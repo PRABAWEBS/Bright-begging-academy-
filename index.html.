@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,23 +6,25 @@
   <title>Bright Beginning Academy | School Tuition in Kumbakonam</title>
 
   <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
 
   <style>
     :root {
-      --bg: #f4f7f5;
-      --bg-soft: #e3f2eb;
+      --bg: #f4fff5;
+      --bg-soft: #e3f8eb;
       --card: #ffffff;
-      --accent: #2f855a;
-      --accent-soft: rgba(47, 133, 90, 0.15);
-      --accent-2: #2b6cb0;
-      --text: #1a202c;
-      --muted: #718096;
-      --border: rgba(160, 174, 192, 0.6);
-      --radius-xl: 1.5rem;
-      --shadow-soft: 0 24px 60px rgba(15, 23, 42, 0.16);
+      --accent: #28a66a;
+      --accent-soft: rgba(40, 166, 106, 0.08);
+      --accent-strong: #0b7a46;
+      --text-main: #16302b;
+      --text-soft: #4b635a;
+      --radius-xl: 1.4rem;
+      --shadow-soft: 0 24px 60px rgba(40, 80, 60, 0.18);
     }
 
     * {
@@ -35,13 +36,12 @@
     body {
       font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
         "Segoe UI", sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(56, 161, 105, 0.18), transparent 55%),
-        radial-gradient(circle at 80% 0, rgba(56, 189, 248, 0.14), transparent 60%),
-        var(--bg);
-      color: var(--text);
-      line-height: 1.6;
       min-height: 100vh;
+      color: var(--text-main);
+      background:
+        radial-gradient(circle at 0% 0%, rgba(141, 199, 146, 0.35), transparent 55%),
+        radial-gradient(circle at 100% 15%, rgba(118, 190, 150, 0.25), transparent 55%),
+        var(--bg);
       scroll-behavior: smooth;
     }
 
@@ -59,7 +59,7 @@
       width: 100%;
       max-width: 1120px;
       margin: 0 auto;
-      padding: 1.4rem 1.2rem 4rem;
+      padding: 1.5rem 1.2rem 4rem;
     }
 
     /* HEADER */
@@ -68,20 +68,20 @@
       position: sticky;
       top: 0;
       z-index: 40;
-      backdrop-filter: blur(16px);
+      backdrop-filter: blur(18px);
       background: linear-gradient(
         to bottom,
-        rgba(244, 247, 245, 0.98),
-        rgba(244, 247, 245, 0.92),
+        rgba(244, 255, 245, 0.96),
+        rgba(244, 255, 245, 0.78),
         transparent
       );
-      border-bottom: 1px solid rgba(209, 213, 219, 0.9);
+      border-bottom: 1px solid rgba(189, 219, 197, 0.9);
     }
 
     .nav {
       max-width: 1120px;
       margin: 0 auto;
-      padding: 0.6rem 1.2rem;
+      padding: 0.8rem 1.2rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -95,131 +95,112 @@
     }
 
     .logo-pill {
-      width: 160px;
-      height: 54px;
+      width: 150px;
+      height: 52px;
       border-radius: 999px;
-      background: linear-gradient(135deg, #0f172a, #1d4044);
-      padding: 0.2rem;
-      box-shadow: 0 0 0 1px rgba(148, 163, 184, 0.4),
-        0 14px 40px rgba(15, 23, 42, 0.55);
+      background: radial-gradient(circle at 20% 0%, #7ad98e, #1a8c57);
+      box-shadow: 0 0 25px rgba(50, 160, 100, 0.75);
       display: flex;
       align-items: center;
       justify-content: center;
-      position: relative;
       overflow: hidden;
+      position: relative;
     }
 
     .logo-pill::before {
       content: "";
       position: absolute;
-      inset: -40%;
-      background:
-        radial-gradient(circle at 0 0, rgba(72, 187, 120, 0.4), transparent 60%),
-        radial-gradient(circle at 100% 0, rgba(56, 189, 248, 0.4), transparent 70%);
-      opacity: 0.35;
-      pointer-events: none;
-    }
-
-    .logo-pill-inner {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
-
-    .logo-mark {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      background: radial-gradient(circle at 30% 20%, #48bb78, #2b6cb0);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 1rem;
-      color: #e6fffa;
-      box-shadow: 0 0 0 1px rgba(203, 213, 225, 0.5);
+      inset: 0;
+      background: radial-gradient(circle at 0% 0%, rgba(255, 255, 255, 0.32), transparent 60%);
+      mix-blend-mode: screen;
     }
 
     .logo-text-main {
-      font-size: 0.9rem;
-      font-weight: 600;
-      letter-spacing: 0.13em;
+      position: relative;
+      z-index: 1;
+      font-weight: 700;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: #e6fffa;
+      font-size: 0.78rem;
+      color: #f5fff8;
     }
 
     .logo-text-sub {
-      font-size: 0.7rem;
-      color: rgba(226, 232, 240, 0.8);
+      font-size: 0.72rem;
+      color: var(--text-soft);
+    }
+
+    .nav-title {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
     }
 
     .nav-links {
       display: flex;
-      gap: 0.75rem;
+      gap: 0.9rem;
       font-size: 0.85rem;
-      color: var(--muted);
+      color: var(--text-soft);
     }
 
     .nav-links a {
-      padding: 0.3rem 0.7rem;
+      padding: 0.3rem 0.8rem;
       border-radius: 999px;
-      transition: all 0.16s ease;
+      transition: all 0.18s ease;
     }
 
     .nav-links a:hover {
-      color: var(--text);
-      background: rgba(226, 232, 240, 0.9);
+      background: rgba(255, 255, 255, 0.9);
+      color: var(--accent-strong);
     }
 
     .nav-links a.active {
-      color: #1f2933;
-      background: rgba(72, 187, 120, 0.16);
-      box-shadow: 0 0 0 1px rgba(56, 161, 105, 0.45);
+      background: rgba(40, 166, 106, 0.12);
+      color: var(--accent-strong);
+      box-shadow: 0 0 18px rgba(40, 166, 106, 0.5);
     }
 
     .btn {
       border-radius: 999px;
-      padding: 0.55rem 1.3rem;
-      font-size: 0.9rem;
+      padding: 0.6rem 1.3rem;
+      font-size: 0.88rem;
       border: 1px solid transparent;
       cursor: pointer;
       outline: none;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 0.4rem;
-      transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease,
-        background 0.12s ease;
+      gap: 0.45rem;
+      transition: all 0.15s ease;
       white-space: nowrap;
+      position: relative;
+      overflow: hidden;
       background: transparent;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, #38a169, #2b6cb0);
-      color: #f0fff4;
-      box-shadow: 0 12px 32px rgba(56, 161, 105, 0.4);
+      background: linear-gradient(135deg, #1a8c57, #28a66a, #8ce2a3);
+      color: #f5fff8;
+      box-shadow: 0 10px 30px rgba(33, 140, 87, 0.55);
+    }
+
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.7);
+      border-color: rgba(168, 201, 179, 0.9);
+      color: var(--text-soft);
     }
 
     .btn-primary:hover {
       transform: translateY(-1px) scale(1.02);
-      filter: brightness(1.05);
-      box-shadow: 0 18px 45px rgba(56, 161, 105, 0.6);
-    }
-
-    .btn-outline {
-      border-color: rgba(148, 163, 184, 0.7);
-      color: var(--muted);
-      background: rgba(248, 250, 252, 0.92);
+      filter: brightness(1.04);
+      box-shadow: 0 18px 40px rgba(33, 140, 87, 0.8);
     }
 
     .btn-outline:hover {
-      background: #e2f0e8;
-      border-color: rgba(56, 161, 105, 0.7);
-      color: #22543d;
-      box-shadow: 0 10px 26px rgba(148, 163, 184, 0.5);
-      transform: translateY(-1px);
+      background: #ffffff;
+      border-color: rgba(40, 166, 106, 0.7);
+      color: var(--accent-strong);
+      box-shadow: 0 10px 26px rgba(48, 120, 82, 0.2);
     }
 
     /* HERO */
@@ -230,70 +211,58 @@
 
     .hero {
       display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2.6fr);
-      gap: 2.4rem;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 2.5rem;
       align-items: center;
-      padding-top: 2.4rem;
+      padding-top: 2.8rem;
     }
 
     .hero-left h1 {
-      font-size: clamp(2.3rem, 4.2vw, 3.2rem);
-      line-height: 1.1;
-      margin-bottom: 0.8rem;
+      font-size: clamp(2.3rem, 4vw, 3rem);
+      line-height: 1.15;
+      margin-bottom: 1rem;
     }
 
     .hero-highlight {
-      background: linear-gradient(120deg, #22543d, #2f855a, #2b6cb0);
+      background: linear-gradient(120deg, #0b7a46, #28a66a, #a2f1b7);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
 
-    .hero-subtitle {
+    .hero-sub {
       font-size: 0.95rem;
-      color: var(--muted);
+      color: var(--text-soft);
       max-width: 30rem;
-      margin-bottom: 1.4rem;
+      margin-bottom: 1.5rem;
     }
 
     .hero-badges {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 1.6rem;
+      gap: 0.6rem;
+      margin-bottom: 1.7rem;
     }
 
     .badge {
       font-size: 0.75rem;
-      padding: 0.25rem 0.7rem;
+      padding: 0.3rem 0.7rem;
       border-radius: 999px;
-      background: rgba(237, 248, 243, 0.98);
-      border: 1px solid rgba(163, 230, 207, 0.9);
-      color: #22543d;
+      border: 1px solid rgba(169, 205, 179, 0.9);
+      background: rgba(255, 255, 255, 0.9);
+      color: var(--text-soft);
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 0.8rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.7rem;
     }
 
-    .hero-stats {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.4rem;
-      font-size: 0.78rem;
-      color: var(--muted);
-    }
-
-    .hero-stat span {
-      display: block;
-    }
-
-    .hero-stat strong {
-      font-size: 1.05rem;
-      color: var(--text);
+    .hero-note {
+      font-size: 0.8rem;
+      color: var(--text-soft);
     }
 
     .hero-right {
@@ -301,112 +270,99 @@
     }
 
     .hero-card {
-      background: radial-gradient(circle at top, #ebfff6, #ffffff 65%);
+      background: radial-gradient(circle at top left, #ffffff, #f2fff4 70%);
       border-radius: var(--radius-xl);
-      border: 1px solid rgba(209, 213, 219, 0.9);
-      padding: 1.4rem;
+      border: 1px solid rgba(206, 230, 213, 0.9);
+      padding: 1.3rem 1.3rem 1.1rem;
       box-shadow: var(--shadow-soft);
       position: relative;
       overflow: hidden;
     }
 
-    .hero-bubble {
-      position: absolute;
-      inset: -25%;
-      background:
-        radial-gradient(circle at 0 0, rgba(72, 187, 120, 0.2), transparent 60%),
-        radial-gradient(circle at 80% 0, rgba(56, 189, 248, 0.2), transparent 60%);
-      opacity: 0.6;
-      pointer-events: none;
-    }
-
-    .hero-card-inner {
-      position: relative;
-      z-index: 1;
-    }
-
     .hero-card-header {
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-bottom: 1rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      font-size: 0.8rem;
+      margin-bottom: 0.9rem;
+      color: var(--text-soft);
     }
 
-    .hero-level-tag {
-      padding: 0.2rem 0.7rem;
+    .hero-chip {
+      padding: 0.25rem 0.7rem;
       border-radius: 999px;
-      background: rgba(72, 187, 120, 0.12);
-      border: 1px solid rgba(56, 161, 105, 0.45);
-      color: #22543d;
-      font-size: 0.76rem;
+      border: 1px solid rgba(40, 166, 106, 0.4);
+      background: rgba(227, 248, 235, 0.8);
+      color: var(--accent-strong);
+      font-size: 0.72rem;
     }
 
-    .hero-visual {
-      height: 180px;
-      border-radius: 1.2rem;
-      border: 1px solid rgba(204, 219, 209, 0.9);
-      background:
-        radial-gradient(circle at 30% 10%, rgba(72, 187, 120, 0.22), transparent 60%),
-        radial-gradient(circle at 80% 70%, rgba(56, 189, 248, 0.16), transparent 60%),
-        #f8fffb;
-      overflow: hidden;
-      position: relative;
-      padding: 1rem;
+    .hero-stats-grid {
       display: grid;
-      grid-template-columns: 1.4fr 1.6fr;
-      gap: 1rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.7rem;
+      margin-bottom: 0.9rem;
     }
 
-    .hero-visual-left {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+    .mini-card {
+      border-radius: 1rem;
+      border: 1px solid rgba(209, 231, 215, 0.9);
+      background: #ffffff;
+      padding: 0.7rem 0.8rem;
       font-size: 0.8rem;
-      color: #1a202c;
+      color: var(--text-soft);
     }
 
-    .level-pill {
-      font-size: 0.78rem;
-      padding: 0.2rem 0.6rem;
-      border-radius: 999px;
-      background: rgba(49, 151, 149, 0.16);
-      border: 1px solid rgba(56, 178, 172, 0.6);
-      width: fit-content;
+    .mini-card strong {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--accent-strong);
     }
 
-    .hero-visual-right {
-      position: relative;
-      border-radius: 999px;
-      background: radial-gradient(circle at 30% 0, #48bb78, #2b6cb0);
+    .timeline {
+      margin-top: 0.4rem;
+      border-radius: 0.9rem;
+      border: 1px dashed rgba(188, 216, 196, 0.9);
+      padding: 0.7rem;
+      font-size: 0.76rem;
+      color: var(--text-soft);
+    }
+
+    .timeline-row {
       display: flex;
       align-items: center;
-      justify-content: center;
-      color: #e6fffa;
-      font-weight: 600;
-      font-size: 0.85rem;
-      box-shadow: 0 18px 45px rgba(56, 161, 105, 0.6);
+      justify-content: space-between;
+      gap: 0.8rem;
+      margin-top: 0.3rem;
     }
 
-    .hero-visual-ring {
-      position: absolute;
-      width: 120%;
-      height: 120%;
+    .timeline-bar-wrap {
+      flex: 1;
+      height: 6px;
       border-radius: 999px;
-      border: 1px dashed rgba(209, 250, 229, 0.6);
-      animation: rotate-ring 22s linear infinite;
+      background: rgba(210, 231, 216, 0.9);
+      overflow: hidden;
     }
 
-    @keyframes rotate-ring {
-      from { transform: rotate(0deg); }
-      to   { transform: rotate(360deg); }
+    .timeline-bar-fill {
+      width: 78%;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(to right, #28a66a, #a2f1b7);
+      transform-origin: left;
+      transform: scaleX(0.2);
+      animation: grow-fill 1.1s ease-out forwards;
+    }
+
+    @keyframes grow-fill {
+      from { transform: scaleX(0.1); }
+      to   { transform: scaleX(1); }
     }
 
     /* SECTIONS */
 
     section {
-      margin-top: 4rem;
+      margin-top: 3.6rem;
     }
 
     .section-title {
@@ -416,146 +372,87 @@
 
     .section-subtitle {
       font-size: 0.88rem;
-      color: var(--muted);
-      margin-bottom: 1.8rem;
-    }
-
-    /* PROGRAMS */
-
-    .grid {
-      display: grid;
-      gap: 1.3rem;
+      color: var(--text-soft);
+      margin-bottom: 1.6rem;
     }
 
     .grid-3 {
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.2rem;
     }
 
     .card {
       background: var(--card);
       border-radius: var(--radius-xl);
-      border: 1px solid var(--border);
+      border: 1px solid rgba(203, 227, 211, 0.95);
       padding: 1.2rem 1.3rem;
-      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+      box-shadow: var(--shadow-soft);
       position: relative;
       overflow: hidden;
-      transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
-    }
-
-    .card::before {
-      content: "";
-      position: absolute;
-      inset: -40%;
-      background:
-        radial-gradient(circle at 0 0, rgba(72, 187, 120, 0.16), transparent 60%),
-        radial-gradient(circle at 100% 100%, rgba(56, 189, 248, 0.16), transparent 60%);
-      opacity: 0;
-      transition: opacity 0.2s ease;
-      pointer-events: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, translate 0.2s ease;
     }
 
     .card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 24px 70px rgba(15, 23, 42, 0.18);
-      border-color: rgba(56, 161, 105, 0.55);
-    }
-
-    .card:hover::before {
-      opacity: 1;
+      box-shadow: 0 26px 60px rgba(31, 77, 55, 0.25);
     }
 
     .card h3 {
-      font-size: 1rem;
-      margin-bottom: 0.35rem;
+      font-size: 1.05rem;
+      margin-bottom: 0.25rem;
     }
 
     .card p {
       font-size: 0.86rem;
-      color: var(--muted);
+      color: var(--text-soft);
       margin-bottom: 0.6rem;
     }
 
     .pill-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.35rem;
-      margin-top: 0.25rem;
+      gap: 0.4rem;
+      margin-top: 0.3rem;
     }
 
     .pill {
       font-size: 0.72rem;
-      padding: 0.2rem 0.6rem;
+      padding: 0.18rem 0.6rem;
       border-radius: 999px;
-      background: var(--bg-soft);
-      color: #22543d;
-      border: 1px solid rgba(154, 230, 180, 0.9);
+      background: rgba(230, 246, 235, 0.95);
+      color: var(--accent-strong);
+      border: 1px solid rgba(188, 216, 196, 0.9);
     }
 
-    /* WHY + RESULTS */
+    /* RESULTS / TESTIMONIALS SIMPLE */
 
-    .list {
-      margin-top: 0.4rem;
-      padding-left: 1.1rem;
-      font-size: 0.85rem;
-      color: var(--muted);
+    .simple-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.1rem;
     }
 
-    .list li + li {
-      margin-top: 0.25rem;
-    }
-
-    .stat-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.4rem;
+    .simple-card {
+      border-radius: 1.2rem;
+      border: 1px dashed rgba(189, 219, 197, 0.9);
+      padding: 1rem 1.1rem;
+      background: rgba(248, 255, 249, 0.9);
       font-size: 0.86rem;
-      margin-top: 0.6rem;
+      color: var(--text-soft);
     }
 
-    .stat {
-      padding: 0.6rem 0.9rem;
-      border-radius: 1rem;
-      background: rgba(237, 248, 243, 0.95);
-      border: 1px solid rgba(154, 230, 180, 0.9);
+    .simple-card strong {
+      color: var(--accent-strong);
     }
 
-    .stat strong {
-      display: block;
-      font-size: 1.1rem;
-      color: #22543d;
-    }
-
-    /* CONTACT + FORM */
+    /* CONTACT / FORM */
 
     .contact-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.6fr);
-      gap: 1.5rem;
-    }
-
-    .contact-card {
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    .contact-card strong {
-      color: var(--text);
-    }
-
-    .contact-tag-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin: 0.9rem 0;
-    }
-
-    .contact-tag {
-      font-size: 0.78rem;
-      padding: 0.25rem 0.7rem;
-      border-radius: 999px;
-      background: rgba(237, 248, 243, 0.98);
-      border: 1px solid rgba(154, 230, 180, 0.9);
-      color: #22543d;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.4fr);
+      gap: 1.4rem;
+      align-items: flex-start;
     }
 
     form {
@@ -566,79 +463,62 @@
 
     label {
       display: block;
-      margin-bottom: 0.15rem;
-      color: var(--muted);
+      margin-bottom: 0.18rem;
+      color: var(--text-soft);
     }
 
     input,
+    textarea,
     select {
       width: 100%;
       padding: 0.55rem 0.7rem;
       border-radius: 0.9rem;
-      border: 1px solid rgba(203, 213, 225, 0.95);
-      background: rgba(248, 250, 252, 0.98);
-      color: var(--text);
+      border: 1px solid rgba(188, 216, 196, 0.95);
+      background: rgba(250, 255, 251, 0.98);
+      color: var(--text-main);
       outline: none;
-      font-size: 0.84rem;
+      font-size: 0.85rem;
+      resize: vertical;
     }
 
     input:focus,
+    textarea:focus,
     select:focus {
-      border-color: rgba(56, 161, 105, 0.9);
-      box-shadow: 0 0 0 1px rgba(56, 161, 105, 0.7);
-      background: #ffffff;
+      border-color: rgba(40, 166, 106, 0.8);
+      box-shadow: 0 0 0 1px rgba(40, 166, 106, 0.5);
+    }
+
+    textarea {
+      min-height: 90px;
     }
 
     .form-note {
-      font-size: 0.75rem;
-      color: var(--muted);
-      margin-top: 0.2rem;
-    }
-
-    .toast {
-      position: fixed;
-      bottom: 1.4rem;
-      right: 1.4rem;
-      background: #22543d;
-      color: #e6fffa;
-      font-size: 0.8rem;
-      border-radius: 0.9rem;
-      padding: 0.6rem 0.9rem;
-      box-shadow: 0 14px 40px rgba(15, 23, 42, 0.6);
-      opacity: 0;
-      transform: translateY(16px);
-      pointer-events: none;
-      transition: opacity 0.2s ease, transform 0.2s ease;
-      z-index: 999;
-    }
-
-    .toast.show {
-      opacity: 1;
-      transform: translateY(0);
-      pointer-events: auto;
+      font-size: 0.76rem;
+      color: var(--text-soft);
+      margin-top: 0.25rem;
     }
 
     footer {
       margin-top: 3rem;
-      padding-top: 1.2rem;
-      padding-bottom: 1.4rem;
-      border-top: 1px solid rgba(203, 213, 225, 0.95);
+      padding-top: 1.1rem;
+      border-top: 1px solid rgba(203, 227, 211, 0.95);
       font-size: 0.78rem;
-      color: var(--muted);
+      color: var(--text-soft);
       text-align: center;
+      padding-bottom: 1.2rem;
     }
 
     footer span {
-      color: #22543d;
+      color: var(--accent-strong);
       font-weight: 500;
     }
 
-    /* SCROLL REVEAL */
+    /* REVEAL ANIMATION */
 
     .reveal {
       opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.55s ease, transform 0.55s ease;
+      transform: translateY(22px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
     }
 
     .reveal.visible {
@@ -668,7 +548,7 @@
         padding-inline: 1rem;
       }
       .hero {
-        padding-top: 2rem;
+        padding-top: 2.3rem;
       }
       .hero-actions {
         flex-direction: column;
@@ -681,201 +561,197 @@
   </style>
 </head>
 <body>
-  <!-- Toast -->
-  <div class="toast" id="toast">Form submitted (preview only)</div>
-
-  <!-- HEADER -->
+  <!-- MAIN CONTENT -->
   <header>
     <nav class="nav">
       <div class="nav-left">
         <div class="logo-pill">
-          <div class="logo-pill-inner">
-            <div class="logo-mark">B</div>
-            <div>
-              <div class="logo-text-main">BRIGHT BEGINNING</div>
-              <div class="logo-text-sub">Academy • Kumbakonam</div>
-            </div>
+          <span class="logo-text-main">BRIGHT B</span>
+        </div>
+        <div class="nav-title">
+          <div class="logo-text-main" style="color:#1a3d2b;letter-spacing:0.16em;">
+            ACADEMY
           </div>
+          <span class="logo-text-sub">
+            School tuition • Kumbakonam
+          </span>
         </div>
       </div>
 
       <div class="nav-links">
-        <a href="#top" class="active" data-link>Home</a>
-        <a href="#programs" data-link>Programs</a>
-        <a href="#why" data-link>Why us</a>
-        <a href="#contact" data-link>Enquiry</a>
+        <a href="#top" class="active">Home</a>
+        <a href="#classes">Classes</a>
+        <a href="#why">Why us</a>
+        <a href="#contact">Enquiry</a>
       </div>
+
+      <button class="btn btn-primary" data-scroll="#contact">
+        Enquiry form
+      </button>
     </nav>
   </header>
 
-  <!-- MAIN -->
   <main class="container" id="top">
     <!-- HERO -->
     <section class="hero reveal">
       <div class="hero-left">
         <h1>
           <span class="hero-highlight">Bright Beginning Academy</span><br />
-          Serious tuition for confident students.
+          focused tuition for confident students.
         </h1>
-        <p class="hero-subtitle">
-          School tuition from <strong>1st to 12th standard</strong>, plus Handwriting,
-          Spoken English, Abacus &amp; Vedic Maths and Computer Skills – all in one trusted
-          centre at Indira Gandhi Salai, Kumbakonam.
+        <p class="hero-sub">
+          School tuition from <strong>Class 1 to 12</strong> with extra support for
+          board exams, spoken English, handwriting, Abacus, Vedic Maths and
+          computer skills – all in one place at <strong>Kumbakonam</strong>.
         </p>
 
         <div class="hero-badges">
-          <span class="badge">CBSE &amp; State Board</span>
-          <span class="badge">English &amp; Tamil</span>
-          <span class="badge">Small batch size</span>
-          <span class="badge">Regular tests &amp; feedback</span>
+          <span class="badge">Class 1 – 5 foundation</span>
+          <span class="badge">Class 6 – 10 all subjects</span>
+          <span class="badge">Class 11 &amp; 12 board focus</span>
+          <span class="badge">Spoken English &amp; Handwriting</span>
         </div>
 
         <div class="hero-actions">
           <button class="btn btn-primary" data-scroll="#contact">
-            Book a free enquiry
+            Book a free enquiry →
           </button>
-          <button class="btn btn-outline" data-scroll="#programs">
-            View programs
+          <button class="btn btn-outline" data-scroll="#classes">
+            View classes &amp; programs
           </button>
         </div>
 
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <span><strong>1–12</strong></span>
-            <span>All standards covered</span>
-          </div>
-          <div class="hero-stat">
-            <span><strong>Multi-skill</strong></span>
-            <span>Tuition + skills + English</span>
-          </div>
-          <div class="hero-stat">
-            <span><strong>Parent-friendly</strong></span>
-            <span>Clear updates &amp; communication</span>
-          </div>
-        </div>
+        <p class="hero-note">
+          📍 No.1 Indira Gandhi Salai, Kumbakonam – easy access for school students.
+        </p>
       </div>
 
       <div class="hero-right">
         <div class="hero-card">
-          <div class="hero-bubble"></div>
-          <div class="hero-card-inner">
-            <div class="hero-card-header">
-              <span>Preview timetable snapshot</span>
-              <span class="hero-level-tag">Classes 1–12 • Eng / Tam</span>
-            </div>
+          <div class="hero-card-header">
+            <span>Student progress snapshot</span>
+            <span class="hero-chip">Consistent improvement</span>
+          </div>
 
-            <div class="hero-visual">
-              <div class="hero-visual-left">
-                <div>
-                  <div class="level-pill">School Tuition</div>
-                  <p style="margin-top:0.5rem;">
-                    Daily support for homework, lessons &amp; exam preparation with
-                    chapter-wise tests.
-                  </p>
-                </div>
-                <div>
-                  <strong style="font-size:0.82rem;">Extra Skills:</strong>
-                  <ul class="list" style="margin-top:0.15rem;">
-                    <li>Handwriting &amp; Reading (Eng / Tam)</li>
-                    <li>Spoken English practice</li>
-                    <li>Abacus &amp; Vedic Maths</li>
-                    <li>Computer basics</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="hero-visual-right">
-                <div class="hero-visual-ring"></div>
-                Focus on<br>concept clarity
-              </div>
+          <div class="hero-stats-grid">
+            <div class="mini-card">
+              <strong>Smaller groups</strong>
+              More attention on each child, doubts cleared every day.
             </div>
+            <div class="mini-card">
+              <strong>Daily practice</strong>
+              Regular tests, worksheets and revision to build confidence.
+            </div>
+            <div class="mini-card">
+              <strong>Concept clarity</strong>
+              Focus on understanding, not just memorising answers.
+            </div>
+            <div class="mini-card">
+              <strong>Parental updates</strong>
+              Clear communication about performance &amp; behaviour.
+            </div>
+          </div>
+
+          <div class="timeline">
+            <span>Typical student improvement (3–6 months)*</span>
+            <div class="timeline-row">
+              <span>Marks &amp; confidence</span>
+              <div class="timeline-bar-wrap">
+                <div class="timeline-bar-fill"></div>
+              </div>
+              <span>↑</span>
+            </div>
+            <small style="display:block;margin-top:0.3rem;color:var(--text-soft);">
+              *Example based on consistent attendance &amp; practice.
+            </small>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PROGRAMS -->
-    <section id="programs" class="reveal">
-      <h2 class="section-title">Programs we offer</h2>
+    <!-- CLASSES / PROGRAMS -->
+    <section id="classes" class="reveal">
+      <h2 class="section-title">Classes &amp; programs we offer</h2>
       <p class="section-subtitle">
-        Clear batches for different standards – parents can choose only tuition or
-        combine with skills like Spoken English or Abacus.
+        Clear, structured batches so every student gets attention at their level.
       </p>
 
-      <div class="grid grid-3">
+      <div class="grid-3">
         <article class="card">
-          <h3>School Tuition (1st–5th Std)</h3>
+          <h3>Classes 1 – 5</h3>
           <p>
-            Strong basics in all subjects with focus on reading, writing and
-            understanding – not just memorising.
+            Strong foundation in reading, writing and core subjects with
+            friendly guidance.
           </p>
           <div class="pill-row">
             <span class="pill">All subjects</span>
-            <span class="pill">Activity-based</span>
-            <span class="pill">Concept foundation</span>
+            <span class="pill">Reading &amp; writing</span>
+            <span class="pill">Basic maths</span>
+            <span class="pill">Handwriting practice</span>
           </div>
         </article>
 
         <article class="card">
-          <h3>School Tuition (6th–10th Std)</h3>
+          <h3>Classes 6 – 10</h3>
           <p>
-            Regular chapter-wise coaching with tests, worksheets and revision
-            plans for school exams and board exams.
+            Regular tuition for school syllabus with focus on understanding,
+            tests and revision.
           </p>
           <div class="pill-row">
-            <span class="pill">Maths</span>
-            <span class="pill">Science</span>
-            <span class="pill">English &amp; Languages</span>
+            <span class="pill">Maths &amp; Science</span>
+            <span class="pill">English &amp; Tamil</span>
+            <span class="pill">Social Science</span>
+            <span class="pill">Weekly tests</span>
           </div>
         </article>
 
         <article class="card">
-          <h3>Board Exam Support (11th–12th)</h3>
+          <h3>Classes 11 &amp; 12</h3>
           <p>
-            Focused batches with important questions, previous year papers and
-            regular mock tests.
+            Board-focused support to help students stay consistent and exam ready.
           </p>
           <div class="pill-row">
-            <span class="pill">Commerce / Science</span>
-            <span class="pill">Revision plans</span>
+            <span class="pill">Concept revision</span>
+            <span class="pill">Important questions</span>
             <span class="pill">Exam strategy</span>
           </div>
         </article>
 
         <article class="card">
-          <h3>Handwriting &amp; Reading</h3>
+          <h3>Spoken English &amp; Handwriting</h3>
           <p>
-            Special sessions to improve handwriting speed &amp; neatness and
-            reading fluency in English and Tamil.
+            Extra attention for communication and neat writing – useful for all classes.
           </p>
           <div class="pill-row">
-            <span class="pill">Eng / Tam</span>
-            <span class="pill">Individual attention</span>
+            <span class="pill">Fluent speaking</span>
+            <span class="pill">Confidence building</span>
+            <span class="pill">Neat &amp; fast writing</span>
           </div>
         </article>
 
         <article class="card">
-          <h3>Spoken English</h3>
+          <h3>Abacus &amp; Vedic Maths</h3>
           <p>
-            Simple, practical English speaking practice for school students to
-            feel confident in conversations.
+            Special programs for speed maths, mental calculation and brain
+            development.
           </p>
           <div class="pill-row">
-            <span class="pill">Small groups</span>
-            <span class="pill">Activity-based</span>
+            <span class="pill">Speed calculation</span>
+            <span class="pill">Memory boosting</span>
+            <span class="pill">Maths confidence</span>
           </div>
         </article>
 
         <article class="card">
-          <h3>Abacus, Vedic Maths &amp; Computer</h3>
+          <h3>Computer Skills</h3>
           <p>
-            Brain development and speed maths training, plus basic computer
-            skills for today’s students.
+            Basic computer knowledge and skills to help students for projects
+            and future careers.
           </p>
           <div class="pill-row">
-            <span class="pill">Speed maths</span>
-            <span class="pill">Concentration</span>
-            <span class="pill">Computer basics</span>
+            <span class="pill">Basic computer</span>
+            <span class="pill">Typing &amp; docs</span>
+            <span class="pill">Student friendly</span>
           </div>
         </article>
       </div>
@@ -883,94 +759,67 @@
 
     <!-- WHY US -->
     <section id="why" class="reveal">
-      <h2 class="section-title">Why parents choose Bright Beginning</h2>
+      <h2 class="section-title">Why parents choose Bright Beginning Academy</h2>
       <p class="section-subtitle">
-        A centre that focuses on confidence, basics and clear communication with parents.
+        A focused tuition centre that aims for confident, successful students –
+        not just finishing portions.
       </p>
 
-      <div class="grid grid-3">
-        <article class="card">
-          <h3>1. Clean, safe environment</h3>
-          <p>
-            Classrooms arranged for focus and comfort. Students feel calm and ready
-            to learn.
-          </p>
-          <ul class="list">
-            <li>Neat, child-friendly setup</li>
-            <li>Disciplined but friendly atmosphere</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h3>2. Personal attention</h3>
-          <p>
-            Limited students per batch so teachers can track each child closely.
-          </p>
-          <ul class="list">
-            <li>Doubt clearing in every class</li>
-            <li>Extra support for weak topics</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h3>3. Regular updates</h3>
-          <p>
-            Parents know what is happening – from attendance to test marks.
-          </p>
-          <ul class="list">
-            <li>Frequent tests</li>
-            <li>Feedback &amp; suggestions for home practice</li>
-          </ul>
-        </article>
-      </div>
-
-      <div class="stat-row">
-        <div class="stat">
-          <strong>Concept clarity</strong>
-          Better understanding instead of just memorising answers.
+      <div class="simple-row">
+        <div class="simple-card">
+          <strong>Smaller batches</strong><br />
+          Students get time to ask doubts and practice with support.
         </div>
-        <div class="stat">
-          <strong>Confidence</strong>
-          Students participate more in school and exams.
+        <div class="simple-card">
+          <strong>Regular test &amp; feedback</strong><br />
+          Parents know how their child is improving throughout the year.
         </div>
-        <div class="stat">
-          <strong>Support</strong>
-          Parents get a partner to help with academics.
+        <div class="simple-card">
+          <strong>Caring environment</strong><br />
+          Friendly teachers, disciplined study and motivation for students.
+        </div>
+        <div class="simple-card">
+          <strong>Multiple skill programs</strong><br />
+          Tuition plus spoken English, handwriting, Abacus, Vedic Maths and computers.
         </div>
       </div>
     </section>
 
-    <!-- CONTACT + FORM -->
+    <!-- CONTACT / FORM -->
     <section id="contact" class="reveal">
-      <h2 class="section-title">Enquiry & contact</h2>
+      <h2 class="section-title">Enquiry form</h2>
       <p class="section-subtitle">
-        Share your child’s details below. This preview form just shows how parents
-        can contact Bright Beginning Academy online.
+        Share basic details – the academy can contact you with batch timings,
+        fees and more information.
       </p>
 
       <div class="contact-grid">
-        <article class="card contact-card">
-          <p>
-            <strong>Bright Beginning Academy</strong><br />
-            School tuition &amp; skill development centre.
+        <article class="card">
+          <h3 style="margin-bottom:0.4rem;">Direct contact</h3>
+          <p style="font-size:0.9rem;color:var(--text-soft);">
+            This page is only a preview website. Contact details can be updated
+            with the Academy’s real phone / WhatsApp numbers.
           </p>
 
-          <div class="contact-tag-row">
-            <span class="contact-tag">1st–12th standard</span>
-            <span class="contact-tag">Eng / Tam</span>
-            <span class="contact-tag">Tuition + Skills</span>
+          <div class="pill-row" style="margin-top:0.8rem;">
+            <span class="pill">School tuition</span>
+            <span class="pill">After school batches</span>
+            <span class="pill">Friendly environment</span>
           </div>
 
-          <p>
-            <strong>Location:</strong><br />
-            Near Indira Gandhi Salai,<br />
-            Kumbakonam – 612001.
+          <p style="margin-top:1.1rem;font-size:0.9rem;">
+            📍 <strong>Location:</strong><br />
+            No.1 Indira Gandhi Salai, Kumbakonam – Tamil Nadu
           </p>
 
-          <p style="margin-top:0.8rem;">
-            <strong>Contact (preview):</strong><br />
-            Phone &amp; WhatsApp: 9XXXXXXXXX<br />
-            (Will be updated with real numbers in the final website.)
+          <p style="margin-top:0.7rem;font-size:0.9rem;">
+            📞 <strong>Phone / WhatsApp:</strong><br />
+            +91 <em>XXXXXXXXXX</em> (update with real number)
+          </p>
+
+          <p class="form-note" style="margin-top:0.9rem;">
+            When this site is final, the enquiry form on the right can be set to send
+            details directly to WhatsApp or email.
           </p>
         </article>
 
@@ -980,91 +829,104 @@
               <label for="student-name">Student name</label>
               <input id="student-name" type="text" placeholder="Enter student name" required />
             </div>
+
             <div>
-              <label for="standard">Standard (Class)</label>
-              <select id="standard" required>
-                <option value="">Select standard</option>
-                <option>1st Std</option>
-                <option>2nd Std</option>
-                <option>3rd Std</option>
-                <option>4th Std</option>
-                <option>5th Std</option>
-                <option>6th Std</option>
-                <option>7th Std</option>
-                <option>8th Std</option>
-                <option>9th Std</option>
-                <option>10th Std</option>
-                <option>11th Std</option>
-                <option>12th Std</option>
-              </select>
+              <label for="std">Class (Std)</label>
+              <input id="std" type="text" placeholder="e.g. 5th, 8th, 12th" required />
             </div>
+
             <div>
-              <label for="school-name">School name</label>
-              <input id="school-name" type="text" placeholder="Eg: XYZ Matric / CBSE" required />
+              <label for="school">School</label>
+              <input id="school" type="text" placeholder="Student's school name" required />
             </div>
+
             <div>
-              <label for="parent-phone">Parent contact (optional)</label>
-              <input id="parent-phone" type="tel" placeholder="Mobile number" />
+              <label for="parent-name">Parent name</label>
+              <input id="parent-name" type="text" placeholder="Parent / guardian name" />
             </div>
+
+            <div>
+              <label for="phone">Contact number</label>
+              <input id="phone" type="tel" placeholder="Your mobile / WhatsApp number" />
+            </div>
+
+            <div>
+              <label for="message">Anything else to share?</label>
+              <textarea
+                id="message"
+                placeholder="Preferred batch timing, subjects, or special support needed..."
+              ></textarea>
+            </div>
+
             <button type="submit" class="btn btn-primary">
-              Submit enquiry (preview)
+              Preview – send enquiry text
             </button>
             <p class="form-note">
-              This is a demo form for preview. In the final site, this can send
-              enquiry details directly to phone / WhatsApp.
+              This demo will open WhatsApp with a ready-made message containing your details.
+              In the final version, it can be set with the Academy’s official WhatsApp number.
             </p>
           </form>
         </article>
       </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="reveal">
-      Preview website designed by <span>Praba Webs</span> for
-      <span>Bright Beginning Academy</span> • Kumbakonam
+      Built as a preview for <span>Bright Beginning Academy</span> • Kumbakonam • 2025
     </footer>
   </main>
 
-  <!-- JS -->
+  <!-- SCRIPTS -->
   <script>
-    // smooth scroll for buttons / nav
-    document.querySelectorAll("[data-scroll]").forEach(btn => {
-      btn.addEventListener("click", () => {
-        const target = document.querySelector(btn.getAttribute("data-scroll"));
-        if (target) target.scrollIntoView({ behavior: "smooth" });
+    // Smooth scroll for buttons / links with data-scroll
+    document.querySelectorAll("[data-scroll]").forEach(function (el) {
+      el.addEventListener("click", function () {
+        var target = document.querySelector(el.getAttribute("data-scroll"));
+        if (!target) return;
+        window.scrollTo({
+          top: target.offsetTop - 80,
+          behavior: "smooth"
+        });
       });
     });
 
-    // nav active state on click
-    document.querySelectorAll("[data-link]").forEach(link => {
-      link.addEventListener("click", () => {
-        document.querySelectorAll("[data-link]").forEach(l => l.classList.remove("active"));
-        link.classList.add("active");
-      });
-    });
-
-    // scroll reveal
+    // Reveal on scroll
     const revealEls = document.querySelectorAll(".reveal");
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15 });
-
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
     revealEls.forEach(el => observer.observe(el));
 
-    // form preview submit
+    // Simple WhatsApp preview for form
     const form = document.getElementById("enquiry-form");
-    const toast = document.getElementById("toast");
-
-    form.addEventListener("submit", e => {
+    form.addEventListener("submit", function (e) {
       e.preventDefault();
-      toast.classList.add("show");
-      setTimeout(() => toast.classList.remove("show"), 2500);
-      form.reset();
+      const name = document.getElementById("student-name").value.trim();
+      const std = document.getElementById("std").value.trim();
+      const school = document.getElementById("school").value.trim();
+      const parent = document.getElementById("parent-name").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const msg = document.getElementById("message").value.trim();
+
+      let text = "Bright Beginning Academy enquiry:%0A";
+      text += "Student: " + name + "%0A";
+      text += "Class: " + std + "%0A";
+      text += "School: " + school + "%0A";
+      if (parent) text += "Parent: " + parent + "%0A";
+      if (phone) text += "Contact: " + phone + "%0A";
+      if (msg) text += "Note: " + msg + "%0A";
+
+      // TODO: replace 0000000000 with academy WhatsApp
+      const number = "0000000000";
+      const url = "https://wa.me/91" + number + "?text=" + text;
+      window.open(url, "_blank");
     });
   </script>
 </body>
