@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -821,4 +822,250 @@
             Regular chapter-wise coaching with tests, worksheets and revision
             plans for school exams and board exams.
           </p>
-          <div class="pill
+          <div class="pill-row">
+            <span class="pill">Maths</span>
+            <span class="pill">Science</span>
+            <span class="pill">English &amp; Languages</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Board Exam Support (11th–12th)</h3>
+          <p>
+            Focused batches with important questions, previous year papers and
+            regular mock tests.
+          </p>
+          <div class="pill-row">
+            <span class="pill">Commerce / Science</span>
+            <span class="pill">Revision plans</span>
+            <span class="pill">Exam strategy</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Handwriting &amp; Reading</h3>
+          <p>
+            Special sessions to improve handwriting speed &amp; neatness and
+            reading fluency in English and Tamil.
+          </p>
+          <div class="pill-row">
+            <span class="pill">Eng / Tam</span>
+            <span class="pill">Individual attention</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Spoken English</h3>
+          <p>
+            Simple, practical English speaking practice for school students to
+            feel confident in conversations.
+          </p>
+          <div class="pill-row">
+            <span class="pill">Small groups</span>
+            <span class="pill">Activity-based</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Abacus, Vedic Maths &amp; Computer</h3>
+          <p>
+            Brain development and speed maths training, plus basic computer
+            skills for today’s students.
+          </p>
+          <div class="pill-row">
+            <span class="pill">Speed maths</span>
+            <span class="pill">Concentration</span>
+            <span class="pill">Computer basics</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- WHY US -->
+    <section id="why" class="reveal">
+      <h2 class="section-title">Why parents choose Bright Beginning</h2>
+      <p class="section-subtitle">
+        A centre that focuses on confidence, basics and clear communication with parents.
+      </p>
+
+      <div class="grid grid-3">
+        <article class="card">
+          <h3>1. Clean, safe environment</h3>
+          <p>
+            Classrooms arranged for focus and comfort. Students feel calm and ready
+            to learn.
+          </p>
+          <ul class="list">
+            <li>Neat, child-friendly setup</li>
+            <li>Disciplined but friendly atmosphere</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>2. Personal attention</h3>
+          <p>
+            Limited students per batch so teachers can track each child closely.
+          </p>
+          <ul class="list">
+            <li>Doubt clearing in every class</li>
+            <li>Extra support for weak topics</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>3. Regular updates</h3>
+          <p>
+            Parents know what is happening – from attendance to test marks.
+          </p>
+          <ul class="list">
+            <li>Frequent tests</li>
+            <li>Feedback &amp; suggestions for home practice</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat">
+          <strong>Concept clarity</strong>
+          Better understanding instead of just memorising answers.
+        </div>
+        <div class="stat">
+          <strong>Confidence</strong>
+          Students participate more in school and exams.
+        </div>
+        <div class="stat">
+          <strong>Support</strong>
+          Parents get a partner to help with academics.
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT + FORM -->
+    <section id="contact" class="reveal">
+      <h2 class="section-title">Enquiry & contact</h2>
+      <p class="section-subtitle">
+        Share your child’s details below. This preview form just shows how parents
+        can contact Bright Beginning Academy online.
+      </p>
+
+      <div class="contact-grid">
+        <article class="card contact-card">
+          <p>
+            <strong>Bright Beginning Academy</strong><br />
+            School tuition &amp; skill development centre.
+          </p>
+
+          <div class="contact-tag-row">
+            <span class="contact-tag">1st–12th standard</span>
+            <span class="contact-tag">Eng / Tam</span>
+            <span class="contact-tag">Tuition + Skills</span>
+          </div>
+
+          <p>
+            <strong>Location:</strong><br />
+            Near Indira Gandhi Salai,<br />
+            Kumbakonam – 612001.
+          </p>
+
+          <p style="margin-top:0.8rem;">
+            <strong>Contact (preview):</strong><br />
+            Phone &amp; WhatsApp: 9XXXXXXXXX<br />
+            (Will be updated with real numbers in the final website.)
+          </p>
+        </article>
+
+        <article class="card">
+          <form id="enquiry-form">
+            <div>
+              <label for="student-name">Student name</label>
+              <input id="student-name" type="text" placeholder="Enter student name" required />
+            </div>
+            <div>
+              <label for="standard">Standard (Class)</label>
+              <select id="standard" required>
+                <option value="">Select standard</option>
+                <option>1st Std</option>
+                <option>2nd Std</option>
+                <option>3rd Std</option>
+                <option>4th Std</option>
+                <option>5th Std</option>
+                <option>6th Std</option>
+                <option>7th Std</option>
+                <option>8th Std</option>
+                <option>9th Std</option>
+                <option>10th Std</option>
+                <option>11th Std</option>
+                <option>12th Std</option>
+              </select>
+            </div>
+            <div>
+              <label for="school-name">School name</label>
+              <input id="school-name" type="text" placeholder="Eg: XYZ Matric / CBSE" required />
+            </div>
+            <div>
+              <label for="parent-phone">Parent contact (optional)</label>
+              <input id="parent-phone" type="tel" placeholder="Mobile number" />
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Submit enquiry (preview)
+            </button>
+            <p class="form-note">
+              This is a demo form for preview. In the final site, this can send
+              enquiry details directly to phone / WhatsApp.
+            </p>
+          </form>
+        </article>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="reveal">
+      Preview website designed by <span>Praba Webs</span> for
+      <span>Bright Beginning Academy</span> • Kumbakonam
+    </footer>
+  </main>
+
+  <!-- JS -->
+  <script>
+    // smooth scroll for buttons / nav
+    document.querySelectorAll("[data-scroll]").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const target = document.querySelector(btn.getAttribute("data-scroll"));
+        if (target) target.scrollIntoView({ behavior: "smooth" });
+      });
+    });
+
+    // nav active state on click
+    document.querySelectorAll("[data-link]").forEach(link => {
+      link.addEventListener("click", () => {
+        document.querySelectorAll("[data-link]").forEach(l => l.classList.remove("active"));
+        link.classList.add("active");
+      });
+    });
+
+    // scroll reveal
+    const revealEls = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    revealEls.forEach(el => observer.observe(el));
+
+    // form preview submit
+    const form = document.getElementById("enquiry-form");
+    const toast = document.getElementById("toast");
+
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      toast.classList.add("show");
+      setTimeout(() => toast.classList.remove("show"), 2500);
+      form.reset();
+    });
+  </script>
+</body>
+</html>
