@@ -127,17 +127,17 @@
 
 
 .logo-pill {
-  width: 64px;              /* bigger */
-  height: 64px;             /* same as width = perfect circle */
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
   background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;         /* CRITICAL for round crop */
-  box-shadow:
-    0 10px 26px rgba(40, 166, 106, 0.45);
-  border: 2px solid rgba(40, 166, 106, 0.5);
+  overflow: hidden;
+
+  box-shadow: 0 10px 26px rgba(37, 99, 235, 0.35);   /* BLUE shadow */
+  border: 2px solid rgba(244, 178, 62, 0.6);        /* GOLD ring */
 }
 
 .logo-pill img {
@@ -285,12 +285,9 @@
     }
 
     .badge {
-      font-size: 0.75rem;
-      padding: 0.3rem 0.7rem;
-      border-radius: 999px;
-      border: 1px solid rgba(169, 205, 179, 0.9);
-      background: rgba(255, 255, 255, 0.9);
-      color: var(--text-soft);
+  border: 1px solid rgba(37, 99, 235, 0.3);
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--accent-strong);
     }
 
     .hero-actions {
@@ -310,9 +307,9 @@
     }
 
     .hero-card {
-      background: radial-gradient(circle at top left, #ffffff, #f2fff4 70%);
+      background: radial-gradient(circle at top left, #ffffff, #eef2ff 70%);
       border-radius: var(--radius-xl);
-      border: 1px solid rgba(206, 230, 213, 0.9);
+      border: 1px solid rgba(37, 99, 235, 0.25);
       padding: 1.3rem 1.3rem 1.1rem;
       box-shadow: var(--shadow-soft);
       position: relative;
@@ -331,9 +328,9 @@
     .hero-chip {
       padding: 0.25rem 0.7rem;
       border-radius: 999px;
-      border: 1px solid rgba(40, 166, 106, 0.4);
-      background: rgba(227, 248, 235, 0.8);
-      color: var(--accent-strong);
+  border: 1px solid rgba(37, 99, 235, 0.35);
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--accent-strong);
       font-size: 0.72rem;
     }
 
@@ -346,7 +343,7 @@
 
     .mini-card {
       border-radius: 1rem;
-      border: 1px solid rgba(209, 231, 215, 0.9);
+      border: 1px solid rgba(37, 99, 235, 0.25);
       background: #ffffff;
       padding: 0.7rem 0.8rem;
       font-size: 0.8rem;
