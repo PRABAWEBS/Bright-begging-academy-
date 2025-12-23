@@ -360,14 +360,7 @@
       color: var(--accent-strong);
     }
 
-    .timeline {
-      margin-top: 0.4rem;
-      border-radius: 0.9rem;
-      border: 1px dashed rgba(188, 216, 196, 0.9);
-      padding: 0.7rem;
-      font-size: 0.76rem;
-      color: var(--text-soft);
-    }
+    .
 
     .timeline-row {
       display: flex;
@@ -377,23 +370,36 @@
       margin-top: 0.3rem;
     }
 
-    .timeline-bar-wrap {
-      flex: 1;
-      height: 6px;
-      border-radius: 999px;
-      background: rgba(210, 231, 216, 0.9);
-      overflow: hidden;
-    }
+    .timeline {
+  margin-top: 0.4rem;
+  border-radius: 0.9rem;
+  border: 1px dashed rgba(37, 99, 235, 0.25);
+  padding: 0.7rem;
+  font-size: 0.76rem;
+  color: var(--text-soft);
+}
 
-    .timeline-bar-fill {
-      width: 78%;
-      height: 100%;
-      border-radius: inherit;
-      background: linear-gradient(to right, #28a66a, #a2f1b7);
-      transform-origin: left;
-      transform: scaleX(0.2);
-      animation: grow-fill 1.1s ease-out forwards;
-    }
+.timeline-bar-wrap {
+  flex: 1;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.12);
+  overflow: hidden;
+}
+
+.timeline-bar-fill {
+  width: 78%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(
+    to right,
+    #2563EB,
+    #3B82F6,
+    #F4B23E
+  );
+  transform-origin: left;
+  animation: grow-fill 1.1s ease-out forwards;
+}
 
     @keyframes grow-fill {
       from { transform: scaleX(0.1); }
@@ -873,7 +879,7 @@
 
           <p style="margin-top:0.7rem;font-size:0.9rem;">
             📞 <strong>Phone / WhatsApp:</strong><br />
-            +91 <em>944844091</em>
+            +91 <em>9444844091</em>
           </p>
 
           <p class="form-note" style="margin-top:0.9rem;">
