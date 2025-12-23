@@ -94,18 +94,21 @@
       gap: 0.75rem;
     }
 
+
     .logo-pill {
-  width: 46px;
-  height: 46px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
-  background: #ffffff;
-  border: 2px solid rgba(40, 166, 106, 0.6);
+  background: radial-gradient(circle at 30% 20%, #7ad98e, #1a8c57);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  box-shadow: 0 8px 22px rgba(40, 166, 106, 0.35);
-}
+  box-shadow:
+    0 6px 18px rgba(40, 166, 106, 0.45),
+    inset 0 0 0 2px rgba(255, 255, 255, 0.6);
+  position: relative;
+    }
 
 .logo-pill img {
   width: 100%;
