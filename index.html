@@ -95,25 +95,25 @@
     }
 
 
-    .logo-pill {
-  width: 52px;
-  height: 52px;
+.logo-pill {
+  width: 64px;              /* bigger */
+  height: 64px;             /* same as width = perfect circle */
   border-radius: 50%;
-  background: radial-gradient(circle at 30% 20%, #7ad98e, #1a8c57);
+  background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  overflow: hidden;         /* CRITICAL for round crop */
   box-shadow:
-    0 6px 18px rgba(40, 166, 106, 0.45),
-    inset 0 0 0 2px rgba(255, 255, 255, 0.6);
-  position: relative;
-    }
+    0 10px 26px rgba(40, 166, 106, 0.45);
+  border: 2px solid rgba(40, 166, 106, 0.5);
+}
 
 .logo-pill img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 50%;
 }
 
     .logo-pill::before {
@@ -566,6 +566,10 @@
       .btn {
         width: 100%;
       }
+    }
+    .logo-pill {
+  width: 72px;
+  height: 72px;
     }
   </style>
 </head>
