@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bright Beginning Academy – Kumbakonam</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Bright Beginning Academy | Kumbakonam</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
   --green:#2f8f5b;
-  --green-soft:#eaf6f0;
-  --bg:#f4fbf7;
+  --green-soft:#e9f6ef;
+  --bg:#eefaf3;
   --card:#ffffff;
-  --text:#1e2f27;
-  --muted:#6e857b;
-  --radius:18px;
+  --text:#1f2d27;
+  --muted:#6b7f76;
+  --radius:16px;
 }
 
-*{margin:0;padding:0;box-sizing:border-box}
+*{box-sizing:border-box;margin:0;padding:0}
 
 body{
-  font-family:Poppins, sans-serif;
+  font-family:Poppins,sans-serif;
   background:var(--bg);
   color:var(--text);
 }
@@ -31,12 +31,12 @@ header{
   position:sticky;
   top:0;
   z-index:50;
-  background:#ffffff;
-  padding:12px 14px;
+  background:rgba(255,255,255,.9);
+  backdrop-filter:blur(8px);
   display:flex;
   align-items:center;
   justify-content:space-between;
-  border-bottom:1px solid #e3efe8;
+  padding:12px 16px;
 }
 
 .brand{
@@ -46,178 +46,175 @@ header{
 }
 
 .brand img{
-  width:44px;
-  height:44px;
+  width:42px;
+  height:42px;
   border-radius:50%;
   object-fit:cover;
 }
 
 .brand-text strong{
-  letter-spacing:0.14em;
-  font-size:0.85rem;
+  font-size:.95rem;
+  letter-spacing:.14em;
 }
 
 .brand-text span{
-  font-size:0.7rem;
+  font-size:.7rem;
   color:var(--muted);
 }
 
-.top-btn{
-  background:linear-gradient(135deg,#2f8f5b,#59c98a);
+header button{
+  background:var(--green);
   color:#fff;
   border:none;
   padding:10px 16px;
   border-radius:999px;
-  font-size:0.75rem;
   font-weight:600;
+  font-size:.8rem;
 }
 
-/* HERO */
-.hero{
-  padding:28px 16px 22px;
+/* LAYOUT */
+section{
+  padding:26px 18px;
 }
 
-.hero h1{
-  font-size:1.7rem;
+h1{
+  font-size:1.8rem;
   line-height:1.25;
   margin-bottom:10px;
 }
 
-.hero h1 span{color:var(--green)}
+h1 span{color:var(--green)}
 
-.hero p{
-  font-size:0.9rem;
+p.desc{
+  font-size:.95rem;
   color:var(--muted);
   margin-bottom:18px;
 }
 
+/* HERO */
 .hero-actions{
   display:flex;
-  flex-direction:column;
   gap:12px;
+  margin-bottom:24px;
 }
 
 .hero-actions button{
-  width:100%;
+  flex:1;
   padding:14px;
   border-radius:14px;
   font-weight:600;
-  font-size:0.9rem;
+  font-size:.9rem;
+}
+
+.primary{
+  background:var(--green);
+  color:white;
   border:none;
 }
 
-.primary{background:var(--green);color:#fff}
-.secondary{background:#fff;border:1px solid #dceee4}
-
-/* SECTIONS */
-section{padding:26px 16px}
-
-section h2{
-  font-size:1.25rem;
-  margin-bottom:14px;
+.secondary{
+  background:white;
+  border:1px solid #d6eee3;
 }
 
 /* CARDS */
 .grid{
   display:grid;
+  grid-template-columns:1fr;
   gap:14px;
 }
 
 .card{
   background:var(--card);
   border-radius:var(--radius);
-  padding:16px;
-  border:1px solid #e3efe8;
+  padding:18px;
 }
 
 .card h3{
   color:var(--green);
-  font-size:1rem;
   margin-bottom:6px;
+  font-size:1rem;
 }
 
 .card p{
-  font-size:0.85rem;
+  font-size:.85rem;
   color:var(--muted);
-  line-height:1.55;
 }
 
-/* TAGS */
 .tags{
+  margin-top:10px;
   display:flex;
   flex-wrap:wrap;
   gap:6px;
-  margin-top:8px;
 }
 
 .tag{
-  font-size:0.65rem;
-  padding:5px 10px;
-  border-radius:999px;
   background:var(--green-soft);
   color:var(--green);
+  font-size:.65rem;
+  padding:4px 10px;
+  border-radius:999px;
 }
 
 /* WHY US */
 .why-grid{
   display:grid;
-  gap:12px;
+  grid-template-columns:1fr;
+  gap:14px;
 }
 
 .why{
-  background:#fff;
+  background:white;
   border-radius:var(--radius);
-  padding:16px;
-  border:1px solid #e3efe8;
+  padding:18px;
 }
 
 .why strong{
   display:block;
-  margin-bottom:6px;
   color:var(--green);
-}
-
-/* FAQ */
-.faq .card strong{
-  display:block;
-  margin-bottom:6px;
-}
-
-/* CONTACT */
-.contact p{
-  font-size:0.85rem;
-  color:var(--muted);
-  line-height:1.6;
+  margin-bottom:4px;
 }
 
 /* FORM */
-.form input,
-.form textarea{
+.form{
+  background:white;
+  border-radius:18px;
+  padding:18px;
+}
+
+.form input,.form textarea{
   width:100%;
   padding:14px;
+  margin-bottom:12px;
   border-radius:14px;
   border:1px solid #dbeee3;
-  margin-bottom:12px;
   font-family:Poppins;
-  font-size:0.85rem;
+  font-size:.9rem;
 }
 
 .form button{
   width:100%;
-  background:linear-gradient(135deg,#2f8f5b,#59c98a);
-  color:#fff;
+  padding:16px;
   border:none;
-  padding:15px;
   border-radius:16px;
+  background:var(--green);
+  color:white;
   font-weight:600;
+  font-size:.95rem;
 }
 
 /* FOOTER */
 footer{
   text-align:center;
-  font-size:0.65rem;
-  color:#7f9389;
-  padding:18px;
+  font-size:.7rem;
+  color:#7a8f86;
+  padding:20px;
+}
+
+/* DESKTOP */
+@media(min-width:900px){
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .why-grid{grid-template-columns:repeat(4,1fr)}
 }
 </style>
 </head>
@@ -226,127 +223,111 @@ footer{
 
 <header>
   <div class="brand">
-    <img src="logo.png" alt="Bright Beginning Academy">
+    <img src="logo.png" alt="Logo">
     <div class="brand-text">
       <strong>ACADEMY</strong>
-      <span>Kumbakonam</span>
+      <span>School tuition · Kumbakonam</span>
     </div>
   </div>
-  <button class="top-btn" onclick="document.getElementById('enquiry').scrollIntoView()">Enquiry</button>
+  <button onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'})">
+    Enquiry
+  </button>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <h1><span>Bright Beginning</span><br>focused tuition for confident students</h1>
-  <p>
+<section>
+  <h1><span>Bright Beginning</span> Academy<br>focused tuition for confident students</h1>
+  <p class="desc">
     School tuition from Class 1 to 12 with extra support for board exams,
-    spoken English, handwriting, Abacus, Vedic Maths and computer skills –
+    spoken English, handwriting, Abacus, Vedic Maths and computer skills —
     all in one place at Kumbakonam.
   </p>
+
   <div class="hero-actions">
-    <button class="primary" onclick="document.getElementById('enquiry').scrollIntoView()">Book free enquiry</button>
-    <button class="secondary" onclick="document.getElementById('classes').scrollIntoView()">View classes & programs</button>
+    <button class="primary" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'})">
+      Book a free enquiry
+    </button>
+    <button class="secondary">View classes & programs</button>
   </div>
 </section>
 
-<!-- CLASSES -->
-<section id="classes">
-<h2>Classes & programs we offer</h2>
-<div class="grid">
-  <div class="card">
-    <h3>Classes 1 – 5</h3>
-    <p>
-      Strong academic foundation with special focus on reading, writing,
-      basic mathematics and habit building for young learners.
-    </p>
-    <div class="tags">
-      <span class="tag">Reading</span><span class="tag">Writing</span><span class="tag">Basic maths</span>
-    </div>
-  </div>
-
-  <div class="card">
-    <h3>Classes 6 – 10</h3>
-    <p>
-      Regular tuition aligned with school syllabus, including tests,
-      revision sessions and individual doubt clearing.
-    </p>
-    <div class="tags">
-      <span class="tag">Maths</span><span class="tag">Science</span><span class="tag">Weekly tests</span>
-    </div>
-  </div>
-
-  <div class="card">
-    <h3>Classes 11 & 12</h3>
-    <p>
-      Board-focused coaching with exam strategy, important questions
-      and concept clarity for higher secondary students.
-    </p>
-    <div class="tags">
-      <span class="tag">Board focus</span><span class="tag">Revision</span>
-    </div>
-  </div>
-</div>
-</section>
-
-<!-- WHY US -->
 <section>
-<h2>Why parents choose Bright Beginning Academy</h2>
-<div class="why-grid">
-  <div class="why"><strong>Smaller batches</strong>Each student receives personal attention and daily doubt clearing.</div>
-  <div class="why"><strong>Daily practice</strong>Worksheets, regular tests and revision to build confidence.</div>
-  <div class="why"><strong>Concept clarity</strong>Focus on understanding concepts instead of memorising answers.</div>
-  <div class="why"><strong>Parental updates</strong>Clear communication on progress, behaviour and performance.</div>
-</div>
+  <h2>Classes & programs we offer</h2>
+  <p class="desc">Clear, structured batches so every student gets attention at their level.</p>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Classes 1 – 5</h3>
+      <p>Strong foundation in reading, writing and core subjects with friendly guidance.</p>
+      <div class="tags">
+        <span class="tag">All subjects</span>
+        <span class="tag">Reading</span>
+        <span class="tag">Basic maths</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Classes 6 – 10</h3>
+      <p>Regular tuition for school syllabus with focus on understanding, tests and revision.</p>
+      <div class="tags">
+        <span class="tag">Maths</span>
+        <span class="tag">Science</span>
+        <span class="tag">Weekly tests</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Classes 11 & 12</h3>
+      <p>Board-focused support to help students stay consistent and exam-ready.</p>
+      <div class="tags">
+        <span class="tag">Concept revision</span>
+        <span class="tag">Exam strategy</span>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- FAQ -->
-<section class="faq">
-<h2>Frequently asked questions</h2>
-<div class="grid">
-  <div class="card"><strong>Do you offer spoken English?</strong><p>Yes, spoken English and handwriting support is available for all classes.</p></div>
-  <div class="card"><strong>Where is the academy located?</strong><p>No.1 Indira Gandhi Salai, Kumbakonam – easily accessible for students.</p></div>
-  <div class="card"><strong>How to contact?</strong><p>You can directly WhatsApp or call us at 94448 44091.</p></div>
-</div>
+<section>
+  <h2>Why parents choose Bright Beginning Academy</h2>
+  <p class="desc">A focused tuition centre that aims for confident, successful students.</p>
+
+  <div class="why-grid">
+    <div class="why"><strong>Smaller batches</strong>Students get time to ask doubts and practice with support.</div>
+    <div class="why"><strong>Regular tests & feedback</strong>Parents know how their child is improving.</div>
+    <div class="why"><strong>Caring environment</strong>Friendly teachers, disciplined study and motivation.</div>
+    <div class="why"><strong>Multiple skill programs</strong>English, handwriting, Abacus, Vedic Maths & computers.</div>
+  </div>
 </section>
 
-<!-- CONTACT -->
-<section class="contact">
-<h2>Contact information</h2>
-<div class="card">
-<p><strong>📍 Location</strong><br>No.1 Indira Gandhi Salai, Kumbakonam, Tamil Nadu</p>
-<p style="margin-top:10px"><strong>📞 Phone / WhatsApp</strong><br>94448 44091</p>
-</div>
-</section>
-
-<!-- ENQUIRY -->
 <section id="enquiry">
-<h2>Enquiry form</h2>
-<div class="card form">
-<input id="name" placeholder="Student name">
-<input id="class" placeholder="Class (eg. 6th, 10th)">
-<input id="school" placeholder="School name">
-<input id="parent" placeholder="Parent / Guardian name">
-<input id="phone" placeholder="WhatsApp number">
-<textarea id="msg" rows="3" placeholder="Any special requirement"></textarea>
-<button onclick="sendWhatsApp()">Send via WhatsApp</button>
-</div>
+  <h2>Enquiry form</h2>
+  <p class="desc">Share basic details — we’ll contact you with batch timings and fees.</p>
+
+  <form class="form" onsubmit="sendWhatsApp(event)">
+    <input id="student" placeholder="Student name" required>
+    <input id="class" placeholder="Class (eg. 6th, 10th)" required>
+    <input id="school" placeholder="School name">
+    <input id="parent" placeholder="Parent / Guardian name">
+    <input id="phone" placeholder="WhatsApp number" required>
+    <textarea id="msg" rows="3" placeholder="Any special requirement"></textarea>
+    <button type="submit">Send via WhatsApp</button>
+  </form>
 </section>
 
 <footer>
-© 2025 Bright Beginning Academy · Preview website
+  © 2025 Bright Beginning Academy · Kumbakonam
 </footer>
 
 <script>
-function sendWhatsApp(){
+function sendWhatsApp(e){
+  e.preventDefault();
   const text =
-`Enquiry from Website
-Student: ${name.value}
+`Enquiry from website:
+Student: ${student.value}
 Class: ${class.value}
 School: ${school.value}
 Parent: ${parent.value}
 Phone: ${phone.value}
-Requirement: ${msg.value}`;
-
+Message: ${msg.value}`;
   window.open(
     "https://wa.me/919444844091?text=" + encodeURIComponent(text),
     "_blank"
