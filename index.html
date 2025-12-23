@@ -1,342 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bright Beginning Academy – Kumbakonam</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>Bright Beginning Academy – Kumbakonam</title>
 
-  <style>
-    :root{
-      --green:#2f8f5b;
-      --green-soft:#e9f7ef;
-      --card:#ffffff;
-      --text:#1f2d27;
-      --muted:#6b7f76;
-      --radius:16px;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    *{
-      box-sizing:border-box;
-      margin:0;
-      padding:0;
-    }
+<style>
+:root {
+  --green: #2e8b57;
+  --green-soft: #e9f6ef;
+  --dark: #1e3a2f;
+  --card: #ffffff;
+}
 
-    body{
-      font-family:Poppins, sans-serif;
-      background:linear-gradient(180deg,#e8f7ef,#f6fff9);
-      color:var(--text);
-    }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    /* HEADER */
-    header{
-      position:sticky;
-      top:0;
-      z-index:10;
-      background:rgba(255,255,255,0.85);
-      backdrop-filter:blur(10px);
-      padding:12px 14px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-    }
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(180deg, #eaf7f0, #f6fff9);
+  color: var(--dark);
+}
 
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:10px;
-    }
+/* ---------- HEADER ---------- */
+header {
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #e2f1ea;
+  z-index: 10;
+}
 
-    .brand img{
-      height:40px;
-      width:auto;
-      border-radius:8px;
-    }
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+}
 
-    .brand-text{
-      display:flex;
-      flex-direction:column;
-      line-height:1.1;
-    }
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
-    .brand-text strong{
-      font-size:0.95rem;
-      letter-spacing:0.12em;
-    }
+.brand img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--green);
+}
 
-    .brand-text span{
-      font-size:0.7rem;
-      color:var(--muted);
-    }
+.brand-text {
+  line-height: 1.1;
+}
 
-    .cta-btn{
-      background:linear-gradient(135deg,#2f8f5b,#5ac98b);
-      color:white;
-      border:none;
-      padding:10px 14px;
-      border-radius:999px;
-      font-size:0.75rem;
-      font-weight:600;
-    }
+.brand-text b {
+  font-size: 0.9rem;
+  letter-spacing: 0.14em;
+}
 
-    /* HERO */
-    .hero{
-      padding:26px 16px 18px;
-    }
+.brand-text span {
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
 
-    .hero h1{
-      font-size:1.6rem;
-      line-height:1.25;
-      margin-bottom:10px;
-    }
+.cta {
+  background: linear-gradient(135deg, #3fae7a, #2e8b57);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
 
-    .hero h1 span{
-      color:var(--green);
-    }
+/* ---------- HERO ---------- */
+.hero {
+  padding: 22px 16px;
+}
 
-    .hero p{
-      font-size:0.9rem;
-      color:var(--muted);
-      margin-bottom:16px;
-    }
+.hero h1 {
+  font-size: 1.8rem;
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
 
-    .pill-group{
-      display:flex;
-      flex-wrap:wrap;
-      gap:8px;
-      margin-bottom:16px;
-    }
+.hero h1 span {
+  color: var(--green);
+}
 
-    .pill{
-      background:#ffffff;
-      border:1px solid #dff1e7;
-      padding:6px 12px;
-      border-radius:999px;
-      font-size:0.7rem;
-      color:#2f8f5b;
-      font-weight:500;
-    }
+.hero p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  margin-bottom: 18px;
+}
 
-    .hero-actions{
-      display:flex;
-      gap:10px;
-    }
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
-    .primary{
-      flex:1;
-      background:var(--green);
-      color:white;
-      padding:12px;
-      border:none;
-      border-radius:14px;
-      font-weight:600;
-      font-size:0.85rem;
-    }
+.btn {
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
 
-    .secondary{
-      flex:1;
-      background:white;
-      border:1px solid #cfeadd;
-      border-radius:14px;
-      font-size:0.85rem;
-    }
+.btn.primary {
+  background: var(--green);
+  color: white;
+}
 
-    /* SECTION */
-    section{
-      padding:22px 16px;
-    }
+.btn.secondary {
+  background: white;
+  border: 1px solid #d6eee3;
+}
 
-    section h2{
-      font-size:1.1rem;
-      margin-bottom:12px;
-    }
+/* ---------- SECTIONS ---------- */
+.section {
+  padding: 24px 16px;
+}
 
-    .card-grid{
-      display:grid;
-      grid-template-columns:1fr;
-      gap:14px;
-    }
+.section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 14px;
+}
 
-    .card{
-      background:var(--card);
-      border-radius:var(--radius);
-      padding:16px;
-      box-shadow:0 8px 20px rgba(0,0,0,0.04);
-    }
+/* ---------- CARDS ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
 
-    .card h3{
-      font-size:0.95rem;
-      margin-bottom:6px;
-      color:var(--green);
-    }
+.card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
 
-    .card p{
-      font-size:0.8rem;
-      color:var(--muted);
-      margin-bottom:8px;
-    }
+.card h3 {
+  font-size: 1rem;
+  color: var(--green);
+  margin-bottom: 6px;
+}
 
-    .tag-group{
-      display:flex;
-      flex-wrap:wrap;
-      gap:6px;
-    }
+.card p {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
 
-    .tag{
-      background:var(--green-soft);
-      color:var(--green);
-      font-size:0.65rem;
-      padding:4px 8px;
-      border-radius:999px;
-    }
+/* ---------- FORM ---------- */
+.form {
+  background: white;
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
 
-    /* WHY US */
-    .why-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:12px;
-    }
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #d8eee4;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
 
-    .why{
-      background:white;
-      border-radius:14px;
-      padding:14px;
-      font-size:0.75rem;
-    }
+.form button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  background: var(--green);
+  color: white;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
 
-    .why strong{
-      display:block;
-      margin-bottom:4px;
-      color:var(--green);
-    }
-
-    /* FORM */
-    .form-card{
-      background:white;
-      border-radius:18px;
-      padding:16px;
-    }
-
-    .form-card input,
-    .form-card textarea{
-      width:100%;
-      padding:12px;
-      margin-bottom:10px;
-      border-radius:12px;
-      border:1px solid #dbeee3;
-      font-family:Poppins;
-      font-size:0.8rem;
-    }
-
-    .submit{
-      width:100%;
-      background:linear-gradient(135deg,#2f8f5b,#5ac98b);
-      color:white;
-      border:none;
-      padding:14px;
-      border-radius:14px;
-      font-weight:600;
-    }
-
-    footer{
-      text-align:center;
-      font-size:0.65rem;
-      color:#7a8f86;
-      padding:18px;
-    }
-  </style>
+/* ---------- FOOTER ---------- */
+footer {
+  text-align: center;
+  font-size: 0.75rem;
+  opacity: 0.6;
+  padding: 18px;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-  <div class="brand">
-    <img src="logo.png" alt="Academy logo">
-    <div class="brand-text">
-      <strong>ACADEMY</strong>
-      <span>School tuition · Kumbakonam</span>
+  <div class="nav">
+    <div class="brand">
+      <img src="logo.png" alt="Bright Beginning Academy">
+      <div class="brand-text">
+        <b>ACADEMY</b><br>
+        <span>Kumbakonam</span>
+      </div>
     </div>
+    <button class="cta" onclick="document.getElementById('enquiry').scrollIntoView()">Enquiry</button>
   </div>
-  <button class="cta-btn">Enquiry</button>
 </header>
 
 <section class="hero">
   <h1><span>Bright Beginning</span><br>focused tuition for confident students</h1>
-  <p>From Class 1 to 12 with extra care, concept clarity and regular practice.</p>
-
-  <div class="pill-group">
-    <div class="pill">Class 1–5</div>
-    <div class="pill">Class 6–10</div>
-    <div class="pill">Class 11–12</div>
-    <div class="pill">Spoken English</div>
-  </div>
+  <p>Classes 1–12 • Small batches • Daily practice • Personal attention</p>
 
   <div class="hero-actions">
-    <button class="primary">Book free enquiry</button>
-    <button class="secondary">View programs</button>
+    <button class="btn primary" onclick="document.getElementById('enquiry').scrollIntoView()">Book free enquiry</button>
+    <button class="btn secondary">View classes & programs</button>
   </div>
 </section>
 
-<section>
-  <h2>Classes & Programs</h2>
-  <div class="card-grid">
-    <div class="card">
-      <h3>Classes 1 – 5</h3>
-      <p>Strong foundation with personal attention.</p>
-      <div class="tag-group">
-        <div class="tag">Reading</div>
-        <div class="tag">Writing</div>
-        <div class="tag">Basic maths</div>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>Classes 6 – 10</h3>
-      <p>Regular tests & syllabus-focused coaching.</p>
-      <div class="tag-group">
-        <div class="tag">Maths</div>
-        <div class="tag">Science</div>
-        <div class="tag">Weekly tests</div>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>Spoken English</h3>
-      <p>Confidence building & communication skills.</p>
-      <div class="tag-group">
-        <div class="tag">Fluency</div>
-        <div class="tag">Handwriting</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
+<section class="section">
   <h2>Why parents choose us</h2>
-  <div class="why-grid">
-    <div class="why"><strong>Small batches</strong>More attention for each child</div>
-    <div class="why"><strong>Daily practice</strong>Worksheets & revision</div>
-    <div class="why"><strong>Concept clarity</strong>Understand, not memorise</div>
-    <div class="why"><strong>Parent updates</strong>Clear communication</div>
+  <div class="grid">
+    <div class="card"><h3>Smaller batches</h3><p>More attention on every child.</p></div>
+    <div class="card"><h3>Daily practice</h3><p>Tests, worksheets & revision.</p></div>
+    <div class="card"><h3>Concept clarity</h3><p>Understanding over memorising.</p></div>
+    <div class="card"><h3>Parental updates</h3><p>Clear communication & progress.</p></div>
   </div>
 </section>
 
-<section>
+<section class="section" id="enquiry">
   <h2>Enquiry form</h2>
-  <div class="form-card">
-    <input placeholder="Student name">
-    <input placeholder="Class (eg. 5th, 10th)">
-    <input placeholder="School name">
-    <input placeholder="Parent / Guardian name">
-    <input placeholder="Phone / WhatsApp number">
-    <textarea rows="3" placeholder="Any special requirement"></textarea>
-    <button class="submit">Send enquiry</button>
+  <div class="form">
+    <input id="student" placeholder="Student name">
+    <input id="class" placeholder="Class (eg. 6th, 10th)">
+    <input id="school" placeholder="School name">
+    <input id="parent" placeholder="Parent / Guardian name">
+    <input id="phone" placeholder="WhatsApp number">
+    <textarea id="msg" rows="3" placeholder="Any special requirement"></textarea>
+    <button onclick="sendWhatsApp()">Send via WhatsApp</button>
   </div>
 </section>
 
 <footer>
-  Built as a preview for Bright Beginning Academy · Kumbakonam · 2025
+  © 2025 Bright Beginning Academy · Preview website
 </footer>
+
+<script>
+function sendWhatsApp() {
+  const student = student.value;
+  const cls = class.value;
+  const school = school.value;
+  const parent = parent.value;
+  const phone = phone.value;
+  const msg = msg.value;
+
+  if (!student || !cls || !phone) {
+    alert("Please fill student name, class and WhatsApp number");
+    return;
+  }
+
+  const text = `Hello Bright Beginning Academy 👋
+
+Student: ${student}
+Class: ${cls}
+School: ${school}
+Parent: ${parent}
+Contact: ${phone}
+
+Message:
+${msg}`;
+
+  const number = "91XXXXXXXXXX"; // change to academy WhatsApp
+  window.open(`https://wa.me/${number}?text=${encodeURIComponent(text)}`, "_blank");
+}
+</script>
 
 </body>
 </html>
