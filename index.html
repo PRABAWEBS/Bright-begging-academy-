@@ -1045,5 +1045,29 @@ select:-webkit-autofill {
       window.open(url, "_blank");
     });
   </script>
+  <script>
+function sendEnquiry() {
+  const student = document.getElementById("student").value;
+  const cls = document.getElementById("class").value;
+  const school = document.getElementById("school").value;
+  const parent = document.getElementById("parent").value;
+  const phone = document.getElementById("phone").value;
+  const msg = document.getElementById("message").value;
+
+  const text =
+`New Enquiry – Bright Beginning Academy
+
+Student: ${student}
+Class: ${cls}
+School: ${school}
+Parent: ${parent}
+Contact: ${phone}
+Message: ${msg}`;
+
+  const whatsappNumber = "919444844091"; // change if needed
+  const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+  window.open(url, "_blank");
+}
+  </script>
 </body>
 </html>
