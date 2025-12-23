@@ -626,6 +626,31 @@
   color: #1E40AF !important;
   border: 1px solid rgba(37, 99, 235, 0.35) !important;
 }
+  /* ===== FORCE BLUE FORM THEME ===== */
+
+input,
+textarea,
+select {
+  background: #ffffff;
+  border: 1.5px solid rgba(37, 99, 235, 0.25);
+  color: #0f172a;
+}
+
+/* placeholder text */
+input::placeholder,
+textarea::placeholder {
+  color: #64748b;
+}
+
+/* focus state */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18);
+  background: #ffffff;
+}
       }
   </style>
 </head>
