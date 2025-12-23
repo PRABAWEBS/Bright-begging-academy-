@@ -9,6 +9,52 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+  /* ✨ VISUAL DEPTH ENHANCEMENTS */
+.card, .why, .form-card {
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.06),
+    inset 0 1px 0 rgba(255,255,255,0.6);
+}
+
+.primary, .cta-btn, .submit {
+  box-shadow: 0 10px 25px rgba(47,143,91,0.35);
+}
+
+.primary:active,
+.submit:active {
+  transform: scale(0.98);
+}
+
+/* 🌟 SECTION SEPARATION */
+section {
+  position: relative;
+}
+
+section::after {
+  content: "";
+  display: block;
+  height: 18px;
+}
+
+/* 🔥 WHY US UPGRADE */
+.why {
+  background: linear-gradient(180deg, #ffffff, #f4fbf7);
+}
+
+/* 📱 FLOATING WHATSAPP */
+.whatsapp-float {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background: #25D366;
+  color: white;
+  padding: 14px 18px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: 0 12px 30px rgba(37,211,102,0.5);
+  z-index: 99;
+}
 :root {
   --green: #2e8b57;
   --green-soft: #e9f6ef;
@@ -249,6 +295,48 @@ footer {
     <button onclick="sendWhatsApp()">Send via WhatsApp</button>
   </div>
 </section>
+  <section>
+  <h2>Frequently asked questions</h2>
+
+  <div class="card">
+    <h3>What classes do you teach?</h3>
+    <p>We provide tuition from Class 1 to 12, including Spoken English, Abacus and Vedic Maths.</p>
+  </div>
+
+  <div class="card">
+    <h3>Do you conduct regular tests?</h3>
+    <p>Yes. Weekly tests, revision worksheets and progress tracking are part of our system.</p>
+  </div>
+
+  <div class="card">
+    <h3>How many students per batch?</h3>
+    <p>We keep small batches so every student gets personal attention.</p>
+  </div>
+
+  <div class="card">
+    <h3>Where is the academy located?</h3>
+    <p>No.1 Indira Gandhi Salai, Kumbakonam – Tamil Nadu.</p>
+  </div>
+  </section>
+  <section id="contact">
+  <h2>Contact & Location</h2>
+
+  <div class="card">
+    <p><strong>📍 Location</strong><br>
+      No.1 Indira Gandhi Salai,<br>
+      Kumbakonam – Tamil Nadu
+    </p>
+
+    <p style="margin-top:12px">
+      <strong>📞 Phone / WhatsApp</strong><br>
+      <a href="tel:9444844091">94448 44091</a>
+    </p>
+
+    <p style="margin-top:12px; font-size:0.8rem; color:#6b7f76">
+      Call or WhatsApp us for admissions, batch timings and fees.
+    </p>
+  </div>
+  </section>
 
 <footer>
   © 2025 Bright Beginning Academy · Preview website
@@ -283,6 +371,36 @@ ${msg}`;
   window.open(`https://wa.me/${number}?text=${encodeURIComponent(text)}`, "_blank");
 }
 </script>
+  <button class="submit" onclick="sendWhatsApp()">Send enquiry via WhatsApp</button>
+  <script>
+function sendWhatsApp() {
+  const inputs = document.querySelectorAll(".form-card input, .form-card textarea");
+  const data = [...inputs].map(i => i.value);
 
+  if (!data[0] || !data[1] || !data[4]) {
+    alert("Please fill student name, class and phone number");
+    return;
+  }
+
+  const text = `Hello Bright Beginning Academy 👋
+
+Student: ${data[0]}
+Class: ${data[1]}
+School: ${data[2]}
+Parent: ${data[3]}
+Contact: ${data[4]}
+
+Message:
+${data[5] || "—"}`;
+
+  window.open(
+    "https://wa.me/919444844091?text=" + encodeURIComponent(text),
+    "_blank"
+  );
+}
+  </script>
+<a class="whatsapp-float" href="https://wa.me/919444844091" target="_blank">
+  WhatsApp us
+</a>
 </body>
 </html>
