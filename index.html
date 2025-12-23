@@ -95,17 +95,23 @@
     }
 
     .logo-pill {
-      width: 150px;
-      height: 52px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 20% 0%, #7ad98e, #1a8c57);
-      box-shadow: 0 0 25px rgba(50, 160, 100, 0.75);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      position: relative;
-    }
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid rgba(40, 166, 106, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(40, 166, 106, 0.35);
+}
+
+.logo-pill img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
     .logo-pill::before {
       content: "";
@@ -566,7 +572,7 @@
     <nav class="nav">
       <div class="nav-left">
         <div class="logo-pill">
-          <span class="logo-text-main">BRIGHT B</span>
+  <img src="logo.png" alt="Bright Beginning Academy logo" />
         </div>
         <div class="nav-title">
           <div class="logo-text-main" style="color:#1a3d2b;letter-spacing:0.16em;">
