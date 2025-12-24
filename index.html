@@ -751,7 +751,56 @@ html {
 section {
   scroll-margin-top: 90px; /* adjust if header height changes */
 }
+/* ===============================
+   HERO – HARD RESET & FIX
+   =============================== */
 
+.hero {
+  display: grid !important;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 2.2rem;
+  align-items: center;
+}
+
+/* Left text column */
+.hero-left {
+  max-width: 560px;
+}
+
+/* Right progress card */
+.hero > .card {
+  justify-self: end;
+  max-width: 420px;
+}
+
+/* Address blocks spacing */
+.hero .location {
+  margin-top: 0.7rem;
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+/* Action buttons (restore old spacing) */
+.hero-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+/* ===============================
+   MOBILE FIX (STACK LIKE BEFORE)
+   =============================== */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hero > .card {
+    justify-self: start;
+    margin-top: 1.2rem;
+  }
+}
 /* Ensure sections are scroll targets */
 #home,
 #classes,
@@ -811,12 +860,12 @@ section {
         </div>
 
         <div class="hero-actions">
-          <button class="btn btn-primary" data-scroll="#contact">
-            Book a free enquiry →
-          </button>
-          <button class="btn btn-outline" data-scroll="#classes">
-            View classes &amp; programs
-          </button>
+          <a href="#contact" class="btn btn-primary">
+  Book a free enquiry →
+          </a>
+          <a href="#classes" class="btn btn-outline">
+  View classes & programs
+          </a>
         </div>
 
         <p class="location">
@@ -1003,7 +1052,7 @@ section {
     </section>
 
     <!-- CONTACT / FORM -->
-    <section id="enquiry" class="reveal">
+    <section id="contact" class="reveal">
       <h2 class="section-title">Enquiry form</h2>
       <p class="section-subtitle">
         Share basic details – the academy can contact you with batch timings,
