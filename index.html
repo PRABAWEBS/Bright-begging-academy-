@@ -666,7 +666,79 @@ select:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
   -webkit-text-fill-color: #0f172a !important;
   transition: background-color 9999s ease-in-out 0s;
-  
+  /* FIX SCROLL OFFSET FOR STICKY NAVBAR */
+#contact,
+#classes,
+#why,
+#top {
+  scroll-margin-top: 90px; /* adjust if navbar height changes */
+}
+
+/* ENSURE BUTTON LINKS BEHAVE LIKE BUTTONS */
+.hero-actions a.btn,
+.nav a.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/* KEEP HERO BUTTON LAYOUT STABLE */
+.hero-actions {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+  /* ===============================
+   RESTORE HERO ORIGINAL LAYOUT
+   =============================== */
+
+/* Hero container */
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* Hero left content */
+.hero-left {
+  max-width: 560px;
+}
+
+/* Hero right card */
+.hero-right {
+  justify-self: end;
+}
+
+/* Fix address blocks inside hero */
+.hero .location {
+  margin-top: 0.8rem;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+/* Buttons spacing (old look) */
+.hero-actions {
+  margin-top: 0.9rem;
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+/* ===============================
+   MOBILE: STACK CLEANLY
+   =============================== */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .hero-right {
+    justify-self: start;
+  }
+}
 }
   /* ===== NAVIGATION SCROLL FIX ===== */
 
