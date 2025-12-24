@@ -668,6 +668,25 @@ select:-webkit-autofill {
   transition: background-color 9999s ease-in-out 0s;
   
 }
+  /* ===== NAVIGATION SCROLL FIX ===== */
+
+/* Smooth scrolling for all anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Offset fix for sticky header (important for mobile) */
+section {
+  scroll-margin-top: 90px; /* adjust if header height changes */
+}
+
+/* Ensure sections are scroll targets */
+#home,
+#classes,
+#why-us,
+#enquiry {
+  position: relative;
+}
       }
   </style>
 </head>
@@ -686,15 +705,15 @@ select:-webkit-autofill {
         </div>
 
       <div class="nav-links">
-        <a href="#top" class="active">Home</a>
-        <a href="#classes">Classes</a>
-        <a href="#why">Why us</a>
-        <a href="#contact">Enquiry</a>
-      </div>
+  <a href="#top" class="active">Home</a>
+  <a href="#classes">Classes</a>
+  <a href="#why-us">Why us</a>
+  <a href="#enquiry">Enquiry</a>
+</div>
 
-      <button class="btn btn-primary" data-scroll="#contact">
-        Enquiry form
-      </button>
+<button class="btn btn-primary" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'})">
+  Enquiry form
+</button>
     </nav>
   </header>
 
