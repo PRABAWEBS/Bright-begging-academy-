@@ -675,34 +675,6 @@ select:-webkit-autofill {
   justify-content: center;
   text-decoration: none;
 }
-  /* ===============================
-   RESTORE HERO ORIGINAL LAYOUT
-   =============================== */
-
-/* Hero container */
-.hero {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 2rem;
-  align-items: center;
-}
-
-/* Hero left content */
-.hero-left {
-  max-width: 560px;
-}
-
-/* Hero right card */
-.hero-right {
-  justify-self: end;
-}
-
-/* Fix address blocks inside hero */
-.hero .location {
-  margin-top: 0.8rem;
-  font-size: 0.8rem;
-  line-height: 1.4;
-}
 
 /* ===============================
    MOBILE: STACK CLEANLY
@@ -888,36 +860,6 @@ main {
     padding-top: 110px;
   }
 
-  /* Hero layout */
-  .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .hero-left {
-    width: 100%;
-    order: 1;
-  }
-
-  .hero-right {
-    width: 100%;
-    order: 2;
-    margin-top: 1.5rem;
-  }
-
-  /* Hero buttons */
-  .hero-actions {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 0.6rem;
-  }
-
-  .hero-actions .btn {
-    width: 100%;
-    text-align: center;
-  }
   html {
   scroll-behavior: smooth;
 }
