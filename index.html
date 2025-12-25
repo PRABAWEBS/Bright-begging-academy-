@@ -885,6 +885,25 @@ main {
 section {
   scroll-margin-top: 100px;
 }
+  /* FORCE NAVBAR TO RECEIVE CLICKS */
+header,
+nav,
+.nav-links,
+.nav-links a,
+.btn {
+  position: relative;
+  z-index: 999999;
+  pointer-events: auto;
+}
+
+/* DISABLE CLICK BLOCKING LAYERS */
+.hero,
+.hero::before,
+.hero::after,
+.hero-bg,
+.hero-overlay {
+  pointer-events: none;
+}
 
 </style>
 </head>
