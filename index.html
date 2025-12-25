@@ -729,11 +729,6 @@ select:-webkit-autofill {
   }
   /* ===== NAVIGATION SCROLL FIX ===== */
 
-/* Smooth scrolling for all anchor links */
-html {
-  scroll-behavior: smooth;
-}
-
 /* Offset fix for sticky header (important for mobile) */
 section {
   scroll-margin-top: 90px; /* adjust if header height changes */
@@ -934,6 +929,12 @@ main {
     width: 100%;
     text-align: center;
   }
+  html {
+  scroll-behavior: smooth;
+}
+  section {
+  scroll-margin-top: 140px;
+}
 
 </style>
 </head>
@@ -958,7 +959,7 @@ main {
   <a href="#enquiry">Enquiry</a>
 </div>
 
-<a href="#contact" class="btn btn-primary">
+<a href="#enquiry" class="btn btn-primary">
   Enquiry form
 </a>
     </nav>
