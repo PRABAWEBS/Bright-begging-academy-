@@ -1,327 +1,448 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bright Beginning Academy | Premium Tuition</title>
+<title>Bright Beginning Academy | One-to-One Premium Tuition</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-:root {
-  --primary: #ff7a00;
-  --dark: #222;
-  --muted: #666;
-  --bg: #f7f8fa;
-}
 
+/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  background: var(--bg);
-  color: var(--dark);
+  font-family: 'Poppins', sans-serif;
+  background: #f7f8fa;
+  color: #1f1f1f;
+  line-height: 1.45;
+}
+
+/* ================= VARIABLES ================= */
+:root {
+  --primary: #ff7a00;
+  --text-dark: #1f1f1f;
+  --text-muted: #6b7280;
+  --border: #e5e7eb;
+  --card-radius: 18px;
+  --shadow-soft: 0 10px 30px rgba(0,0,0,.08);
+  --shadow-hard: 0 16px 40px rgba(0,0,0,.12);
+}
+
+/* ================= GLOBAL WRAPPERS ================= */
+.page-wrapper {
+  width: 100%;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
 /* ================= HEADER ================= */
-header {
-  background: #fff;
-  padding: 1rem 2rem;
-  border-bottom: 1px solid #eee;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+.header {
+  background: #ffffff;
+  border-bottom: 1px solid var(--border);
 }
 
-.logo {
-  font-size: 1.4rem;
+.header-inner {
+  height: 64px;
+  display: flex;
+  align-items: center;
+}
+
+.brand {
+  font-size: 20px;
   font-weight: 700;
   color: var(--primary);
 }
 
 /* ================= HERO ================= */
-.hero-wrapper {
-  background: #fff;
-  padding: 3rem 2rem;
+.hero {
+  background: #ffffff;
+  padding: 64px 0 48px;
 }
 
-.hero {
-  max-width: 1200px;
-  margin: auto;
+.hero-grid {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr 1fr;
-  gap: 2rem;
+  grid-template-columns: 1.15fr 0.9fr 1fr;
+  gap: 32px;
   align-items: center;
 }
 
-/* LEFT CONTENT */
+/* ---------- HERO LEFT ---------- */
 .hero-left h1 {
-  font-size: 2.3rem;
-  line-height: 1.2;
-  margin-bottom: 1rem;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.hero-left h1 span {
+  color: var(--primary);
 }
 
 .hero-left p {
-  color: var(--muted);
-  margin-bottom: 1.2rem;
+  margin-top: 12px;
+  color: var(--text-muted);
+  max-width: 440px;
 }
 
-.hero-left ul {
-  list-style: none;
+.hero-left .bullet {
+  margin-top: 16px;
+  font-size: 14px;
 }
 
-.hero-left li {
-  margin-bottom: 0.6rem;
-  font-size: 0.95rem;
-}
-
-/* FORM */
+/* ---------- HERO FORM ---------- */
 .hero-form {
-  background: #fff;
-  padding: 1.6rem;
+  background: #ffffff;
+  padding: 24px;
   border-radius: 16px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+  box-shadow: var(--shadow-hard);
 }
 
 .hero-form h3 {
-  margin-bottom: 1rem;
+  font-size: 18px;
+  margin-bottom: 12px;
 }
 
-.hero-form input,
-.hero-form select {
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group select {
   width: 100%;
-  padding: 0.7rem;
-  margin-bottom: 0.7rem;
+  padding: 10px 12px;
   border-radius: 8px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border);
+  font-size: 14px;
 }
 
 .hero-form button {
   width: 100%;
-  padding: 0.8rem;
+  margin-top: 6px;
+  padding: 12px;
   background: var(--primary);
-  color: #fff;
   border: none;
-  border-radius: 8px;
+  color: #ffffff;
   font-weight: 600;
+  border-radius: 8px;
   cursor: pointer;
 }
 
-/* RIGHT IMAGE */
-.hero-right {
+/* ---------- HERO RIGHT ---------- */
+.hero-visual {
   position: relative;
 }
 
-.hero-right img {
+.hero-visual img {
   width: 100%;
-  border-radius: 16px;
+  border-radius: 24px;
 }
 
-.badge {
+/* FLOATING BADGES */
+.float-badge {
   position: absolute;
-  background: #fff;
-  padding: 0.5rem 0.8rem;
+  background: #ffffff;
+  padding: 8px 12px;
   border-radius: 12px;
-  font-size: 0.85rem;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  box-shadow: var(--shadow-soft);
+  font-size: 13px;
 }
 
-.badge.rating {
-  top: 10%;
+.badge-rating {
+  top: 12%;
   left: -10%;
 }
 
-.badge.students {
-  bottom: 15%;
-  right: -10%;
+.badge-daily {
+  top: 40%;
+  right: -12%;
+}
+
+.badge-students {
+  bottom: 12%;
+  left: -8%;
 }
 
 /* ================= STATS ================= */
-.stats {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 2rem;
-  background: #fff;
+.stats-bar {
+  background: #ffffff;
+  padding: 24px 0;
 }
 
-.stat {
-  font-size: 0.9rem;
-  color: var(--muted);
+.stats-inner {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  font-size: 14px;
+  color: var(--text-muted);
 }
 
 /* ================= WHY US ================= */
 .section {
-  padding: 3rem 2rem;
-  max-width: 1200px;
-  margin: auto;
+  padding: 56px 0;
 }
 
 .section h2 {
   text-align: center;
-  margin-bottom: 2rem;
+  font-size: 26px;
+  margin-bottom: 32px;
 }
 
 .why-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
+  gap: 20px;
 }
 
 .why-card {
-  padding: 1.6rem;
-  border-radius: 18px;
-  color: #333;
+  padding: 24px;
+  border-radius: var(--card-radius);
+  min-height: 190px;
 }
 
-.c1 { background: #ede9fe; }
-.c2 { background: #fff3d6; }
-.c3 { background: #dcfce7; }
-.c4 { background: #ffe4e6; }
+.why-card h4 {
+  margin: 12px 0 8px;
+  font-size: 16px;
+}
+
+.why-card p {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* PASTEL COLORS */
+.bg-purple { background: #ede9fe; }
+.bg-yellow { background: #fff3d6; }
+.bg-green  { background: #dcfce7; }
+.bg-pink   { background: #ffe4e6; }
 
 /* ================= CTA ================= */
 .cta {
-  background: #fff;
-  padding: 2rem;
-  margin: 3rem auto;
-  max-width: 1100px;
-  border-radius: 20px;
+  background: #ffffff;
+  padding: 36px 40px;
+  border-radius: 18px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: var(--shadow-soft);
+}
+
+.cta h3 {
+  font-size: 22px;
+}
+
+.cta p {
+  color: var(--text-muted);
+  font-size: 14px;
 }
 
 .cta button {
-  padding: 0.8rem 1.6rem;
+  padding: 12px 22px;
   background: var(--primary);
-  color: #fff;
   border: none;
-  border-radius: 8px;
+  color: #ffffff;
   font-weight: 600;
+  border-radius: 10px;
 }
 
 /* ================= COURSES ================= */
-.courses {
+.courses-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 20px;
 }
 
-.course {
-  background: #fff;
-  padding: 1.2rem;
+.course-card {
+  background: #ffffff;
+  padding: 18px;
   border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  box-shadow: var(--shadow-soft);
+}
+
+.course-card h4 {
+  margin-bottom: 6px;
+}
+
+.course-card p {
+  font-size: 14px;
+  color: var(--text-muted);
 }
 
 /* ================= FOOTER ================= */
-footer {
-  background: #111;
-  color: #aaa;
+.footer {
+  background: #111827;
+  color: #9ca3af;
+  padding: 20px 0;
   text-align: center;
-  padding: 1.5rem;
+  font-size: 13px;
 }
 
-/* ================= RESPONSIVE ================= */
-@media(max-width: 900px) {
-  .hero {
+/* ================= MOBILE ================= */
+@media (max-width: 900px) {
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .why-grid {
     grid-template-columns: 1fr;
   }
-  .why-grid, .courses {
+
+  .courses-grid {
     grid-template-columns: 1fr;
   }
+
+  .stats-inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
   .cta {
     flex-direction: column;
-    gap: 1rem;
     text-align: center;
+    gap: 16px;
   }
+
 }
+
 </style>
 </head>
 
 <body>
 
-<header>
-  <div class="logo">Bright Beginning Academy</div>
-</header>
+<div class="page-wrapper">
 
-<section class="hero-wrapper">
-  <div class="hero">
-
-    <div class="hero-left">
-      <h1>One-to-One Premium Tuition</h1>
-      <p>Classes 1–12 • CBSE & State Board</p>
-      <ul>
-        <li>✔ Personalised learning</li>
-        <li>✔ Expert teachers</li>
-        <li>✔ Regular tests & feedback</li>
-      </ul>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand">Bright Beginning Academy</div>
     </div>
+  </header>
 
-    <div class="hero-form">
-      <h3>Book a Free Demo</h3>
-      <input placeholder="Student Name">
-      <input placeholder="Phone Number">
-      <select>
-        <option>Select Class</option>
-        <option>1–5</option>
-        <option>6–8</option>
-        <option>9–10</option>
-        <option>11–12</option>
-      </select>
-      <button>Submit</button>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+
+      <div class="hero-left">
+        <h1>One-to-One<br><span>Live Premium Tuitions</span></h1>
+        <p>Ace CBSE & State Board exams with personalised one-to-one tutoring.</p>
+        <div class="bullet">🍀 Attend free demo classes with our premium tutors</div>
+      </div>
+
+      <div class="hero-form">
+        <h3>Book a Free Demo</h3>
+        <div class="form-group">
+          <input placeholder="Student Name">
+        </div>
+        <div class="form-group">
+          <input placeholder="Phone Number">
+        </div>
+        <div class="form-group">
+          <select>
+            <option>Select Class</option>
+            <option>Class 1–5</option>
+            <option>Class 6–8</option>
+            <option>Class 9–10</option>
+            <option>Class 11–12</option>
+          </select>
+        </div>
+        <button>Submit</button>
+      </div>
+
+      <div class="hero-visual">
+        <img src="https://via.placeholder.com/360x440" alt="">
+        <div class="float-badge badge-rating">⭐ 4.8<br>Our tutor rating</div>
+        <div class="float-badge badge-daily">Daily live classes</div>
+        <div class="float-badge badge-students">1000+ students</div>
+      </div>
+
     </div>
+  </section>
 
-    <div class="hero-right">
-      <img src="https://via.placeholder.com/350x420" alt="">
-      <div class="badge rating">⭐ 4.8 Rating</div>
-      <div class="badge students">1000+ Students</div>
+  <!-- STATS -->
+  <section class="stats-bar">
+    <div class="container stats-inner">
+      <div>📘 25,000+ doubts solved</div>
+      <div>👨‍🏫 Expert faculty</div>
+      <div>🏆 Proven results</div>
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- WHY US -->
+  <section class="section">
+    <div class="container">
+      <h2>Why study with us?</h2>
+      <div class="why-grid">
+        <div class="why-card bg-purple">
+          <h4>Proven improvement in marks</h4>
+          <p>Structured learning & regular assessments.</p>
+        </div>
+        <div class="why-card bg-yellow">
+          <h4>Personalised attention</h4>
+          <p>One-to-one doubt solving.</p>
+        </div>
+        <div class="why-card bg-green">
+          <h4>Subject-specific courses</h4>
+          <p>Custom plans per student.</p>
+        </div>
+        <div class="why-card bg-pink">
+          <h4>Dedicated support</h4>
+          <p>Continuous feedback.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<div class="stats">
-  <div class="stat">📘 25,000+ Doubts Solved</div>
-  <div class="stat">👨‍🏫 Expert Faculty</div>
-  <div class="stat">🏆 Proven Results</div>
+  <!-- CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="cta">
+        <div>
+          <h3>Book a Free Demo Class</h3>
+          <p>Experience premium teaching</p>
+        </div>
+        <button>Book Demo</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSES -->
+  <section class="section">
+    <div class="container">
+      <h2>Courses We Offer</h2>
+      <div class="courses-grid">
+        <div class="course-card">
+          <h4>Full Year Courses</h4>
+          <p>Complete syllabus coverage</p>
+        </div>
+        <div class="course-card">
+          <h4>Single Subject Courses</h4>
+          <p>Focused subject mastery</p>
+        </div>
+        <div class="course-card">
+          <h4>Exam Focused Plans</h4>
+          <p>Board-oriented preparation</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    © 2025 Bright Beginning Academy · Kumbakonam
+  </footer>
+
 </div>
-
-<section class="section">
-  <h2>Why Study With Us?</h2>
-  <div class="why-grid">
-    <div class="why-card c1">Proven improvement in marks</div>
-    <div class="why-card c2">Personalised attention</div>
-    <div class="why-card c3">Subject-specific courses</div>
-    <div class="why-card c4">Dedicated student support</div>
-  </div>
-</section>
-
-<div class="cta">
-  <div>
-    <h3>Book a Free Demo Class</h3>
-    <p>Experience premium teaching</p>
-  </div>
-  <button>Book Demo</button>
-</div>
-
-<section class="section">
-  <h2>Courses We Offer</h2>
-  <div class="courses">
-    <div class="course">Full Year Courses</div>
-    <div class="course">Single Subject Courses</div>
-    <div class="course">Exam Focused Plans</div>
-  </div>
-</section>
-
-<footer>
-  © 2025 Bright Beginning Academy • Kumbakonam
-</footer>
 
 </body>
 </html>
