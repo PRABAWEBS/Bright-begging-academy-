@@ -896,6 +896,68 @@ body {
   .card.reveal {
   transition-delay: 0.1s;
   }
+  /* ===== CARD REFRESH ANIMATION ===== */
+.card {
+  position: relative;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+
+  /* fade + rise */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: cardFadeUp 0.7s ease forwards;
+}
+
+/* BORDER DRAW EFFECT */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    #4169e1,
+    transparent
+  );
+
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+
+  opacity: 0;
+  animation: borderGlow 0.8s ease forwards;
+}
+
+/* Fade + slide animation */
+@keyframes cardFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Border reveal animation */
+@keyframes borderGlow {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
   
 </style>
 </head>
@@ -912,6 +974,11 @@ body {
   <div class="logo-text-sub">Education Institute</div>
   <div class="logo-text-location">Kumbakonam</div>
         </div>
+        
+      <div class="card" style="animation-delay:.1s"></div>
+<div class="card" style="animation-delay:.2s"></div>
+<div class="card" style="animation-delay:.3s"></div>
+<div class="card" style="animation-delay:.4s"></div>
 
       <div class="nav-links">
   <a href="#top" class="active">Home</a>
