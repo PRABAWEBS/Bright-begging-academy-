@@ -871,6 +871,22 @@ header {
     margin-top: 1.5rem;
   }
 }
+  /* ===== FORCE HERO FIX ON MOBILE ===== */
+@media (max-width: 900px) {
+  .hero {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .hero-left {
+    order: 1 !important;
+  }
+
+  .hero-right {
+    order: 2 !important;
+    margin-top: 1.5rem;
+  }
+}
       }
   </style>
 </head>
