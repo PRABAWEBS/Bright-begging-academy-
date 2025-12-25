@@ -660,14 +660,13 @@ select:-webkit-autofill {
   -webkit-text-fill-color: #0f172a !important;
   transition: background-color 9999s ease-in-out 0s;
 }
-  /* FIX SCROLL OFFSET FOR STICKY NAVBAR */
-#contact,
+  
+#top,
 #classes,
-#why,
-#top {
-  scroll-margin-top: 90px; /* adjust if navbar height changes */
+#why-us,
+#contact {
+  scroll-margin-top: 100px;
 }
-
 /* ENSURE BUTTON LINKS BEHAVE LIKE BUTTONS */
 .hero-actions a.btn,
 .nav a.btn {
@@ -740,43 +739,6 @@ section {
     }
 
   
-  /* ===== FIX HEADER OVERLAP PROPERLY ===== */
-
-/* Header stays on top */
-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: linear-gradient(135deg, #f8fbff, #eef4ff);
-}
-
-/* Dynamically push content below header */
-#main-content {
-  margin-top: calc(var(--header-height, 90px));
-}
-
-/* Mobile safety */
-@media (max-width: 900px) {
-  #main-content {
-    margin-top: 120px;
-  }
-}
-@media (max-width: 900px) {
-  .hero {
-    padding-top: 7.5rem; /* mobile header is taller */
-  }
-}
-  /* ===== FIX HEADER OVERLAP ISSUE ===== */
-
-/* Height of header ≈ 90px */
-main {
-  padding-top: 90px;
-}
-
-@media (max-width: 900px) {
-  main {
-    padding-top: 110px; /* mobile header is taller */
-  }
   /* ================================
    MOBILE HARD RESET (FINAL FIX)
 ================================ */
