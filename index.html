@@ -745,7 +745,7 @@ section {
 header {
   position: sticky;
   top: 0;
-  z-index: 9999;
+  z-index: 1000;
   background: linear-gradient(135deg, #f8fbff, #eef4ff);
 }
 
@@ -808,13 +808,6 @@ section,
 header {
   max-width: 100%;
 }
-  /
-  /* Center all sections properly */
-  section,
-  header {
-    display: flex;
-    justify-content: center;
-  }
 
   section > *,
   header > * {
@@ -881,6 +874,15 @@ main {
 .nav-links a.active {
   background: #2563eb;
   color: white;
+}
+
+  * {
+  pointer-events: auto;
+  }
+  .btn {
+  position: relative;
+  z-index: 2;
+  pointer-events: auto;
 }
 
 </style>
