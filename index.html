@@ -684,13 +684,6 @@ select:-webkit-autofill {
   justify-content: center;
   text-decoration: none;
 }
-
-/* KEEP HERO BUTTON LAYOUT STABLE */
-.hero-actions {
-  display: flex;
-  gap: 0.6rem;
-  flex-wrap: wrap;
-}
   /* ===============================
    RESTORE HERO ORIGINAL LAYOUT
    =============================== */
@@ -718,14 +711,6 @@ select:-webkit-autofill {
   margin-top: 0.8rem;
   font-size: 0.8rem;
   line-height: 1.4;
-}
-
-/* Buttons spacing (old look) */
-.hero-actions {
-  margin-top: 0.9rem;
-  display: flex;
-  gap: 0.6rem;
-  flex-wrap: wrap;
 }
 
 /* ===============================
@@ -1019,8 +1004,62 @@ header {
     width: 100%;
   }
 }
-      }
-  </style>
+  /* ===============================
+   HERO ACTION BUTTONS (FINAL)
+   =============================== */
+
+.hero-actions {
+  display: flex;
+/* ===============================
+   CLEAN MOBILE HERO FIX (FINAL)
+   =============================== */
+
+/* Prevent horizontal scroll */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Header spacing */
+main {
+  padding-top: 90px;
+}
+
+@media (max-width: 900px) {
+  main {
+    padding-top: 110px;
+  }
+
+  /* Hero layout */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-left {
+    width: 100%;
+    order: 1;
+  }
+
+  .hero-right {
+    width: 100%;
+    order: 2;
+    margin-top: 1.5rem;
+  }
+
+  /* Hero buttons */
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.6rem;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
 </head>
 <body>
   <!-- MAIN CONTENT -->
