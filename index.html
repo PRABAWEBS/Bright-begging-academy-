@@ -26,6 +26,16 @@
   />
 
   <style>
+    .nav-links {
+  position: relative;
+  z-index: 999999;
+}
+
+.nav-links a {
+  position: relative;
+  z-index: 999999;
+  pointer-events: auto !important;
+}
   section {
   scroll-margin-top: 90px;
   }
@@ -856,15 +866,6 @@ nav,
   position: relative;
   z-index: 999999;
   pointer-events: auto;
-}
-
-/* DISABLE CLICK BLOCKING LAYERS */
-.hero,
-.hero::before,
-.hero::after,
-.hero-bg,
-.hero-overlay {
-  pointer-events: none;
 }
 
 </style>
