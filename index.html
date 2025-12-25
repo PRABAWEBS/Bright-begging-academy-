@@ -641,7 +641,7 @@
 }
   /* TEXT LOGO IMAGE (REPLACES TEXT) */
 .nav-title-image img {
-  height: 42px;        /* adjust if needed */
+  height: 28px;        /* adjust if needed */
   width: auto;
   display: block;
 }
@@ -976,7 +976,14 @@ body {
     opacity: 0;
   }
 }
-  
+/* FIX TEXT LOGO IMAGE */
+.nav-title-image img {
+  height: 34px;          /* 🔥 perfect for headers */
+  width: auto;
+  max-width: none;
+  object-fit: contain;
+  image-rendering: auto;
+}
 </style>
 </head>
 <body>
