@@ -958,36 +958,89 @@ body {
     opacity: 0;
   }
 }
+  /* ===== HEADER LAYOUT FIX ===== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 999999;
+  background: linear-gradient(180deg, #eaf2ff, #dbe8ff);
+}
+
+.nav {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0.6rem 1rem;
+
+  display: flex;
+  align-items: center;
+}
+
+/* LOGO LEFT */
+.nav-logo img {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
+/* PUSH LINKS TO RIGHT */
+.nav-links {
+  display: flex;
+  gap: 1.2rem;
+  margin-left: auto;   /* 🔥 THIS moves links to right */
+}
+
+/* NAV LINKS STYLE */
+.nav-links a {
+  font-weight: 500;
+  color: #1f2b4d;
+  text-decoration: none;
+}
+
+/* BUTTON SPACING */
+.nav .btn {
+  margin-left: 1rem;
+}
+  @media (max-width: 768px) {
+  .nav {
+    gap: 0.6rem;
+  }
+
+  .nav-links {
+    gap: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .nav-logo img {
+    height: 38px;
+  }
+}
+  
   
 </style>
 </head>
 <body>
   <!-- MAIN CONTENT -->
-  <header id="site-header">
-    <nav class="nav">
-      <div class="nav-left">
-        <div class="logo-pill">
-  <img src="logo.png" alt="Bright Beginning Academy logo" />
-        </div>
-        <div class="nav-title">
-  <div class="logo-text-main">BRIGHT BEGINNING ACADEMY</div>
-  <div class="logo-text-sub">Education Institute</div>
-  <div class="logo-text-location">Kumbakonam</div>
-        </div>
-        
-      <div class="nav-links">
-  <a href="#top" class="active">Home</a>
-  <a href="#classes">Classes</a>
-  <a href="#why-us">Why us</a>
-  <a href="#contact">Enquiry</a>
-</div>
+  <header class="site-header">
+  <nav class="nav">
 
-<a href="#contact" class="btn btn-primary">
-  Enquiry form
-</a>
-    </nav>
-  </header>
+    <!-- LOGO (PNG ONLY) -->
+    <div class="nav-logo">
+      <img src="logo.png" alt="Bright Beginning Academy Logo">
+    </div>
 
+    <!-- NAV LINKS (RIGHT SIDE) -->
+    <div class="nav-links">
+      <a href="#top">Home</a>
+      <a href="#classes">Classes</a>
+      <a href="#why-us">Why us</a>
+      <a href="#contact">Enquiry</a>
+    </div>
+
+    <!-- CTA BUTTON -->
+    <a href="#contact" class="btn btn-primary">Enquiry form</a>
+
+  </nav>
+</header>
   <main class="container">
     <!-- HERO -->
     <section class="hero" id= "top">
