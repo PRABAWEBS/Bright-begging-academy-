@@ -639,6 +639,24 @@
   color: #1E40AF !important;
   border: 1px solid rgba(37, 99, 235, 0.35) !important;
 }
+  /* TEXT LOGO IMAGE (REPLACES TEXT) */
+.nav-title-image img {
+  height: 42px;        /* adjust if needed */
+  width: auto;
+  display: block;
+}
+
+/* ALIGN LOGO ICON + TEXT IMAGE */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+  @media (max-width: 768px) {
+  .nav-title-image img {
+    height: 34px;
+  }
+  }
   /* ===== FORCE BLUE FORM THEME ===== */
 
 /* ===== REMOVE GREEN FROM FORM COMPLETELY ===== */
@@ -958,89 +976,34 @@ body {
     opacity: 0;
   }
 }
-  /* ===== HEADER LAYOUT FIX ===== */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 999999;
-  background: linear-gradient(180deg, #eaf2ff, #dbe8ff);
-}
-
-.nav {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0.6rem 1rem;
-
-  display: flex;
-  align-items: center;
-}
-
-/* LOGO LEFT */
-.nav-logo img {
-  height: 44px;
-  width: auto;
-  display: block;
-}
-
-/* PUSH LINKS TO RIGHT */
-.nav-links {
-  display: flex;
-  gap: 1.2rem;
-  margin-left: auto;   /* 🔥 THIS moves links to right */
-}
-
-/* NAV LINKS STYLE */
-.nav-links a {
-  font-weight: 500;
-  color: #1f2b4d;
-  text-decoration: none;
-}
-
-/* BUTTON SPACING */
-.nav .btn {
-  margin-left: 1rem;
-}
-  @media (max-width: 768px) {
-  .nav {
-    gap: 0.6rem;
-  }
-
-  .nav-links {
-    gap: 0.8rem;
-    font-size: 0.9rem;
-  }
-
-  .nav-logo img {
-    height: 38px;
-  }
-}
-  
   
 </style>
 </head>
 <body>
   <!-- MAIN CONTENT -->
-  <header class="site-header">
-  <nav class="nav">
+  <header id="site-header">
+    <nav class="nav">
+      <div class="nav-left">
+        <div class="logo-pill">
+  <img src="logo.png" alt="Bright Beginning Academy logo" />
+        </div>
+        <div class="nav-title-image">
+  <img src="text-logo.png" alt="Bright Beginning Academy Text Logo">
+</div>
+        
+      <div class="nav-links">
+  <a href="#top" class="active">Home</a>
+  <a href="#classes">Classes</a>
+  <a href="#why-us">Why us</a>
+  <a href="#contact">Enquiry</a>
+</div>
 
-    <!-- LOGO (PNG ONLY) -->
-    <div class="nav-logo">
-      <img src="logo.png" alt="Bright Beginning Academy Logo">
-    </div>
+<a href="#contact" class="btn btn-primary">
+  Enquiry form
+</a>
+    </nav>
+  </header>
 
-    <!-- NAV LINKS (RIGHT SIDE) -->
-    <div class="nav-links">
-      <a href="#top">Home</a>
-      <a href="#classes">Classes</a>
-      <a href="#why-us">Why us</a>
-      <a href="#contact">Enquiry</a>
-    </div>
-
-    <!-- CTA BUTTON -->
-    <a href="#contact" class="btn btn-primary">Enquiry form</a>
-
-  </nav>
-</header>
   <main class="container">
     <!-- HERO -->
     <section class="hero" id= "top">
@@ -1487,4 +1450,6 @@ Message: ${msg}`;
   </script>
 </body>
 </html>
+
+
 
