@@ -1,1324 +1,327 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DWFHDFZGCT"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bright Beginning Academy | Premium Tuition</title>
 
-  gtag('config', 'G-DWFHDFZGCT');
-</script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bright Beginning Academy | Education Institute in Kumbakonam</title>
-  <meta name="description" content="Bright Beginning Academy is an Education Institute in Kumbakonam offering Classes 1 to 12, Abacus, Vedic Maths, Spoken English and Computer Skills.">
-<link rel="icon" href="/favicon.png" type="image/png">
-<link rel="apple-touch-icon" href="/favicon.png">
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <style>
-  section {
-  scroll-margin-top: 90px;
-  }
-    /* ===== GOLD ACCENTS ===== */
+<style>
+:root {
+  --primary: #ff7a00;
+  --dark: #222;
+  --muted: #666;
+  --bg: #f7f8fa;
+}
 
-.section-title {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--dark);
+}
+
+/* ================= HEADER ================= */
+header {
+  background: #fff;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* ================= HERO ================= */
+.hero-wrapper {
+  background: #fff;
+  padding: 3rem 2rem;
+}
+
+.hero {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* LEFT CONTENT */
+.hero-left h1 {
+  font-size: 2.3rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero-left p {
+  color: var(--muted);
+  margin-bottom: 1.2rem;
+}
+
+.hero-left ul {
+  list-style: none;
+}
+
+.hero-left li {
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+}
+
+/* FORM */
+.hero-form {
+  background: #fff;
+  padding: 1.6rem;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.hero-form h3 {
+  margin-bottom: 1rem;
+}
+
+.hero-form input,
+.hero-form select {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.hero-form button {
+  width: 100%;
+  padding: 0.8rem;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* RIGHT IMAGE */
+.hero-right {
   position: relative;
-  display: inline-block;
 }
 
-.section-title::after {
-  content: "";
+.hero-right img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.badge {
   position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 40%;
-  height: 3px;
-  background: var(--gold);
-  border-radius: 999px;
+  background: #fff;
+  padding: 0.5rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
-.gold-highlight {
-  color: var(--gold);
+.badge.rating {
+  top: 10%;
+  left: -10%;
+}
+
+.badge.students {
+  bottom: 15%;
+  right: -10%;
+}
+
+/* ================= STATS ================= */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  background: #fff;
+}
+
+.stat {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* ================= WHY US ================= */
+.section {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.why-card {
+  padding: 1.6rem;
+  border-radius: 18px;
+  color: #333;
+}
+
+.c1 { background: #ede9fe; }
+.c2 { background: #fff3d6; }
+.c3 { background: #dcfce7; }
+.c4 { background: #ffe4e6; }
+
+/* ================= CTA ================= */
+.cta {
+  background: #fff;
+  padding: 2rem;
+  margin: 3rem auto;
+  max-width: 1100px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cta button {
+  padding: 0.8rem 1.6rem;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
   font-weight: 600;
 }
 
-.icon-gold {
-  color: var(--gold);
-}
-    :root {
-  /* Backgrounds */
-  --bg: #f8faff;
-  --bg-soft: #eef2ff;
-  --card: #ffffff;
-
-  /* Brand colours */
-  --accent: #2563EB;          /* PRIMARY BLUE */
-  --accent-soft: rgba(37, 99, 235, 0.08);
-  --accent-strong: #1E40AF;   /* DARK BLUE */
-
-  /* Gold accent (SECONDARY) */
-  --gold: #F4B23E;
-  --gold-soft: rgba(244, 178, 62, 0.15);
-
-  /* Text */
-  --text-main: #0f172a;
-  --text-soft: #475569;
-
-  /* UI */
-  --radius-xl: 1.4rem;
-  --shadow-soft: 0 20px 50px rgba(30, 64, 175, 0.15);
-    }
-
-    body {
-      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
-        "Segoe UI", sans-serif;
-      min-height: 100vh;
-      color: var(--text-main);
-  background:
-    radial-gradient(circle at 0% 0%, rgba(37, 99, 235, 0.10)),
-    radial-gradient(circle at 100% 15%, rgba(59, 130, 246, 0.10)),
-    var(--bg);
-  color: var(--text-main);
+/* ================= COURSES ================= */
+.courses {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: 100%;
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 1.5rem 1.2rem 4rem;
-    }
-
-    /* HEADER */
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      backdrop-filter: blur(18px);
-      background: linear-gradient(
-        to bottom,
-        rgba(244, 255, 245, 0.96),
-        rgba(244, 255, 245, 0.78),
-        transparent
-      );
-      border-bottom: 1px solid rgba(189, 219, 197, 0.9);
-    }
-
-    .nav {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 0.8rem 1.2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-
-    .nav-left {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-
-.logo-pill {
-  width: 64px;
-  height: 64px;
-  aspect-ratio: 1 / 1;
-  border-radius: 30%;
-  background: transparent; /* 🔥 IMPORTANT */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-
-  border: 2px solid #2563eb; /* logo blue */
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
-}
-.logo-pill img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 30%;
+.course {
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
 
-    .logo-pill::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 0% 0%, rgba(255, 255, 255, 0.32), transparent 0%);
-      mix-blend-mode: screen;
-    }
-
-    .logo-text-main {
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #0b3ea6; /* deep logo blue */
-  font-size: 0.9rem;
+/* ================= FOOTER ================= */
+footer {
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 1.5rem;
 }
 
-.logo-text-sub {
-  font-size: 0.72rem;
-  color: var(--text-soft);
-  margin-top: 2px;
-}
-
-.logo-text-location {
-  font-size: 0.7rem;
-  color: var(--text-soft);
-  opacity: 0.85;
-}
-    .nav-title {
-  display: flex;
-  flex-direction: column;
-  gap: 0.1rem;
-}
-
-    .nav-links {
-      display: flex;
-      gap: 0.9rem;
-      font-size: 0.85rem;
-      color: var(--text-soft);
-    }
-
-    .nav-links a {
-      padding: 0.3rem 0.8rem;
-      border-radius: 999px;
-      transition: all 0.18s ease;
-    }
-
-    .nav-links a:hover {
-      background: rgba(255, 255, 255, 0.9);
-      color: var(--accent-strong);
-    }
-
-    .nav-links a.active {
-  background: var(--accent-soft);
-  color: var(--accent-strong);
-  box-shadow: 0 0 18px rgba(37, 99, 235, 0.35);
-    }
-
-    .btn {
-      border-radius: 999px;
-      padding: 0.6rem 1.3rem;
-      font-size: 0.88rem;
-      border: 1px solid transparent;
-      cursor: pointer;
-      outline: none;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.45rem;
-      transition: all 0.15s ease;
-      white-space: nowrap;
-      position: relative;
-      overflow: hidden;
-      background: transparent;
-    }
-
-    .btn-primary {
-  background: linear-gradient(135deg, #2563EB, #3B82F6);
-  color: #ffffff;
-  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.45);
-    }
-
-    .btn-outline {
-  background: rgba(255, 255, 255, 0.7);
-  border-color: rgba(37, 99, 235, 0.35);
-  color: var(--accent-strong);
-    }
-
-    .btn-primary:hover {
-  transform: translateY(-1px) scale(1.02);
-  filter: brightness(1.05);
-  box-shadow: 0 18px 40px rgba(30, 64, 175, 0.6);
-    }
-
-    .btn-outline:hover {
-  background: #ffffff;
-  border-color: rgba(37, 99, 235, 0.6);
-  color: var(--accent-strong);
-  box-shadow: 0 10px 26px rgba(37, 99, 235, 0.25);
-    }
-
-    /* HERO */
-
-    main {
-      position: relative;
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
-      gap: 2.5rem;
-      align-items: center;
-      padding-top: 2.8rem;
-    }
-
-    .hero-left h1 {
-      font-size: clamp(2.3rem, 4vw, 3rem);
-      line-height: 1.15;
-      margin-bottom: 1rem;
-    }
-
-    .hero-highlight {
-  background: linear-gradient(120deg, #1E40AF, #2563EB, #60A5FA);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-    .hero-sub {
-      font-size: 0.95rem;
-      color: var(--text-soft);
-      max-width: 30rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      margin-bottom: 1.7rem;
-    }
-
-    .badge {
-  font-size: 0.75rem;
-  padding: 0.3rem 0.7rem;
-  border-radius: 999px;
-
-  background: rgba(37, 99, 235, 0.12);
-  color: #1E40AF;
-  border: 1px solid rgba(37, 99, 235, 0.35);
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.8rem;
-      margin-bottom: 1.7rem;
-    }
-
-    .hero-note {
-      font-size: 0.8rem;
-      color: var(--text-soft);
-    }
-
-    .hero-right {
-      position: relative;
-    }
-
-    .hero-card {
-      background: radial-gradient(circle at top left, #ffffff, #eef2ff 70%);
-      border-radius: var(--radius-xl);
-      border: 1px solid rgba(37, 99, 235, 0.25);
-      padding: 1.3rem 1.3rem 1.1rem;
-      box-shadow: var(--shadow-soft);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.8rem;
-      margin-bottom: 0.9rem;
-      color: var(--text-soft);
-    }
-
-    .hero-chip {
-      padding: 0.25rem 0.7rem;
-      border-radius: 999px;
-  border: 1px solid rgba(37, 99, 235, 0.35);
-  background: rgba(37, 99, 235, 0.1);
-  color: var(--accent-strong);
-      font-size: 0.72rem;
-    }
-
-    .hero-stats-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.7rem;
-      margin-bottom: 0.9rem;
-    }
-
-    .mini-card {
-      border-radius: 1rem;
-      border: 1px solid rgba(37, 99, 235, 0.25);
-      background: #ffffff;
-      padding: 0.7rem 0.8rem;
-      font-size: 0.8rem;
-      color: var(--text-soft);
-    }
-
-    .mini-card strong {
-      display: block;
-      font-size: 0.9rem;
-      color: var(--accent-strong);
-    }
-
-    .
-
-    .timeline-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 0.8rem;
-      margin-top: 0.3rem;
-    }
-
-    .timeline {
-  margin-top: 0.4rem;
-  border-radius: 0.9rem;
-  border: 1px dashed rgba(37, 99, 235, 0.25);
-  padding: 0.7rem;
-  font-size: 0.76rem;
-  color: var(--text-soft);
-}
-
-.timeline-bar-wrap {
-  flex: 1;
-  height: 6px;
-  border-radius: 999px;
-  background: rgba(37, 99, 235, 0.12);
-  overflow: hidden;
-}
-
-.timeline-bar-fill {
-  width: 78%;
-  height: 100%;
-  border-radius: inherit;
-  background: linear-gradient(
-    to right,
-    #2563EB,
-    #3B82F6,
-    #F4B23E
-  );
-  transform-origin: left;
-  animation: grow-fill 1.1s ease-out forwards;
-}
-
-    @keyframes grow-fill {
-      from { transform: scaleX(0.1); }
-      to   { transform: scaleX(1); }
-    }
-
-    /* SECTIONS */
-
-    section {
-      margin-top: 3.6rem;
-    }
-
-    .section-title {
-      font-size: 1.4rem;
-      margin-bottom: 0.4rem;
-    }
-
-    .section-subtitle {
-      font-size: 0.88rem;
-      color: var(--text-soft);
-      margin-bottom: 1.6rem;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 1.2rem;
-    }
-
-    .card {
-  background: var(--card);
-  border-radius: var(--radius-xl);
-  border: 1px solid rgba(37, 99, 235, 0.18); /* blue border */
-  padding: 1.2rem 1.3rem;
-  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.12);
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 26px 60px rgba(37, 99, 235, 0.28)
-    }
-
-    .card h3 {
-      font-size: 1.05rem;
-      margin-bottom: 0.25rem;
-    }
-
-    .card p {
-      font-size: 0.86rem;
-      color: var(--text-soft);
-      margin-bottom: 0.6rem;
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-top: 0.3rem;
-    }
-
-    .pill {
-  font-size: 0.72em;
-  padding: 0.18rem 0.6rem;
-  border-radius: 999px;
-  background: rgba(37, 99, 235, 0.10);
-  color: #1E40AF;
-  border: 1px solid rgba(37, 99, 235, 0.25);
-    }
-
-    /* RESULTS / TESTIMONIALS SIMPLE */
-
-    .simple-row {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.1rem;
-    }
-
-    .simple-card {
-  border-radius: 1.2rem;
-  border: 1px dashed rgba(37, 99, 235, 0.25);
-  padding: 1rem 1.1rem;
-  background: #f9fbff;
-  font-size: 0.86rem;
-  color: var(--text-soft);
-    }
-
-    .simple-card strong {
-      color: var(--gold);
-    }
-
-    /* CONTACT / FORM */
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.4fr);
-      gap: 1.4rem;
-      align-items: flex-start;
-    }
-
-    form {
-      display: grid;
-      gap: 0.7rem;
-      font-size: 0.82rem;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 0.18rem;
-      color: var(--text-soft);
-    }
-
-    input,
-    textarea,
-    select {
-      width: 100%;
-      padding: 0.55rem 0.7rem;
-      border-radius: 0.9rem;
-      border: 1px solid rgba(188, 216, 196, 0.95);
-      background: #f9fbff;
-      color: var(--text-main);
-      outline: none;
-      font-size: 0.85rem;
-      resize: vertical;
-    }
-
-    input:focus,
-    textarea:focus,
-    select:focus {
-      border-color: #2563eb;
-      box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.4);
-    }
-
-    textarea {
-      min-height: 90px;
-    }
-
-    .form-note {
-      font-size: 0.76rem;
-      color: var(--text-soft);
-      margin-top: 0.25rem;
-    }
-
-    footer {
-      margin-top: 3rem;
-      padding-top: 1.1rem;
-      border-top: 1px solid rgba--card: rgba(255, 255, 255, 0.95);
-      font-size: 0.78rem;
-      color: var(--text-soft);
-      text-align: center;
-      padding-bottom: 1.2rem;
-    }
-
-    footer span {
-      color: var(--accent-strong);
-      font-weight: 500;
-    }
-
-  
-    /* RESPONSIVE */
-
-    @media (max-width: 880px) {
-      .hero {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .hero-right {
-        order: -1;
-      }
-      .contact-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    @media (max-width: 720px) {
-      .nav-links {
-        display: none;
-      }
-      .container {
-        padding-inline: 1rem;
-      }
-      .hero {
-        padding-top: 2.3rem;
-      }
-      .hero-actions {
-        flex-direction: column;
-        align-items: stretch;
-      }
-      .btn {
-        width: 100%;
-      }
-    }
-    .logo-pill {
-  width: 72px;
-  height: 72px;
-    }
-    /* HERO PILLS – FORCE BLUE FILL */
-.pill {
-  background: rgba(37, 99, 235, 0.12) !important;
-  color: #1E40AF !important;
-  border: 1px solid rgba(37, 99, 235, 0.3) !important;
-  /* FORCE HERO PILLS TO BLUE (FINAL OVERRIDE) */
-.hero-badges .pill,
-.hero .pill,
-.pill {
-  background: rgba(37, 99, 235, 0.14) !important;
-  color: #1E40AF !important;
-  border: 1px solid rgba(37, 99, 235, 0.35) !important;
-}
-  /* ===== FORCE BLUE FORM THEME ===== */
-
-/* ===== REMOVE GREEN FROM FORM COMPLETELY ===== */
-
-/* normal inputs */
-input,
-textarea,
-select {
-  background-color: #ffffff !important;
-  border: 1.5px solid rgba(37, 99, 235, 0.25) !important;
-  color: #0f172a;
-}
-
-/* focus */
-input:focus,
-textarea:focus,
-select:focus {
-  outline: none;
-  background-color: #ffffff !important;
-  border-color: #2563eb !important;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18) !important;
-}
-
-/* 🔥 KILL CHROME AUTOFILL GREEN */
-input:-webkit-autofill,
-textarea:-webkit-autofill,
-select:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
-  -webkit-text-fill-color: #0f172a !important;
-  transition: background-color 9999s ease-in-out 0s;
-}
-  /* FIX SCROLL OFFSET FOR STICKY NAVBAR */
-#contact,
-#classes,
-#why,
-#top {
-  scroll-margin-top: 90px; /* adjust if navbar height changes */
-}
-
-/* ENSURE BUTTON LINKS BEHAVE LIKE BUTTONS */
-.hero-actions a.btn,
-.nav a.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-}
-
-/* ===============================
-   MOBILE: STACK CLEANLY
-   =============================== */
-@media (max-width: 900px) {
+/* ================= RESPONSIVE ================= */
+@media(max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
-    text-align: left;
   }
-
-  .hero-right {
-    justify-self: start;
+  .why-grid, .courses {
+    grid-template-columns: 1fr;
   }
-  /* ===== NAVIGATION SCROLL FIX ===== */
-
-/* Offset fix for sticky header (important for mobile) */
-section {
-  scroll-margin-top: 90px; /* adjust if header height changes */
-}
-/* ===============================
-   HERO – HARD RESET & FIX
-   =============================== */
-
-.hero {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 2.2rem;
-  align-items: center;
-}
-
-/* Left text column */
-.hero-left {
-  max-width: 560px;
-}
-
-/* Right progress card */
-.hero > .card {
-  justify-self: end;
-  max-width: 420px;
-}
-
-/* Address blocks spacing */
-.hero .location {
-  margin-top: 0.7rem;
-  font-size: 0.8rem;
-  line-height: 1.45;
-}
-
-/* Action buttons (restore old spacing) */
-.hero-actions {
-  margin-top: 1rem;
-  display: flex;
-  gap: 0.6rem;
-  flex-wrap: wrap;
-}
-/* Ensure sections are scroll targets */
-#home,
-#classes,
-#why-us,
-#enquiry {
-  scroll-margin-top: 100px;
-    }
-
-  
-  /* ===== FIX HEADER OVERLAP PROPERLY ===== */
-
-/* Header stays on top */
-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: linear-gradient(135deg, #f8fbff, #eef4ff);
-}
-
-/* Dynamically push content below header */
-#main-content {
-  margin-top: calc(var(--header-height, 90px));
-}
-
-/* Mobile safety */
-@media (max-width: 900px) {
-  #main-content {
-    margin-top: 120px;
+  .cta {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
   }
 }
-@media (max-width: 900px) {
-  .hero {
-    padding-top: 7.5rem; /* mobile header is taller */
-  }
-}
-  /* ===== FIX HEADER OVERLAP ISSUE ===== */
-
-/* Height of header ≈ 90px */
-main {
-  padding-top: 90px;
-}
-
-@media (max-width: 900px) {
-  main {
-    padding-top: 110px; /* mobile header is taller */
-  }
-  /* ================================
-   MOBILE HARD RESET (FINAL FIX)
-================================ */
-
-/* 1. Stop horizontal overflow */
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-/* 2. Fix container centering */
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
-/* 4. Fix cards alignment */
-.hero-right,
-.hero-card {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* 5. Prevent 100vw bugs */
-.hero,
-section,
-header {
-  max-width: 100%;
-}
-
-  section > *,
-  header > * {
-    width: 100%;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  /* Fix right-shift bug */
-  body {
-    overflow-x: hidden;
-  }
-
-  /* Buttons full width on mobile */
-  .hero-actions .btn {
-    width: 100%;
-  }
-  /* ===============================
-   HERO ACTION BUTTONS (FINAL)
-   =============================== */
-
-.hero-actions {
-  display: flex;
-/* ===============================
-   CLEAN MOBILE HERO FIX (FINAL)
-   =============================== */
-
-/* Prevent horizontal scroll */
-html, body {
-  overflow-x: hidden;
-}
-
-/* Header spacing */
-main {
-  padding-top: 90px;
-}
-
-@media (max-width: 900px) {
-  main {
-    padding-top: 110px;
-  }
-  .nav-links a {
-  padding: 0.55rem 1rem;
-  border-radius: 999px;
-  font-weight: 500;
-  color: #1e40af;
-  transition: all 0.25s ease;
-}
-
-.nav-links a:hover {
-  background: rgba(37, 99, 235, 0.12);
-}
-
-.nav-links a.active {
-  background: #2563eb;
-  color: white;
-}
-
-  * {
-  pointer-events: auto;
-  }
-  .btn {
-  position: relative;
-  z-index: 2;
-  pointer-events: auto;
-}
-  html {
-  scroll-behavior: smooth;
-}
-
-section {
-  scroll-margin-top: 100px;
-}
-
 </style>
 </head>
+
 <body>
-  <!-- MAIN CONTENT -->
-  <header>
-    <nav class="nav">
-      <div class="nav-left">
-        <div class="logo-pill">
-  <img src="logo.png" alt="Bright Beginning Academy logo" />
-        </div>
-        <div class="nav-title">
-  <div class="logo-text-main">BRIGHT BEGINNING ACADEMY</div>
-  <div class="logo-text-sub">Education Institute</div>
-  <div class="logo-text-location">Kumbakonam</div>
-        </div>
 
-      <div class="nav-links">
-  <a href="#top" class="active">Home</a>
-  <a href="#classes">Classes</a>
-  <a href="#why-us">Why us</a>
-  <a href="#contact">Enquiry</a>
+<header>
+  <div class="logo">Bright Beginning Academy</div>
+</header>
+
+<section class="hero-wrapper">
+  <div class="hero">
+
+    <div class="hero-left">
+      <h1>One-to-One Premium Tuition</h1>
+      <p>Classes 1–12 • CBSE & State Board</p>
+      <ul>
+        <li>✔ Personalised learning</li>
+        <li>✔ Expert teachers</li>
+        <li>✔ Regular tests & feedback</li>
+      </ul>
+    </div>
+
+    <div class="hero-form">
+      <h3>Book a Free Demo</h3>
+      <input placeholder="Student Name">
+      <input placeholder="Phone Number">
+      <select>
+        <option>Select Class</option>
+        <option>1–5</option>
+        <option>6–8</option>
+        <option>9–10</option>
+        <option>11–12</option>
+      </select>
+      <button>Submit</button>
+    </div>
+
+    <div class="hero-right">
+      <img src="https://via.placeholder.com/350x420" alt="">
+      <div class="badge rating">⭐ 4.8 Rating</div>
+      <div class="badge students">1000+ Students</div>
+    </div>
+
+  </div>
+</section>
+
+<div class="stats">
+  <div class="stat">📘 25,000+ Doubts Solved</div>
+  <div class="stat">👨‍🏫 Expert Faculty</div>
+  <div class="stat">🏆 Proven Results</div>
 </div>
 
-<a href="#contact" class="btn btn-primary">
-  Enquiry form
-</a>
-    </nav>
-  </header>
+<section class="section">
+  <h2>Why Study With Us?</h2>
+  <div class="why-grid">
+    <div class="why-card c1">Proven improvement in marks</div>
+    <div class="why-card c2">Personalised attention</div>
+    <div class="why-card c3">Subject-specific courses</div>
+    <div class="why-card c4">Dedicated student support</div>
+  </div>
+</section>
 
-  <main class="container">
-    <!-- HERO -->
-    <section class="hero" id= "top">
-      <div class="hero-left">
-        <h1>
-          <span class="hero-highlight">Bright Beginning Academy</span><br />
-          focused tuition for confident students.
-        </h1>
-        <p class="hero-sub">
-          School tuition from <strong>Class 1 to 12</strong> with extra support for
-          board exams, spoken English, handwriting, Abacus, Vedic Maths and
-          computer skills – all in one place at <strong>Kumbakonam</strong>.
-        </p>
-
-        <div class="hero-badges">
-          <span class="badge">Class 1 – 5 foundation</span>
-          <span class="badge">Class 6 – 10 all subjects</span>
-          <span class="badge">Class 11 &amp; 12 board focus</span>
-          <span class="badge">Spoken English &amp; Handwriting</span>
-        </div>
-
-        <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary">
-  Book a free enquiry →
-          </a>
-          <a href="#classes" class="btn btn-outline">
-  View classes & programs
-          </a>
-        </div>
-
-        <p class="location">
-  📍
-  <a
-    href="https://maps.app.goo.gl/NMe4ZzNd2P6btLgY7"
-    target="_blank"
-    rel="noopener"
-  >
-    No.1 Indira Gandhi Salai, Kumbakonam
-  </a>
-</p>
-        <p class="location">
-  📍
-  <a
-    href="https://maps.app.goo.gl/DNg75d7hqcgNaG2z9"
-    target="_blank"
-    rel="noopener"
-  >
-    22/24, Yagalasalai Street, Karna Kollai Agraharam,<br>
-    Valayapettai Agraharam, Kumbakonam,<br>
-    Tamil Nadu 612001
-  </a>
-        </p>
-      </div>
-
-      <div class="hero-right">
-        <div class="hero-card">
-          <div class="hero-card-header">
-            <span>Student progress snapshot</span>
-            <span class="hero-chip">Consistent improvement</span>
-          </div>
-
-          <div class="hero-stats-grid">
-            <div class="mini-card">
-              <strong>Smaller groups</strong>
-              More attention on each child, doubts cleared every day.
-            </div>
-            <div class="mini-card">
-              <strong>Daily practice</strong>
-              Regular tests, worksheets and revision to build confidence.
-            </div>
-            <div class="mini-card">
-              <strong>Concept clarity</strong>
-              Focus on understanding, not just memorising answers.
-            </div>
-            <div class="mini-card">
-              <strong>Parental updates</strong>
-              Clear communication about performance &amp; behaviour.
-            </div>
-          </div>
-
-          <div class="timeline">
-            <span>Typical student improvement (3–6 months)*</span>
-            <div class="timeline-row">
-              <span>Marks &amp; confidence</span>
-              <div class="timeline-bar-wrap">
-                <div class="timeline-bar-fill"></div>
-              </div>
-              <span>↑</span>
-            </div>
-            <small style="display:block;margin-top:0.3rem;color:var(--text-soft);">
-              *Based on consistent attendance &amp; practice.
-            </small>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CLASSES / PROGRAMS -->
-    <section class="classes" id="classes">
-      <h2 class="section-title">Classes &amp; programs we offer</h2>
-      <p class="section-subtitle">
-        Clear, structured batches so every student gets attention at their level.
-      </p>
-
-      <div class="grid-3">
-        <article class="card">
-          <h3>Classes 1 – 5</h3>
-          <p>
-            Strong foundation in reading, writing and core subjects with
-            friendly guidance.
-          </p>
-          <div class="pill-row">
-            <span class="pill">All subjects</span>
-            <span class="pill">Reading &amp; writing</span>
-            <span class="pill">Basic maths</span>
-            <span class="pill">Handwriting practice</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3>Classes 6 – 10</h3>
-          <p>
-            Regular tuition for school syllabus with focus on understanding,
-            tests and revision.
-          </p>
-          <div class="pill-row">
-            <span class="pill">Maths &amp; Science</span>
-            <span class="pill">English &amp; Tamil</span>
-            <span class="pill">Social Science</span>
-            <span class="pill">Weekly tests</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3>Classes 11 &amp; 12</h3>
-          <p>
-            Board-focused support to help students stay consistent and exam ready.
-          </p>
-          <div class="pill-row">
-            <span class="pill">Concept revision</span>
-            <span class="pill">Important questions</span>
-            <span class="pill">Exam strategy</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3>Spoken English &amp; Handwriting</h3>
-          <p>
-            Extra attention for communication and neat writing – useful for all classes.
-          </p>
-          <div class="pill-row">
-            <span class="pill">Fluent speaking</span>
-            <span class="pill">Confidence building</span>
-            <span class="pill">Neat &amp; fast writing</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3>Abacus &amp; Vedic Maths</h3>
-          <p>
-            Special programs for speed maths, mental calculation and brain
-            development.
-          </p>
-          <div class="pill-row">
-            <span class="pill">Speed calculation</span>
-            <span class="pill">Memory boosting</span>
-            <span class="pill">Maths confidence</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3>Computer Skills</h3>
-          <p>
-            Basic computer knowledge and skills to help students for projects
-            and future careers.
-          </p>
-          <div class="pill-row">
-            <span class="pill">Basic computer</span>
-            <span class="pill">Typing &amp; docs</span>
-            <span class="pill">Student friendly</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- WHY US -->
-    <section id="why-us">
-      <h2 class="section-title">Why parents choose Bright Beginning Academy</h2>
-      <p class="section-subtitle">
-        A focused tuition centre that aims for confident, successful students –
-        not just finishing portions.
-      </p>
-
-      <div class="simple-row">
-        <div class="simple-card">
-          <strong>Smaller batches</strong><br />
-          Students get time to ask doubts and practice with support.
-        </div>
-        <div class="simple-card">
-          <strong>Regular test &amp; feedback</strong><br />
-          Parents know how their child is improving throughout the year.
-        </div>
-        <div class="simple-card">
-          <strong>Caring environment</strong><br />
-          Friendly teachers, disciplined study and motivation for students.
-        </div>
-        <div class="simple-card">
-          <strong>Multiple skill programs</strong><br />
-          Tuition plus spoken English, handwriting, Abacus, Vedic Maths and computers.
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT / FORM -->
-    <section id="contact">
-      <h2 class="section-title">Enquiry form</h2>
-      <p class="section-subtitle">
-        Share basic details – the academy can contact you with batch timings,
-        fees and more information.
-      </p>
-
-      <div class="contact-grid">
-        <article class="card">
-          <h3 style="margin-bottom:0.4rem;">Direct contact</h3>
-          <p style="font-size:0.9rem;color:var(--text-soft);">
-            This page is only a preview website. Contact details can be updated
-            with the Academy’s real phone / WhatsApp numbers.
-          </p>
-
-          <div class="pill-row" style="margin-top:0.8rem;">
-            <span class="pill">School tuition</span>
-            <span class="pill">After school batches</span>
-            <span class="pill">Friendly environment</span>
-          </div>
-
-          <div class="contact-item">
-  <strong>📍 Location 1:</strong><br>
-  <a 
-    href="https://maps.app.goo.gl/NMe4ZzNd2P6btLgY7" 
-    target="_blank" 
-    rel="noopener noreferrer"
-  >
-    No.1 Indira Gandhi Salai, Kumbakonam – Tamil Nadu
-  </a>
+<div class="cta">
+  <div>
+    <h3>Book a Free Demo Class</h3>
+    <p>Experience premium teaching</p>
+  </div>
+  <button>Book Demo</button>
 </div>
 
-<div class="contact-item" style="margin-top: 0.6rem;">
-  <strong>📍 Location 2:</strong><br>
-  <a 
-    href="https://maps.app.goo.gl/DNg75d7hqcgNaG2z9" 
-    target="_blank" 
-    rel="noopener noreferrer"
-  >
-    22/24, Yagalasalai Street, Karna Kollai Agraharam,  
-    Valayapettai Agraharam, Kumbakonam,  
-    Tamil Nadu 612001
-  </a>
-</div>
+<section class="section">
+  <h2>Courses We Offer</h2>
+  <div class="courses">
+    <div class="course">Full Year Courses</div>
+    <div class="course">Single Subject Courses</div>
+    <div class="course">Exam Focused Plans</div>
+  </div>
+</section>
 
-<div class="contact-item" style="margin-top: 0.6rem;">
-  <strong>📞 Phone / WhatsApp:</strong><br>
-  <a href="tel:+919444844091">+91 94448 44091</a><br>
-  <a href="tel:+919488868842">+91 94888 68842</a>
-</div>
+<footer>
+  © 2025 Bright Beginning Academy • Kumbakonam
+</footer>
 
-          <p class="form-note" style="margin-top:0.9rem;">
-            The enquiry form on the right can be set to send
-            details directly to WhatsApp.
-          </p>
-        </article>
-
-        <article class="card">
-          <form id="enquiry-form">
-            <div>
-              <label for="student-name">Student name</label>
-              <input id="student-name" type="text" placeholder="Enter student name" required />
-            </div>
-
-            <div>
-              <label for="std">Class (Std)</label>
-              <input id="std" type="text" placeholder="e.g. 5th, 8th, 12th" required />
-            </div>
-
-            <div>
-              <label for="school">School</label>
-              <input id="school" type="text" placeholder="Student's school name" required />
-            </div>
-
-            <div>
-              <label for="parent-name">Parent name</label>
-              <input id="parent-name" type="text" placeholder="Parent / guardian name" />
-            </div>
-
-            <div>
-              <label for="phone">Contact number</label>
-              <input id="phone" type="tel" placeholder="Your mobile / WhatsApp number" />
-            </div>
-
-            <div>
-              <label for="message">Anything else to share?</label>
-              <textarea
-                id="message"
-                placeholder="Preferred batch timing, subjects, or special support needed..."
-              ></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary">
-              send enquiry text
-            </button>
-            <p class="form-note">
-              This will open WhatsApp with a ready-made message containing your details.
-              In the final version, it can be set with the Academy’s official WhatsApp number.
-            </p>
-          </form>
-        </article>
-      </div>
-    </section>
-
-    <footer class="reveal">
-       <span>Bright Beginning Academy</span> • Kumbakonam • 2025
-    </footer>
-  </main>
-
-  <!-- SCRIPTS -->
-  <script>
-  
-    // Reveal on scroll
-    const revealEls = document.querySelectorAll(".reveal");
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.12 }
-    );
-    revealEls.forEach(el => observer.observe(el));
-
-    // Simple WhatsApp preview for form
-    const form = document.getElementById("enquiry-form");
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      const name = document.getElementById("student-name").value.trim();
-      const std = document.getElementById("std").value.trim();
-      const school = document.getElementById("school").value.trim();
-      const parent = document.getElementById("parent-name").value.trim();
-      const phone = document.getElementById("phone").value.trim();
-      const msg = document.getElementById("message").value.trim();
-
-      let text = "Bright Beginning Academy enquiry:%0A";
-      text += "Student: " + name + "%0A";
-      text += "Class: " + std + "%0A";
-      text += "School: " + school + "%0A";
-      if (parent) text += "Parent: " + parent + "%0A";
-      if (phone) text += "Contact: " + phone + "%0A";
-      if (msg) text += "Note: " + msg + "%0A";
-
-      // TODO: replace 0000000000 with academy WhatsApp
-      const number = "9444844091";
-      const url = "https://wa.me/91" + number + "?text=" + text;
-      window.open(url, "_blank");
-    });
-  </script>
-  <script>
-function sendEnquiry() {
-  const student = document.getElementById("student").value;
-  const cls = document.getElementById("class").value;
-  const school = document.getElementById("school").value;
-  const parent = document.getElementById("parent").value;
-  const phone = document.getElementById("phone").value;
-  const msg = document.getElementById("message").value;
-
-  const text =
-`New Enquiry – Bright Beginning Academy
-
-Student: ${student}
-Class: ${cls}
-School: ${school}
-Parent: ${parent}
-Contact: ${phone}
-Message: ${msg}`;
-
-  const whatsappNumber = "919444844091"; // change if needed
-  const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
-  window.open(url, "_blank");
-}
-  </script>
-  <script>
-  function setHeaderHeight() {
-    const header = document.querySelector("header");
-    if (header) {
-      document.documentElement.style.setProperty(
-        "--header-height",
-        header.offsetHeight + "px"
-      );
-    }
-  }
-
-  window.addEventListener("load", setHeaderHeight);
-  window.addEventListener("resize", setHeaderHeight);
-  </script>
 </body>
 </html>
-
