@@ -852,13 +852,6 @@ main {
   main {
     padding-top: 110px;
   }
-
-  html {
-  scroll-behavior: smooth;
-}
-  section {
-  scroll-margin-top: 140px;
-}
   .nav-links a {
   padding: 0.55rem 1rem;
   border-radius: 999px;
@@ -883,6 +876,13 @@ main {
   position: relative;
   z-index: 2;
   pointer-events: auto;
+}
+  html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 100px;
 }
 
 </style>
@@ -1239,18 +1239,7 @@ main {
 
   <!-- SCRIPTS -->
   <script>
-    // Smooth scroll for buttons / links with data-scroll
-    document.querySelectorAll("[data-scroll]").forEach(function (el) {
-      el.addEventListener("click", function () {
-        var target = document.querySelector(el.getAttribute("data-scroll"));
-        if (!target) return;
-        window.scrollTo({
-          top: target.offsetTop - 80,
-          behavior: "smooth"
-        });
-      });
-    });
-
+  
     // Reveal on scroll
     const revealEls = document.querySelectorAll(".reveal");
     const observer = new IntersectionObserver(
