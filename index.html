@@ -822,6 +822,27 @@ header {
   width: 100%;
   z-index: 1000;
 }
+  /* ===== FIX HEADER OVERLAP PROPERLY ===== */
+
+/* Header stays on top */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background: linear-gradient(135deg, #f8fbff, #eef4ff);
+}
+
+/* Dynamically push content below header */
+#main-content {
+  margin-top: calc(var(--header-height, 90px));
+}
+
+/* Mobile safety */
+@media (max-width: 900px) {
+  #main-content {
+    margin-top: 120px;
+  }
+}
       }
   </style>
 </head>
@@ -1252,6 +1273,20 @@ Message: ${msg}`;
   const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
   window.open(url, "_blank");
 }
+  </script>
+  <script>
+  function setHeaderHeight() {
+    const header = document.querySelector("header");
+    if (header) {
+      document.documentElement.style.setProperty(
+        "--header-height",
+        header.offsetHeight + "px"
+      );
+    }
+  }
+
+  window.addEventListener("load", setHeaderHeight);
+  window.addEventListener("resize", setHeaderHeight);
   </script>
 </body>
 </html>
