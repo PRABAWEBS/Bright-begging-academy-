@@ -1,1376 +1,354 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DWFHDFZGCT"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DWFHDFZGCT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DWFHDFZGCT');
+  </script>
 
-  gtag('config', 'G-DWFHDFZGCT');
-</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bright Beginning Academy | Education Institute in Kumbakonam</title>
   <meta name="description" content="Bright Beginning Academy is an Education Institute in Kumbakonam offering Classes 1 to 12, Abacus, Vedic Maths, Spoken English and Computer Skills.">
-<link rel="icon" href="/favicon.png" type="image/png">
-<link rel="apple-touch-icon" href="/favicon.png">
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
 
-  <style>
-    /* ===== GOLD ACCENTS ===== */
+  <link rel="icon" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/favicon.png">
 
-.section-title {
-  position: relative;
-  display: inline-block;
-}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-.section-title::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 40%;
-  height: 3px;
-  background: var(--gold);
-  border-radius: 999px;
-}
-
-.gold-highlight {
-  color: var(--gold);
-  font-weight: 600;
-}
-
-.icon-gold {
-  color: var(--gold);
-}
-    :root {
-  /* Backgrounds */
+<style>
+/* ===================== VARIABLES ===================== */
+:root {
   --bg: #f8faff;
-  --bg-soft: #eef2ff;
   --card: #ffffff;
-
-  /* Brand colours */
-  --accent: #2563EB;          /* PRIMARY BLUE */
-  --accent-soft: rgba(37, 99, 235, 0.08);
-  --accent-strong: #1E40AF;   /* DARK BLUE */
-
-  /* Gold accent (SECONDARY) */
+  --accent: #2563EB;
+  --accent-dark: #1E40AF;
   --gold: #F4B23E;
-  --gold-soft: rgba(244, 178, 62, 0.15);
-
-  /* Text */
   --text-main: #0f172a;
   --text-soft: #475569;
-
-  /* UI */
-  --radius-xl: 1.4rem;
-  --shadow-soft: 0 20px 50px rgba(30, 64, 175, 0.15);
-    }
-
-    body {
-      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
-        "Segoe UI", sans-serif;
-      min-height: 100vh;
-      color: var(--text-main);
-  background:
-    radial-gradient(circle at 0% 0%, rgba(37, 99, 235, 0.10)),
-    radial-gradient(circle at 100% 15%, rgba(59, 130, 246, 0.10)),
-    var(--bg);
-  color: var(--text-main);
+  --radius: 1.3rem;
 }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
+/* ===================== RESET ===================== */
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: var(--bg);
+  color: var(--text-main);
+  overflow-x: hidden;
+}
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+/* ===================== HEADER ===================== */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(135deg,#f8fbff,#eef4ff);
+  border-bottom: 1px solid rgba(0,0,0,.06);
+}
 
-    .container {
-      width: 100%;
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 1.5rem 1.2rem 4rem;
-    }
+.nav {
+  max-width: 1120px;
+  margin: auto;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-    /* HEADER */
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      backdrop-filter: blur(18px);
-      background: linear-gradient(
-        to bottom,
-        rgba(244, 255, 245, 0.96),
-        rgba(244, 255, 245, 0.78),
-        transparent
-      );
-      border-bottom: 1px solid rgba(189, 219, 197, 0.9);
-    }
-
-    .nav {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 0.8rem 1.2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-
-    .nav-left {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
+.nav-left {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
 
 .logo-pill {
-  width: 64px;
-  height: 64px
-  aspect-ratio: 1 / 1;
+  width: 56px;
+  height: 56px;
   border-radius: 30%;
-  background: transparent; /* 🔥 IMPORTANT */
+  border: 2px solid var(--accent);
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-
-  border: 2px solid #2563eb; /* logo blue */
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
 }
 .logo-pill img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  border-radius: 30%;
 }
 
-    .logo-pill::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 0% 0%, rgba(255, 255, 255, 0.32), transparent 0%);
-      mix-blend-mode: screen;
-    }
-
-    .logo-text-main {
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #0b3ea6; /* deep logo blue */
-  font-size: 0.9rem;
-}
-
-.logo-text-sub {
-  font-size: 0.72rem;
-  color: var(--text-soft);
-  margin-top: 2px;
-}
-
-.logo-text-location {
-  font-size: 0.7rem;
-  color: var(--text-soft);
-  opacity: 0.85;
-}
-    .nav-title {
+.nav-title {
   display: flex;
   flex-direction: column;
-  gap: 0.1rem;
+  font-size: 0.75rem;
+}
+.logo-text-main {
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+.logo-text-sub,
+.logo-text-location {
+  color: var(--text-soft);
 }
 
-    .nav-links {
-      display: flex;
-      gap: 0.9rem;
-      font-size: 0.85rem;
-      color: var(--text-soft);
-    }
+.nav-links {
+  display: flex;
+  gap: 8px;
+}
+.nav-links a {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+.nav-links a:hover {
+  background: rgba(37,99,235,.1);
+}
 
-    .nav-links a {
-      padding: 0.3rem 0.8rem;
-      border-radius: 999px;
-      transition: all 0.18s ease;
-    }
+.btn {
+  border-radius: 999px;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+.btn-primary {
+  background: linear-gradient(135deg,#2563EB,#3B82F6);
+  color: white;
+}
+.btn-outline {
+  border: 1px solid rgba(37,99,235,.4);
+  background: white;
+  color: var(--accent-dark);
+}
 
-    .nav-links a:hover {
-      background: rgba(255, 255, 255, 0.9);
-      color: var(--accent-strong);
-    }
+/* ===================== LAYOUT ===================== */
+.container {
+  max-width: 1120px;
+  margin: auto;
+  padding: 24px 16px;
+}
 
-    .nav-links a.active {
-  background: var(--accent-soft);
-  color: var(--accent-strong);
-  box-shadow: 0 0 18px rgba(37, 99, 235, 0.35);
-    }
+section {
+  margin-top: 64px;
+  scroll-margin-top: 90px;
+}
 
-    .btn {
-      border-radius: 999px;
-      padding: 0.6rem 1.3rem;
-      font-size: 0.88rem;
-      border: 1px solid transparent;
-      cursor: pointer;
-      outline: none;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.45rem;
-      transition: all 0.15s ease;
-      white-space: nowrap;
-      position: relative;
-      overflow: hidden;
-      background: transparent;
-    }
+/* ===================== HERO ===================== */
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 32px;
+  align-items: center;
+}
 
-    .btn-primary {
-  background: linear-gradient(135deg, #2563EB, #3B82F6);
-  color: #ffffff;
-  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.45);
-    }
-
-    .btn-outline {
-  background: rgba(255, 255, 255, 0.7);
-  border-color: rgba(37, 99, 235, 0.35);
-  color: var(--accent-strong);
-    }
-
-    .btn-primary:hover {
-  transform: translateY(-1px) scale(1.02);
-  filter: brightness(1.05);
-  box-shadow: 0 18px 40px rgba(30, 64, 175, 0.6);
-    }
-
-    .btn-outline:hover {
-  background: #ffffff;
-  border-color: rgba(37, 99, 235, 0.6);
-  color: var(--accent-strong);
-  box-shadow: 0 10px 26px rgba(37, 99, 235, 0.25);
-    }
-
-    /* HERO */
-
-    main {
-      position: relative;
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
-      gap: 2.5rem;
-      align-items: center;
-      padding-top: 2.8rem;
-    }
-
-    .hero-left h1 {
-      font-size: clamp(2.3rem, 4vw, 3rem);
-      line-height: 1.15;
-      margin-bottom: 1rem;
-    }
-
-    .hero-highlight {
-  background: linear-gradient(120deg, #1E40AF, #2563EB, #60A5FA);
+.hero h1 {
+  font-size: 2.6rem;
+  line-height: 1.15;
+}
+.hero-highlight {
+  background: linear-gradient(120deg,#1E40AF,#2563EB);
   -webkit-background-clip: text;
-  background-clip: text;
   color: transparent;
 }
 
-    .hero-sub {
-      font-size: 0.95rem;
-      color: var(--text-soft);
-      max-width: 30rem;
-      margin-bottom: 1.5rem;
-    }
+.hero-sub {
+  color: var(--text-soft);
+  max-width: 520px;
+}
 
-    .hero-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      margin-bottom: 1.7rem;
-    }
-
-    .badge {
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+.badge {
+  padding: 6px 12px;
+  border-radius: 999px;
   font-size: 0.75rem;
-  padding: 0.3rem 0.7rem;
-  border-radius: 999px;
-
-  background: rgba(37, 99, 235, 0.12);
-  color: #1E40AF;
-  border: 1px solid rgba(37, 99, 235, 0.35);
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.8rem;
-      margin-bottom: 1.7rem;
-    }
-
-    .hero-note {
-      font-size: 0.8rem;
-      color: var(--text-soft);
-    }
-
-    .hero-right {
-      position: relative;
-    }
-
-    .hero-card {
-      background: radial-gradient(circle at top left, #ffffff, #eef2ff 70%);
-      border-radius: var(--radius-xl);
-      border: 1px solid rgba(37, 99, 235, 0.25);
-      padding: 1.3rem 1.3rem 1.1rem;
-      box-shadow: var(--shadow-soft);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.8rem;
-      margin-bottom: 0.9rem;
-      color: var(--text-soft);
-    }
-
-    .hero-chip {
-      padding: 0.25rem 0.7rem;
-      border-radius: 999px;
-  border: 1px solid rgba(37, 99, 235, 0.35);
-  background: rgba(37, 99, 235, 0.1);
-  color: var(--accent-strong);
-      font-size: 0.72rem;
-    }
-
-    .hero-stats-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.7rem;
-      margin-bottom: 0.9rem;
-    }
-
-    .mini-card {
-      border-radius: 1rem;
-      border: 1px solid rgba(37, 99, 235, 0.25);
-      background: #ffffff;
-      padding: 0.7rem 0.8rem;
-      font-size: 0.8rem;
-      color: var(--text-soft);
-    }
-
-    .mini-card strong {
-      display: block;
-      font-size: 0.9rem;
-      color: var(--accent-strong);
-    }
-
-    .
-
-    .timeline-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 0.8rem;
-      margin-top: 0.3rem;
-    }
-
-    .timeline {
-  margin-top: 0.4rem;
-  border-radius: 0.9rem;
-  border: 1px dashed rgba(37, 99, 235, 0.25);
-  padding: 0.7rem;
-  font-size: 0.76rem;
-  color: var(--text-soft);
+  background: rgba(37,99,235,.12);
+  border: 1px solid rgba(37,99,235,.3);
 }
 
-.timeline-bar-wrap {
-  flex: 1;
-  height: 6px;
-  border-radius: 999px;
-  background: rgba(37, 99, 235, 0.12);
-  overflow: hidden;
-}
-
-.timeline-bar-fill {
-  width: 78%;
-  height: 100%;
-  border-radius: inherit;
-  background: linear-gradient(
-    to right,
-    #2563EB,
-    #3B82F6,
-    #F4B23E
-  );
-  transform-origin: left;
-  animation: grow-fill 1.1s ease-out forwards;
-}
-
-    @keyframes grow-fill {
-      from { transform: scaleX(0.1); }
-      to   { transform: scaleX(1); }
-    }
-
-    /* SECTIONS */
-
-    section {
-      margin-top: 3.6rem;
-    }
-
-    .section-title {
-      font-size: 1.4rem;
-      margin-bottom: 0.4rem;
-    }
-
-    .section-subtitle {
-      font-size: 0.88rem;
-      color: var(--text-soft);
-      margin-bottom: 1.6rem;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 1.2rem;
-    }
-
-    .card {
-  background: var(--card);
-  border-radius: var(--radius-xl);
-  border: 1px solid rgba(37, 99, 235, 0.18); /* blue border */
-  padding: 1.2rem 1.3rem;
-  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.12);
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 26px 60px rgba(37, 99, 235, 0.28)
-    }
-
-    .card h3 {
-      font-size: 1.05rem;
-      margin-bottom: 0.25rem;
-    }
-
-    .card p {
-      font-size: 0.86rem;
-      color: var(--text-soft);
-      margin-bottom: 0.6rem;
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-top: 0.3rem;
-    }
-
-    .pill {
-  font-size: 0.72em;
-  padding: 0.18rem 0.6rem;
-  border-radius: 999px;
-  background: rgba(37, 99, 235, 0.10);
-  color: #1E40AF;
-  border: 1px solid rgba(37, 99, 235, 0.25);
-    }
-
-    /* RESULTS / TESTIMONIALS SIMPLE */
-
-    .simple-row {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.1rem;
-    }
-
-    .simple-card {
-  border-radius: 1.2rem;
-  border: 1px dashed rgba(37, 99, 235, 0.25);
-  padding: 1rem 1.1rem;
-  background: #f9fbff;
-  font-size: 0.86rem;
-  color: var(--text-soft);
-    }
-
-    .simple-card strong {
-      color: var(--gold);
-    }
-
-    /* CONTACT / FORM */
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.4fr);
-      gap: 1.4rem;
-      align-items: flex-start;
-    }
-
-    form {
-      display: grid;
-      gap: 0.7rem;
-      font-size: 0.82rem;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 0.18rem;
-      color: var(--text-soft);
-    }
-
-    input,
-    textarea,
-    select {
-      width: 100%;
-      padding: 0.55rem 0.7rem;
-      border-radius: 0.9rem;
-      border: 1px solid rgba(188, 216, 196, 0.95);
-      background: #f9fbff;
-      color: var(--text-main);
-      outline: none;
-      font-size: 0.85rem;
-      resize: vertical;
-    }
-
-    input:focus,
-    textarea:focus,
-    select:focus {
-      border-color: #2563eb;
-      box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.4);
-    }
-
-    textarea {
-      min-height: 90px;
-    }
-
-    .form-note {
-      font-size: 0.76rem;
-      color: var(--text-soft);
-      margin-top: 0.25rem;
-    }
-
-    footer {
-      margin-top: 3rem;
-      padding-top: 1.1rem;
-      border-top: 1px solid rgba--card: rgba(255, 255, 255, 0.95);
-      font-size: 0.78rem;
-      color: var(--text-soft);
-      text-align: center;
-      padding-bottom: 1.2rem;
-    }
-
-    footer span {
-      color: var(--accent-strong);
-      font-weight: 500;
-    }
-
-    /* REVEAL ANIMATION */
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(22px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* RESPONSIVE */
-
-    @media (max-width: 880px) {
-      .hero {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .hero-right {
-        order: -1;
-      }
-      .contact-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    @media (max-width: 720px) {
-      .nav-links {
-        display: none;
-      }
-      .container {
-        padding-inline: 1rem;
-      }
-      .hero {
-        padding-top: 2.3rem;
-      }
-      .hero-actions {
-        flex-direction: column;
-        align-items: stretch;
-      }
-      .btn {
-        width: 100%;
-      }
-    }
-    .logo-pill {
-  width: 72px;
-  height: 72px;
-    }
-    /* HERO PILLS – FORCE BLUE FILL */
-.pill {
-  background: rgba(37, 99, 235, 0.12) !important;
-  color: #1E40AF !important;
-  border: 1px solid rgba(37, 99, 235, 0.3) !important;
-  /* FORCE HERO PILLS TO BLUE (FINAL OVERRIDE) */
-.hero-badges .pill,
-.hero .pill,
-.pill {
-  background: rgba(37, 99, 235, 0.14) !important;
-  color: #1E40AF !important;
-  border: 1px solid rgba(37, 99, 235, 0.35) !important;
-}
-  /* ===== FORCE BLUE FORM THEME ===== */
-
-/* ===== REMOVE GREEN FROM FORM COMPLETELY ===== */
-
-/* normal inputs */
-input,
-textarea,
-select {
-  background-color: #ffffff !important;
-  border: 1.5px solid rgba(37, 99, 235, 0.25) !important;
-  color: #0f172a;
-}
-
-/* focus */
-input:focus,
-textarea:focus,
-select:focus {
-  outline: none;
-  background-color: #ffffff !important;
-  border-color: #2563eb !important;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18) !important;
-}
-
-/* 🔥 KILL CHROME AUTOFILL GREEN */
-input:-webkit-autofill,
-textarea:-webkit-autofill,
-select:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
-  -webkit-text-fill-color: #0f172a !important;
-  transition: background-color 9999s ease-in-out 0s;
-  /* FIX SCROLL OFFSET FOR STICKY NAVBAR */
-#contact,
-#classes,
-#why,
-#top {
-  scroll-margin-top: 90px; /* adjust if navbar height changes */
-}
-
-/* ENSURE BUTTON LINKS BEHAVE LIKE BUTTONS */
-.hero-actions a.btn,
-.nav a.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-}
-
-/* KEEP HERO BUTTON LAYOUT STABLE */
 .hero-actions {
   display: flex;
-  gap: 0.6rem;
-  flex-wrap: wrap;
-}
-  /* ===============================
-   RESTORE HERO ORIGINAL LAYOUT
-   =============================== */
-
-/* Hero container */
-.hero {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 2rem;
-  align-items: center;
+  gap: 12px;
+  margin: 16px 0;
 }
 
-/* Hero left content */
-.hero-left {
-  max-width: 560px;
-}
-
-/* Hero right card */
-.hero-right {
-  justify-self: end;
-}
-
-/* Fix address blocks inside hero */
-.hero .location {
-  margin-top: 0.8rem;
-  font-size: 0.8rem;
-  line-height: 1.4;
-}
-
-/* Buttons spacing (old look) */
-.hero-actions {
-  margin-top: 0.9rem;
-  display: flex;
-  gap: 0.6rem;
-  flex-wrap: wrap;
-}
-
-/* ===============================
-   MOBILE: STACK CLEANLY
-   =============================== */
-@media (max-width: 900px) {
-  .hero {
-    grid-template-columns: 1fr;
-    text-align: left;
-  }
-
-  .hero-right {
-    justify-self: start;
-  }
-}
-}
-  /* ===== NAVIGATION SCROLL FIX ===== */
-
-/* Smooth scrolling for all anchor links */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Offset fix for sticky header (important for mobile) */
-section {
-  scroll-margin-top: 90px; /* adjust if header height changes */
-}
-/* ===============================
-   HERO – HARD RESET & FIX
-   =============================== */
-
-.hero {
-  display: grid !important;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 2.2rem;
-  align-items: center;
-}
-
-/* Left text column */
-.hero-left {
-  max-width: 560px;
-}
-
-/* Right progress card */
-.hero > .card {
-  justify-self: end;
-  max-width: 420px;
-}
-
-/* Address blocks spacing */
-.hero .location {
-  margin-top: 0.7rem;
-  font-size: 0.8rem;
-  line-height: 1.45;
-}
-
-/* Action buttons (restore old spacing) */
-.hero-actions {
-  margin-top: 1rem;
-  display: flex;
-  gap: 0.6rem;
-  flex-wrap: wrap;
-}
-
-/* ===============================
-   MOBILE FIX (STACK LIKE BEFORE)
-   =============================== */
-@media (max-width: 900px) {
-  .hero {
-    display: flex !important;
-    flex-direction: column !important;
-  }
-
-  .hero-left {
-    order: 1;
-    width: 100%;
-  }
-
-  .hero-right {
-    order: 2;
-    width: 100%;
-    margin-top: 24px;
-  }
-}
-  
-
-  .hero > .card {
-    align-self: sretch;
-    margin-top: 1.2rem;
-  }
-}
-/* Ensure sections are scroll targets */
-#home,
-#classes,
-#why-us,
-#enquiry {
-  scroll-margin-top: 100px;
-    }
-}
-  /* Fix content hiding behind fixed header */
-body {
-  padding-top: 80px;
-}
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-}
-  /* ===== FIX HEADER OVERLAP PROPERLY ===== */
-
-/* Header stays on top */
-header {
-  position: sticky;
-  top: 0;
-  z-index: 9999;
-  background: linear-gradient(135deg, #f8fbff, #eef4ff);
-}
-
-/* Dynamically push content below header */
-#main-content {
-  margin-top: calc(var(--header-height, 90px));
-}
-
-/* Mobile safety */
-@media (max-width: 900px) {
-  #main-content {
-    margin-top: 120px;
-  }
-}
-  /* ===== FIX HERO BEING COVERED BY HEADER ===== */
-
-.hero {
-  padding-top: 6rem; /* desktop */
-}
-
-@media (max-width: 900px) {
-  .hero {
-    padding-top: 7.5rem; /* mobile header is taller */
-  }
-}
-  /* ===== FIX HERO ORDER ON MOBILE ===== */
-
-@media (max-width: 900px) {
-  .hero {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .hero-left {
-    order: 1;
-  }
-
-  .hero-right {
-    order: 2;
-    margin-top: 1.5rem;
-  }
-}
-  /* ===== FORCE HERO FIX ON MOBILE ===== */
-@media (max-width: 900px) {
-  .hero {
-    display: flex !important;
-    flex-direction: column !important;
-  }
-
-  .hero-left {
-    order: 1 !important;
-  }
-
-  .hero-right {
-    order: 2 !important;
-    margin-top: 1.5rem;
-  }
-}
-  /* ===== FIX HEADER OVERLAP ISSUE ===== */
-
-/* Height of header ≈ 90px */
-main {
-  padding-top: 90px;
-}
-
-@media (max-width: 900px) {
-  main {
-    padding-top: 110px; /* mobile header is taller */
-  }
-  /* ================================
-   MOBILE HARD RESET (FINAL FIX)
-================================ */
-
-/* 1. Stop horizontal overflow */
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-/* 2. Fix container centering */
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
-/* 3. FORCE hero to stack properly on mobile */
-@media (max-width: 900px) {
-  .hero {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center;
-    text-align: left;
-  }
-
-  .hero-left {
-    order: 1;
-    width: 100%;
-  }
-
-  .hero-right {
-    order: 2;
-    width: 100%;
-    margin-top: 24px;
-  }
-}
-
-/* 4. Fix cards alignment */
-.hero-right,
 .hero-card {
-  margin-left: auto;
-  margin-right: auto;
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 20px;
+  border: 1px solid rgba(37,99,235,.2);
 }
 
-/* 5. Prevent 100vw bugs */
-.hero,
-section,
-header {
-  max-width: 100%;
+/* ===================== CARDS ===================== */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  gap: 20px;
 }
-  /* ===============================
-   MOBILE LAYOUT FIX (FINAL)
-   =============================== */
-@media (max-width: 768px) {
+.card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 20px;
+  border: 1px solid rgba(37,99,235,.2);
+}
+.pill-row {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.pill {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  background: rgba(37,99,235,.12);
+}
 
-  /* Force single column */
+/* ===================== CONTACT ===================== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+input,textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(37,99,235,.3);
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+  text-align: center;
+  margin-top: 64px;
+  color: var(--text-soft);
+}
+
+/* ===================== MOBILE ===================== */
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+
   .hero {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
 
-  /* Title FIRST */
-  .hero-left {
-    order: 1;
+  .hero-actions {
+    flex-direction: column;
     width: 100%;
-    text-align: left;
   }
 
-  /* Card AFTER title */
-  .hero-right {
-    order: 2;
-    width: 100%;
-    margin-top: 1.5rem;
-  }
-
-  /* Center all sections properly */
-  section,
-  header {
-    display: flex;
-    justify-content: center;
-  }
-
-  section > *,
-  header > * {
-    width: 100%;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  /* Fix right-shift bug */
-  body {
-    overflow-x: hidden;
-  }
-
-  /* Buttons full width on mobile */
   .hero-actions .btn {
     width: 100%;
   }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
 }
-      }
-  </style>
+</style>
 </head>
+
 <body>
-  <!-- MAIN CONTENT -->
-  <header>
-    <nav class="nav">
-      <div class="nav-left">
-        <div class="logo-pill">
-  <img src="logo.png" alt="Bright Beginning Academy logo" />
-        </div>
-        <div class="nav-title">
-  <div class="logo-text-main">BRIGHT BEGINNING ACADEMY</div>
-  <div class="logo-text-sub">Education Institute</div>
-  <div class="logo-text-location">Kumbakonam</div>
-        </div>
 
-      <div class="nav-links">
-  <a href="#top" class="active">Home</a>
-  <a href="#classes">Classes</a>
-  <a href="#why-us">Why us</a>
-  <a href="#enquiry">Enquiry</a>
-</div>
-
-<a href="#contact" class="btn btn-primary">
-  Enquiry form
-</a>
-    </nav>
-  </header>
-
-  <main class="container" 
-    <!-- HERO -->
-    <section class="hero reveal" id= "top">
-      <div class="hero-left">
-        <h1>
-          <span class="hero-highlight">Bright Beginning Academy</span><br />
-          focused tuition for confident students.
-        </h1>
-        <p class="hero-sub">
-          School tuition from <strong>Class 1 to 12</strong> with extra support for
-          board exams, spoken English, handwriting, Abacus, Vedic Maths and
-          computer skills – all in one place at <strong>Kumbakonam</strong>.
-        </p>
-
-        <div class="hero-badges">
-          <span class="badge">Class 1 – 5 foundation</span>
-          <span class="badge">Class 6 – 10 all subjects</span>
-          <span class="badge">Class 11 &amp; 12 board focus</span>
-          <span class="badge">Spoken English &amp; Handwriting</span>
-        </div>
-
-        <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary">
-  Book a free enquiry →
-          </a>
-          <a href="#classes" class="btn btn-outline">
-  View classes & programs
-          </a>
-        </div>
-
-        <p class="location">
-  📍
-  <a
-    href="https://maps.app.goo.gl/NMe4ZzNd2P6btLgY7"
-    target="_blank"
-    rel="noopener"
-  >
-    No.1 Indira Gandhi Salai, Kumbakonam
-  </a>
-</p>
-        <p class="location">
-  📍
-  <a
-    href="https://maps.app.goo.gl/DNg75d7hqcgNaG2z9"
-    target="_blank"
-    rel="noopener"
-  >
-    22/24, Yagalasalai Street, Karna Kollai Agraharam,<br>
-    Valayapettai Agraharam, Kumbakonam,<br>
-    Tamil Nadu 612001
-  </a>
-        </p>
+<header>
+  <nav class="nav">
+    <div class="nav-left">
+      <div class="logo-pill"><img src="logo.png"></div>
+      <div class="nav-title">
+        <div class="logo-text-main">BRIGHT BEGINNING ACADEMY</div>
+        <div class="logo-text-sub">Education Institute</div>
+        <div class="logo-text-location">Kumbakonam</div>
       </div>
+    </div>
 
-      <div class="hero-right">
-        <div class="hero-card">
-          <div class="hero-card-header">
-            <span>Student progress snapshot</span>
-            <span class="hero-chip">Consistent improvement</span>
-          </div>
+    <div class="nav-links">
+      <a href="#top">Home</a>
+      <a href="#classes">Classes</a>
+      <a href="#why-us">Why us</a>
+      <a href="#contact">Enquiry</a>
+    </div>
 
-          <div class="hero-stats-grid">
-            <div class="mini-card">
-              <strong>Smaller groups</strong>
-              More attention on each child, doubts cleared every day.
-            </div>
-            <div class="mini-card">
-              <strong>Daily practice</strong>
-              Regular tests, worksheets and revision to build confidence.
-            </div>
-            <div class="mini-card">
-              <strong>Concept clarity</strong>
-              Focus on understanding, not just memorising answers.
-            </div>
-            <div class="mini-card">
-              <strong>Parental updates</strong>
-              Clear communication about performance &amp; behaviour.
-            </div>
-          </div>
+    <a href="#contact" class="btn btn-primary">Enquiry form</a>
+  </nav>
+</header>
 
-          <div class="timeline">
-            <span>Typical student improvement (3–6 months)*</span>
-            <div class="timeline-row">
-              <span>Marks &amp; confidence</span>
-              <div class="timeline-bar-wrap">
-                <div class="timeline-bar-fill"></div>
-              </div>
-              <span>↑</span>
-            </div>
-            <small style="display:block;margin-top:0.3rem;color:var(--text-soft);">
-              *Based on consistent attendance &amp; practice.
-            </small>
-          </div>
-        </div>
-      </div>
-    </section>
+<main class="container">
 
-    <!-- CLASSES / PROGRAMS -->
-    <section id="classes" class="reveal">
-      <h2 class="section-title">Classes &amp; programs we offer</h2>
-      <p class="section-subtitle">
-        Clear, structured batches so every student gets attention at their level.
-      </p>
+<section id="top" class="hero">
+  <div>
+    <h1><span class="hero-highlight">Bright Beginning Academy</span><br>focused tuition for confident students.</h1>
+    <p class="hero-sub">School tuition from <strong>Class 1 to 12</strong> with extra support – all in one place at <strong>Kumbakonam</strong>.</p>
 
-      <div class="grid-3">
-        <article class="card">
-          <h3>Classes 1 – 5</h3>
-          <p>
-            Strong foundation in reading, writing and core subjects with
-            friendly guidance.
-          </p>
-          <div class="pill-row">
-            <span class="pill">All subjects</span>
-            <span class="pill">Reading &amp; writing</span>
-            <span class="pill">Basic maths</span>
-            <span class="pill">Handwriting practice</span>
-          </div>
-        </article>
+    <div class="hero-badges">
+      <span class="badge">Class 1–5</span>
+      <span class="badge">Class 6–10</span>
+      <span class="badge">Class 11–12</span>
+      <span class="badge">Spoken English</span>
+    </div>
 
-        <article class="card">
-          <h3>Classes 6 – 10</h3>
-          <p>
-            Regular tuition for school syllabus with focus on understanding,
-            tests and revision.
-          </p>
-          <div class="pill-row">
-            <span class="pill">Maths &amp; Science</span>
-            <span class="pill">English &amp; Tamil</span>
-            <span class="pill">Social Science</span>
-            <span class="pill">Weekly tests</span>
-          </div>
-        </article>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-primary">Book free enquiry</a>
+      <a href="#classes" class="btn btn-outline">View classes</a>
+    </div>
+  </div>
 
-        <article class="card">
-          <h3>Classes 11 &amp; 12</h3>
-          <p>
-            Board-focused support to help students stay consistent and exam ready.
-          </p>
-          <div class="pill-row">
-            <span class="pill">Concept revision</span>
-            <span class="pill">Important questions</span>
-            <span class="pill">Exam strategy</span>
-          </div>
-        </article>
+  <div class="hero-card">
+    <strong>Student progress snapshot</strong>
+    <p>Smaller groups • Daily practice • Concept clarity</p>
+  </div>
+</section>
 
-        <article class="card">
-          <h3>Spoken English &amp; Handwriting</h3>
-          <p>
-            Extra attention for communication and neat writing – useful for all classes.
-          </p>
-          <div class="pill-row">
-            <span class="pill">Fluent speaking</span>
-            <span class="pill">Confidence building</span>
-            <span class="pill">Neat &amp; fast writing</span>
-          </div>
-        </article>
+<section id="classes">
+  <h2>Classes & Programs</h2>
+  <div class="grid-3">
+    <div class="card"><h3>Classes 1–5</h3></div>
+    <div class="card"><h3>Classes 6–10</h3></div>
+    <div class="card"><h3>Classes 11–12</h3></div>
+  </div>
+</section>
 
-        <article class="card">
-          <h3>Abacus &amp; Vedic Maths</h3>
-          <p>
-            Special programs for speed maths, mental calculation and brain
-            development.
-          </p>
-          <div class="pill-row">
-            <span class="pill">Speed calculation</span>
-            <span class="pill">Memory boosting</span>
-            <span class="pill">Maths confidence</span>
-          </div>
-        </article>
+<section id="why-us">
+  <h2>Why parents choose us</h2>
+  <p>Smaller batches • Regular feedback • Caring environment</p>
+</section>
 
-        <article class="card">
-          <h3>Computer Skills</h3>
-          <p>
-            Basic computer knowledge and skills to help students for projects
-            and future careers.
-          </p>
-          <div class="pill-row">
-            <span class="pill">Basic computer</span>
-            <span class="pill">Typing &amp; docs</span>
-            <span class="pill">Student friendly</span>
-          </div>
-        </article>
-      </div>
-    </section>
+<section id="contact">
+  <h2>Enquiry form</h2>
+  <div class="contact-grid">
+    <div class="card">Direct contact info here</div>
+    <div class="card">
+      <input placeholder="Student name">
+      <input placeholder="Class">
+      <input placeholder="Phone">
+      <textarea placeholder="Message"></textarea>
+      <button class="btn btn-primary">Send enquiry</button>
+    </div>
+  </div>
+</section>
 
-    <!-- WHY US -->
-    <section id="why-us" class="reveal">
-      <h2 class="section-title">Why parents choose Bright Beginning Academy</h2>
-      <p class="section-subtitle">
-        A focused tuition centre that aims for confident, successful students –
-        not just finishing portions.
-      </p>
+<footer>© Bright Beginning Academy – Kumbakonam</footer>
 
-      <div class="simple-row">
-        <div class="simple-card">
-          <strong>Smaller batches</strong><br />
-          Students get time to ask doubts and practice with support.
-        </div>
-        <div class="simple-card">
-          <strong>Regular test &amp; feedback</strong><br />
-          Parents know how their child is improving throughout the year.
-        </div>
-        <div class="simple-card">
-          <strong>Caring environment</strong><br />
-          Friendly teachers, disciplined study and motivation for students.
-        </div>
-        <div class="simple-card">
-          <strong>Multiple skill programs</strong><br />
-          Tuition plus spoken English, handwriting, Abacus, Vedic Maths and computers.
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT / FORM -->
-    <section id="contact" class="reveal">
-      <h2 class="section-title">Enquiry form</h2>
-      <p class="section-subtitle">
-        Share basic details – the academy can contact you with batch timings,
-        fees and more information.
-      </p>
-
-      <div class="contact-grid">
-        <article class="card">
-          <h3 style="margin-bottom:0.4rem;">Direct contact</h3>
-          <p style="font-size:0.9rem;color:var(--text-soft);">
-            This page is only a preview website. Contact details can be updated
-            with the Academy’s real phone / WhatsApp numbers.
-          </p>
-
-          <div class="pill-row" style="margin-top:0.8rem;">
-            <span class="pill">School tuition</span>
-            <span class="pill">After school batches</span>
-            <span class="pill">Friendly environment</span>
-          </div>
-
-          <div class="contact-item">
-  <strong>📍 Location 1:</strong><br>
-  <a 
-    href="https://maps.app.goo.gl/NMe4ZzNd2P6btLgY7" 
-    target="_blank" 
-    rel="noopener noreferrer"
-  >
-    No.1 Indira Gandhi Salai, Kumbakonam – Tamil Nadu
-  </a>
-</div>
-
-<div class="contact-item" style="margin-top: 0.6rem;">
-  <strong>📍 Location 2:</strong><br>
-  <a 
-    href="https://maps.app.goo.gl/DNg75d7hqcgNaG2z9" 
-    target="_blank" 
-    rel="noopener noreferrer"
-  >
-    22/24, Yagalasalai Street, Karna Kollai Agraharam,  
-    Valayapettai Agraharam, Kumbakonam,  
-    Tamil Nadu 612001
-  </a>
-</div>
-
-<div class="contact-item" style="margin-top: 0.6rem;">
-  <strong>📞 Phone / WhatsApp:</strong><br>
-  <a href="tel:+919444844091">+91 94448 44091</a><br>
-  <a href="tel:+919488868842">+91 94888 68842</a>
-</div>
-
-          <p class="form-note" style="margin-top:0.9rem;">
-            The enquiry form on the right can be set to send
-            details directly to WhatsApp.
-          </p>
-        </article>
-
-        <article class="card">
-          <form id="enquiry-form">
-            <div>
-              <label for="student-name">Student name</label>
-              <input id="student-name" type="text" placeholder="Enter student name" required />
-            </div>
-
-            <div>
-              <label for="std">Class (Std)</label>
-              <input id="std" type="text" placeholder="e.g. 5th, 8th, 12th" required />
-            </div>
-
-            <div>
-              <label for="school">School</label>
-              <input id="school" type="text" placeholder="Student's school name" required />
-            </div>
-
-            <div>
-              <label for="parent-name">Parent name</label>
-              <input id="parent-name" type="text" placeholder="Parent / guardian name" />
-            </div>
-
-            <div>
-              <label for="phone">Contact number</label>
-              <input id="phone" type="tel" placeholder="Your mobile / WhatsApp number" />
-            </div>
-
-            <div>
-              <label for="message">Anything else to share?</label>
-              <textarea
-                id="message"
-                placeholder="Preferred batch timing, subjects, or special support needed..."
-              ></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary">
-              send enquiry text
-            </button>
-            <p class="form-note">
-              This will open WhatsApp with a ready-made message containing your details.
-              In the final version, it can be set with the Academy’s official WhatsApp number.
-            </p>
-          </form>
-        </article>
-      </div>
-    </section>
-
-    <footer class="reveal">
-       <span>Bright Beginning Academy</span> • Kumbakonam • 2025
-    </footer>
-  </main>
+</main>
+</body>
+</html>
 
   <!-- SCRIPTS -->
   <script>
