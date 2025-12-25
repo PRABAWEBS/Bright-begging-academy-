@@ -1343,6 +1343,13 @@ Message: ${msg}`;
     });
   });
   </script>
+  <script>
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener("click", () => {
+      alert("CLICK WORKS");
+    });
+  });
+  </script>
 </body>
 </html>
 
