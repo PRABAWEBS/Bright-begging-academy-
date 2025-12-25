@@ -579,18 +579,7 @@
       font-weight: 500;
     }
 
-    /* REVEAL ANIMATION */
-
-    .reveal {
-  transform: none !important;
-  opacity: 1 !important;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
+  
     /* RESPONSIVE */
 
     @media (max-width: 880px) {
@@ -935,6 +924,22 @@ main {
   section {
   scroll-margin-top: 140px;
 }
+  .nav-links a {
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  font-weight: 500;
+  color: #1e40af;
+  transition: all 0.25s ease;
+}
+
+.nav-links a:hover {
+  background: rgba(37, 99, 235, 0.12);
+}
+
+.nav-links a.active {
+  background: #2563eb;
+  color: white;
+}
 
 </style>
 </head>
@@ -967,7 +972,7 @@ main {
 
   <main class="container" 
     <!-- HERO -->
-    <section class="hero reveal" id= "top">
+    <section class="hero" id= "top">
       <div class="hero-left">
         <h1>
           <span class="hero-highlight">Bright Beginning Academy</span><br />
