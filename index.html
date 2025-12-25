@@ -794,12 +794,26 @@ section {
    MOBILE FIX (STACK LIKE BEFORE)
    =============================== */
 @media (max-width: 900px) {
-   .hero {
-    grid-template-columns: 1fr;
+  .hero {
+    display: flex !important;
+    flex-direction: column !important;
   }
 
+  .hero-left {
+    order: 1;
+    width: 100%;
+  }
+
+  .hero-right {
+    order: 2;
+    width: 100%;
+    margin-top: 24px;
+  }
+}
+  
+
   .hero > .card {
-    justify-self: start;
+    align-self: sretch;
     margin-top: 1.2rem;
   }
 }
@@ -808,7 +822,8 @@ section {
 #classes,
 #why-us,
 #enquiry {
-  position: scroll;
+  scroll-margin-top: 100px;
+    }
 }
   /* Fix content hiding behind fixed header */
 body {
@@ -898,6 +913,58 @@ main {
   main {
     padding-top: 110px; /* mobile header is taller */
   }
+  /* ================================
+   MOBILE HARD RESET (FINAL FIX)
+================================ */
+
+/* 1. Stop horizontal overflow */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* 2. Fix container centering */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* 3. FORCE hero to stack properly on mobile */
+@media (max-width: 900px) {
+  .hero {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+    text-align: left;
+  }
+
+  .hero-left {
+    order: 1;
+    width: 100%;
+  }
+
+  .hero-right {
+    order: 2;
+    width: 100%;
+    margin-top: 24px;
+  }
+}
+
+/* 4. Fix cards alignment */
+.hero-right,
+.hero-card {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 5. Prevent 100vw bugs */
+.hero,
+section,
+header {
+  max-width: 100%;
 }
       }
   </style>
