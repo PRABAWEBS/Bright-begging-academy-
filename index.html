@@ -1,262 +1,629 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bright Beginning Academy | One-to-One Live Premium Tuitions</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  * {
-    margin: 0; padding: 0; box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-  }
-  body {
-    background: #fff;
-    color: #222;
-  }
-  header {
-    background: #fff;
-    padding: 1.5rem 5%;
-    border-bottom: 1px solid #eee;
-  }
-  header h1 {
-    color: #ff6600;
-    font-weight: 700;
-    font-size: 1.5rem;
-  }
-  .hero {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 3rem 5%;
-    background: linear-gradient(135deg, #fff7f0, #fff);
-  }
-  .hero-text {
-    flex: 1 1 400px;
-  }
-  .hero-text h2 {
-    color: #ff6600;
-    font-size: 2rem;
-    margin-bottom: .5rem;
-  }
-  .hero-text h1 {
-    font-size: 2.5rem;
-    color: #000;
-  }
-  .hero-text p {
-    margin-top: 1rem;
-    font-size: 1rem;
-    max-width: 500px;
-  }
-  .hero-form {
-    flex: 1 1 350px;
-    background: #fff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  }
-  .hero-form h3 {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-    color: #ff6600;
-  }
-  input, select {
-    width: 100%;
-    padding: .8rem;
-    margin: .5rem 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  button {
-    background: #ff6600;
-    color: #fff;
-    border: none;
-    padding: .9rem 1.5rem;
-    border-radius: 6px;
-    font-size: 1rem;
-    cursor: pointer;
-  }
-  button:hover {
-    background: #e65c00;
-  }
-
-  .why {
-    padding: 4rem 5%;
-  }
-  .why h2 {
-    text-align: center;
-    font-size: 1.8rem;
-    margin-bottom: 2rem;
-  }
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    gap: 1.5rem;
-  }
-  .card {
-    padding: 1.5rem;
-    border-radius: 10px;
-    color: #333;
-  }
-  .card:nth-child(1) { background: #e8e3ff; }
-  .card:nth-child(2) { background: #fff2cc; }
-  .card:nth-child(3) { background: #dff7ea; }
-  .card:nth-child(4) { background: #ffe5e0; }
-  .card h3 { margin-bottom: .5rem; }
-
-  .demo {
-    background: #fff7f0;
-    padding: 3rem 5%;
-    text-align: center;
-  }
-  .demo h2 {
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
-  }
-  .demo a {
-    display: inline-block;
-    margin-top: 1rem;
-    background: #ff6600;
-    color: white;
-    padding: 0.8rem 1.4rem;
-    border-radius: 6px;
-    text-decoration: none;
-  }
-  .courses {
-    padding: 4rem 5%;
-  }
-  .courses h2 {
-    text-align: center;
-    font-size: 1.8rem;
-    margin-bottom: 2rem;
-  }
-  .course-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    gap: 1.5rem;
-  }
-  .course {
-    border-radius: 10px;
-    background: #fff;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    padding: 1.5rem;
-  }
-  .course h3 {
-    color: #ff6600;
-    margin-bottom: .5rem;
-  }
-  footer {
-    text-align: center;
-    background: #222;
-    color: #fff;
-    padding: 1.5rem;
-    font-size: .9rem;
-  }
-  @media (max-width: 768px) {
-    .hero {
-      flex-direction: column;
-    }
-    .hero-text, .hero-form {
-      width: 100%;
-    }
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bright Beginning Academy</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header>
-  <h1>Bright Beginning Academy</h1>
-</header>
+ /* ===========================
+   Bright Beginning Academy - CSS
+   Theme: Royal Blue
+   =========================== */
 
-<section class="hero">
-  <div class="hero-text">
-    <h2>One-to-One</h2>
-    <h1>Live Premium Tuitions</h1>
-    <p>Ace your CBSE & State Board exams with personalized one-to-one tutoring. Attend free demo classes with our expert tutors and boost your confidence.</p>
-  </div>
-  <div class="hero-form">
-    <h3>Fill the form and we’ll get back to you!</h3>
-    <form onsubmit="sendWhatsApp(); return false;">
-      <input type="text" id="name" placeholder="Name" required>
-      <input type="text" id="phone" placeholder="Phone Number" required>
-      <input type="email" id="email" placeholder="Email" required>
-      <select id="grade">
-        <option value="">Select Grade</option>
-        <option>1-5</option>
-        <option>6-10</option>
-        <option>11-12</option>
-      </select>
-      <select id="board">
-        <option value="">Select Board</option>
-        <option>CBSE</option>
-        <option>State Board</option>
-        <option>ICSE</option>
-      </select>
-      <button type="submit">Submit form</button>
-    </form>
-  </div>
-</section>
-
-<section class="why">
-  <h2>Why study with us?</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>Proven way to improve marks</h3>
-      <p>Students receiving one-on-one tutoring show improved test scores and deeper understanding.</p>
-    </div>
-    <div class="card">
-      <h3>Personalised Attention</h3>
-      <p>Expert tutors focus on each student's unique needs and help them with their schoolwork.</p>
-    </div>
-    <div class="card">
-      <h3>Subject Specific Courses</h3>
-      <p>Courses tailored for each subject to ensure students excel in both school and exams.</p>
-    </div>
-    <div class="card">
-      <h3>Dedicated Support Managers</h3>
-      <p>Track student progress and communicate effectively with parents for consistent results.</p>
-    </div>
-  </div>
-</section>
-
-<section class="demo">
-  <h2>Book a <span style="color:#ff6600;">Free Demo</span> class with our premium tutor</h2>
-  <a href="#hero">Book demo session →</a>
-</section>
-
-<section class="courses">
-  <h2>Courses we offer 📚</h2>
-  <div class="course-grid">
-    <div class="course">
-      <h3>Full Year Courses</h3>
-      <p>Comprehensive one-to-one tutoring covering all subjects for Classes 1–12.</p>
-    </div>
-    <div class="course">
-      <h3>Single Subject Courses</h3>
-      <p>Choose individual subjects for focused attention and improvement.</p>
-    </div>
-    <div class="course">
-      <h3>As Per Need</h3>
-      <p>Customized plans for revision, doubt clearing, and exam preparation.</p>
-    </div>
-  </div>
-</section>
-
-<footer>
-  © 2025 Bright Beginning Academy • Kumbakonam • All Rights Reserved
-</footer>
-
-<script>
-function sendWhatsApp() {
-  const name = document.getElementById('name').value;
-  const phone = document.getElementById('phone').value;
-  const grade = document.getElementById('grade').value;
-  const board = document.getElementById('board').value;
-  const msg = `Enquiry from Bright Beginning Academy:%0A%0AName: ${name}%0APhone: ${phone}%0AGrade: ${grade}%0ABoard: ${board}`;
-  window.open(`https://wa.me/919444844091?text=${msg}`, '_blank');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-</script>
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+/* ===== NAVIGATION ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: #0a3d91;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffd700;
+}
+
+/* ===== HERO SECTION ===== */
+#hero {
+  height: 100vh;
+  background: linear-gradient(
+      rgba(10, 61, 145, 0.7),
+      rgba(10, 61, 145, 0.7)
+    ),
+    url('https://images.unsplash.com/photo-1555231955-348d98a529d0?auto=format&fit=crop&w=1200&q=60') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  animation: fadeInDown 1s ease forwards;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.btn-primary {
+  background: #ffd700;
+  color: #0a3d91;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #fff;
+  color: #0a3d91;
+  transform: scale(1.05);
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  padding: 100px 50px;
+  position: relative;
+}
+
+.section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #0a3d91;
+}
+
+.bg-light {
+  background: #f7f9fc;
+}
+
+/* ===== ABOUT SECTION ===== */
+#about .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  justify-content: center;
+}
+
+.about-text {
+  flex: 1 1 45%;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.about-image {
+  flex: 1 1 45%;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== PROGRAMS ===== */
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.program-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.program-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.program-card h3 {
+  margin: 20px 0 10px;
+  color: #0a3d91;
+}
+
+.program-card p {
+  padding: 0 20px 20px;
+  color: #444;
+}
+
+.program-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(10, 61, 145, 0.2);
+}
+
+/* ===== HIGHLIGHTS ===== */
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.highlight-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.highlight-card .icon {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.highlight-card h3 {
+  color: #0a3d91;
+  margin-bottom: 10px;
+}
+
+.highlight-card:hover {
+  transform: scale(1.05);
+}
+
+/* ===== GALLERY ===== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== ENQUIRY FORM ===== */
+.enquiry-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.enquiry-form input,
+.enquiry-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.enquiry-form button {
+  background: #0a3d91;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.enquiry-form button:hover {
+  background: #093278;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #0a3d91;
+  color: #fff;
+  padding: 60px 40px 20px;
+}
+
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+footer h3 {
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+footer p, footer a {
+  color: #fff;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+footer a:hover {
+  color: #ffd700;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+footer .copyright {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 15px;
+  font-size: 0.9rem;
+}
+
+/* ===== ANIMATIONS ===== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 1s ease;
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+}
+
+.zoom-in {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 1s ease;
+}
+
+.fade-in.appear,
+.slide-in-right.appear,
+.slide-up.appear,
+.zoom-in.appear {
+  opacity: 1;
+  transform: translate(0) scale(1);
+}
+
+/* Keyframes */
+@keyframes fadeInDown {
+  from {opacity: 0; transform: translateY(-30px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInUp {
+  from {opacity: 0; transform: translateY(30px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  .section {
+    padding: 80px 25px;
+  }
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+}
+  <!-- Header / Hero Section -->
+  <header id="hero">
+    <nav class="navbar">
+      <div class="logo">Bright Beginning Academy</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#programs">Programs</a></li>
+        <li><a href="#highlights">Highlights</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#enquiry">Enquiry</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <h1>Empowering Students for a Brighter Future</h1>
+      <p>Focused tuition and learning programs for Classes 1–12 in Kumbakonam.</p>
+      <a href="#enquiry" class="btn-primary">Join Us Today</a>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="about-text fade-in">
+        <h2>About Us</h2>
+        <p>
+          Bright Beginning Academy is an education institute in Kumbakonam offering focused tuition for students from Class 1 to 12. We specialize in English, Handwriting, Abacus, Vedic Maths, and Computer Skills. Our mission is to help every student achieve academic excellence and lifelong learning confidence.
+        </p>
+      </div>
+      <div class="about-image slide-in-right">
+        <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=900&q=60" alt="Students learning">
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs Section -->
+  <section id="programs" class="section bg-light">
+    <div class="container">
+      <h2 class="fade-in">Our Programs</h2>
+      <div class="program-grid">
+        <div class="program-card slide-up">
+          <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=60" alt="English Program">
+          <h3>English & Communication</h3>
+          <p>Enhance fluency, grammar, and vocabulary through fun, interactive sessions.</p>
+        </div>
+        <div class="program-card slide-up">
+          <img src="https://images.unsplash.com/photo-1600195077070-7c815b5f5b1e?auto=format&fit=crop&w=900&q=60" alt="Abacus">
+          <h3>Abacus & Vedic Maths</h3>
+          <p>Boost mental arithmetic, focus, and confidence in mathematical problem-solving.</p>
+        </div>
+        <div class="program-card slide-up">
+          <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=900&q=60" alt="Computer Skills">
+          <h3>Computer Skills</h3>
+          <p>Practical computer education for the digital age — from basics to creative projects.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Highlights Section -->
+  <section id="highlights" class="section">
+    <div class="container">
+      <h2 class="fade-in">Why Parents Choose Us</h2>
+      <div class="highlight-grid">
+        <div class="highlight-card zoom-in">
+          <i class="icon">🎯</i>
+          <h3>Focused Learning</h3>
+          <p>Personalized attention for every child to bring out their best potential.</p>
+        </div>
+        <div class="highlight-card zoom-in">
+          <i class="icon">👩‍🏫</i>
+          <h3>Expert Teachers</h3>
+          <p>Dedicated educators with years of experience in nurturing young minds.</p>
+        </div>
+        <div class="highlight-card zoom-in">
+          <i class="icon">🏆</i>
+          <h3>Proven Results</h3>
+          <p>Our students consistently achieve top ranks in school and competitive exams.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="section bg-light">
+    <div class="container">
+      <h2 class="fade-in">Gallery</h2>
+      <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238?auto=format&fit=crop&w=800&q=60" alt="Classroom">
+        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=60" alt="Learning activity">
+        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=60" alt="Students group">
+        <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=800&q=60" alt="Books and study">
+      </div>
+    </div>
+  </section>
+
+  <!-- Enquiry Section -->
+  <section id="enquiry" class="section">
+    <div class="container">
+      <h2 class="fade-in">Enquiry Form</h2>
+      <form class="enquiry-form slide-up" id="enquiryForm">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="text" name="phone" placeholder="Phone Number" required>
+        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn-primary">Submit Enquiry</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <footer id="contact">
+    <div class="container footer-grid">
+      <div>
+        <h3>Bright Beginning Academy</h3>
+        <p>123 Learning Street, Kumbakonam, Tamil Nadu</p>
+        <p>📞 +91 98765 43210</p>
+        <p>✉️ info@brightbeginningacademy.com</p>
+      </div>
+      <div>
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">YouTube</a>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">© 2025 Bright Beginning Academy. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+ /* ===========================
+   Bright Beginning Academy - JavaScript
+   =========================== */
+
+// Smooth scrolling for navbar links
+document.querySelectorAll('.nav-links a').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
+    window.scrollTo({
+      top: targetElement.offsetTop - 60,
+      behavior: 'smooth'
+    });
+  });
+});
+
+// Intersection Observer for fade/slide animations
+const observerOptions = {
+  threshold: 0.2
+};
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('appear');
+      observer.unobserve(entry.target);
+    }
+  });
+}, observerOptions);
+
+// Attach observer to all animated elements
+document.querySelectorAll('.fade-in, .slide-in-right, .slide-up, .zoom-in').forEach(el => {
+  observer.observe(el);
+});
+
+// Sticky navbar background change on scroll
+window.addEventListener('scroll', () => {
+  const navbar = document.querySelector('.navbar');
+  if (window.scrollY > 50) {
+    navbar.style.background = '#082e74';
+  } else {
+    navbar.style.background = '#0a3d91';
+  }
+});
+
+// Enquiry form handling (basic confirmation)
+const enquiryForm = document.getElementById('enquiryForm');
+if (enquiryForm) {
+  enquiryForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    alert('Thank you for contacting Bright Beginning Academy! We will reach out to you soon.');
+    enquiryForm.reset();
+  });
+}
+
+// Scroll-to-top button (optional enhancement)
+const scrollTopBtn = document.createElement('button');
+scrollTopBtn.innerText = '↑';
+scrollTopBtn.id = 'scrollTopBtn';
+scrollTopBtn.style.position = 'fixed';
+scrollTopBtn.style.bottom = '30px';
+scrollTopBtn.style.right = '30px';
+scrollTopBtn.style.padding = '10px 15px';
+scrollTopBtn.style.background = '#0a3d91';
+scrollTopBtn.style.color = '#fff';
+scrollTopBtn.style.border = 'none';
+scrollTopBtn.style.borderRadius = '50%';
+scrollTopBtn.style.fontSize = '1.2rem';
+scrollTopBtn.style.cursor = 'pointer';
+scrollTopBtn.style.display = 'none';
+scrollTopBtn.style.boxShadow = '0 4px 10px rgba(0,0,0,0.2)';
+scrollTopBtn.style.transition = 'opacity 0.3s ease';
+
+document.body.appendChild(scrollTopBtn);
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 400) {
+    scrollTopBtn.style.display = 'block';
+    scrollTopBtn.style.opacity = '1';
+  } else {
+    scrollTopBtn.style.opacity = '0';
+    scrollTopBtn.style.display = 'none';
+  }
+});
+
+scrollTopBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+// Optional: Navbar highlight active section
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.nav-links a');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 70;
+    const sectionHeight = section.clientHeight;
+    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href').substring(1) === current) {
+      link.classList.add('active');
+    }
+  });
+});
 </body>
 </html>
+
+
