@@ -794,8 +794,8 @@ section {
    MOBILE FIX (STACK LIKE BEFORE)
    =============================== */
 @media (max-width: 900px) {
-  .hero {
-    grid-template-columns: 1fr !important;
+   .hero {
+    grid-template-columns: 1fr;
   }
 
   .hero > .card {
@@ -852,6 +852,23 @@ header {
 @media (max-width: 900px) {
   .hero {
     padding-top: 7.5rem; /* mobile header is taller */
+  }
+}
+  /* ===== FIX HERO ORDER ON MOBILE ===== */
+
+@media (max-width: 900px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-left {
+    order: 1;
+  }
+
+  .hero-right {
+    order: 2;
+    margin-top: 1.5rem;
   }
 }
       }
