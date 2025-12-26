@@ -172,22 +172,14 @@
     /* HEADER */
 
     header {
-      margin-bottom: 0;
-      padding-top: 0;
-      padding-bottom: 0;
+      margin: 0;
+      padding: 0;
       position: relative;
       top: 0;
       z-index: auto;
       backdrop-filter: none !important;
-      background: linear-gradient(
-        to bottom,
-        rgba(244, 255, 245, 0.96),
-        rgba(244, 255, 245, 0.78),
-        transparent
-      );
-      border-bottom: 1px solid rgba(189, 219, 197, 0.9);
-    }
-    
+      background: none;
+      border-bottom: none;
     @media (max-width: 768px) {
   .nav {
     padding: 0.5rem 0.8rem;
@@ -275,8 +267,7 @@ body {
   height: 350px;
   width: auto;
 
-  position: static;   
-  display: block;
+  position: static; 
 }
 
 /* ALIGN LOGO ICON + TEXT IMAGE */
@@ -363,8 +354,14 @@ body {
     main {
       position: relative;
     }
-
     .hero {
+  background: linear-gradient(
+    to bottom,
+    rgba(244, 255, 245, 0.96),
+    rgba(244, 255, 245, 0.78),
+    transparent
+  );
+    
       display: grid;
       grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
       gap: 2.5rem;
