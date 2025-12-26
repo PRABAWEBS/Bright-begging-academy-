@@ -1029,36 +1029,52 @@ header,
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
- /* 🔥 CARD HEIGHT NORMALIZATION (FINAL FIX) */
 
-/* tighten headings */
+}
+/* ===============================
+   CARD RESET – RESTORE OLD LOOK
+   (BOTTOM OVERRIDE ONLY)
+   =============================== */
+
+/* kill any animation/transform affecting height */
+.card {
+  opacity: 1 !important;
+  transform: none !important;
+  animation: none !important;
+}
+
+/* restore original padding */
+.card {
+  padding: 1.2rem 1.3rem !important;
+}
+
+/* restore natural spacing */
 .card h3 {
-  margin: 0 0 0.3rem 0 !important;
-  line-height: 1.25;
+  margin-bottom: 0.5rem !important;
+  line-height: 1.3;
 }
 
-/* tighten paragraphs */
 .card p {
-  margin: 0 0 0.45rem 0 !important;
-  line-height: 1.4;
+  margin-bottom: 0.6rem !important;
+  line-height: 1.5;
 }
 
-/* tighten pill rows */
+/* normal pill spacing */
 .card .pill-row {
-  margin-top: 0.25rem !important;
-  gap: 0.35rem;
+  margin-top: 0.4rem !important;
+  gap: 0.4rem;
 }
 
-/* tighten badges / pills */
 .card .pill,
 .card .badge {
-  padding: 0.18rem 0.55rem;
-  line-height: 1.1;
+  padding: 0.25rem 0.65rem !important;
+  line-height: 1.2;
 }
 
-/* safety: prevent margin collapse weirdness */
-.card > *:last-child {
-  margin-bottom: 0 !important;
+/* prevent parent rules from adding extra space */
+section > .card {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
   
 </style>
