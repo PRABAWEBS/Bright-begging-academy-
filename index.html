@@ -265,10 +265,19 @@ body {
   padding: 0;
 }
     /* TEXT LOGO IMAGE (REPLACES TEXT) */
+.nav-title-image {
+  position: relative;
+}
+
 .nav-title-image img {
-  height: 350px;        /* adjust if needed */
+  height: 350px;
   width: auto;
   display: block;
+
+  position: absolute;   /* 🔥 key */
+  top: -120px;          /* move up */
+  left: 0;
+  pointer-events: none; /* avoids click issues */
 }
 
 /* ALIGN LOGO ICON + TEXT IMAGE */
