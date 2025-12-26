@@ -26,6 +26,44 @@
   />
 
   <style>
+
+    /* Top scrolling banner */
+.top-banner {
+  width: 100%;
+  background: linear-gradient(90deg, #2563eb, #1e40af);
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 999;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Moving track */
+.banner-track {
+  display: inline-flex;
+  gap: 60px;
+  animation: scrollBanner 18s linear infinite;
+}
+
+/* Text styling */
+.banner-track span {
+  display: inline-block;
+}
+
+/* Animation */
+@keyframes scrollBanner {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
     .nav-links {
   position: relative;
   z-index: 999999;
@@ -1000,6 +1038,13 @@ body {
 </style>
 </head>
 <body>
+  
+  <div class="top-banner">
+  <div class="banner-track">
+    <span>Delivering quality education for State Board, CBSE, and NIOS students.</span>
+    <span>Delivering quality education for State Board, CBSE, and NIOS students.</span>
+  </div>
+  </div>
   <!-- MAIN CONTENT -->
   <header id="site-header">
     <nav class="nav">
