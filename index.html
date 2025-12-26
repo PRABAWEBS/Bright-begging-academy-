@@ -267,23 +267,22 @@ body {
 }
     /* TEXT LOGO IMAGE (REPLACES TEXT) */
 .nav-title-image {
-  position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .nav-title-image img {
   height: 350px;
   width: auto;
 
-  position: absolute;   /* 🔥 key */
-  top: -40px;          /* move up */
-  left: 0;
-  pointer-events: none; /* avoids click issues */
+  position: static;   
+  display: block;
 }
 
 /* ALIGN LOGO ICON + TEXT IMAGE */
 .nav {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.6rem;
 }
     .nav-title {
