@@ -1029,12 +1029,37 @@ header,
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
- .grid-3 .card {
-  background: red !important;
-  min-height: 100px !important;
-  padding: 0 !important;
+ /* 🔥 CARD HEIGHT NORMALIZATION (FINAL FIX) */
+
+/* tighten headings */
+.card h3 {
+  margin: 0 0 0.3rem 0 !important;
+  line-height: 1.25;
 }
-  
+
+/* tighten paragraphs */
+.card p {
+  margin: 0 0 0.45rem 0 !important;
+  line-height: 1.4;
+}
+
+/* tighten pill rows */
+.card .pill-row {
+  margin-top: 0.25rem !important;
+  gap: 0.35rem;
+}
+
+/* tighten badges / pills */
+.card .pill,
+.card .badge {
+  padding: 0.18rem 0.55rem;
+  line-height: 1.1;
+}
+
+/* safety: prevent margin collapse weirdness */
+.card > *:last-child {
+  margin-bottom: 0 !important;
+}
   
 </style>
 </head>
