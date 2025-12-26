@@ -1142,7 +1142,29 @@ section > .card {
     transform: translateY(0);
   }
 }
+/* 🔥 FINAL HEADER HEIGHT FIX */
+header {
+  height: auto !important;
+  min-height: unset !important;
+  padding-bottom: 0 !important;
+}
 
+/* kill extra visual space */
+header::after {
+  content: none !important;
+}
+
+/* pull hero up */
+main {
+  margin-top: -120px;
+}
+
+/* mobile safety */
+@media (max-width: 768px) {
+  main {
+    margin-top: -90px;
+  }
+  }
 </style>
 </head>
 <body>
