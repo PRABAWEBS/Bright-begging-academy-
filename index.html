@@ -1134,6 +1134,25 @@ section > .card {
     transform: translateY(0);
   }
 }
+/* ===============================
+   FIX RIGHT GAP ISSUE (FINAL)
+   =============================== */
+
+/* Force hero + sections to respect container spacing */
+.hero,
+section {
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+}
+
+/* Center inner content properly */
+.hero > *,
+section > * {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
   
 </style>
 </head>
