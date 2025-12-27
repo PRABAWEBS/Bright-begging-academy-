@@ -24,8 +24,8 @@
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
     rel="stylesheet"
   />
-  
-<style>
+
+  <style>
 
     /* Top scrolling banner */
 .top-banner {
@@ -139,8 +139,6 @@
     }
 
     body {
-      
-      
       font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
         "Segoe UI", sans-serif;
       min-height: 100vh;
@@ -164,22 +162,29 @@
 
     .container {
       width: 100%;
-      max-width: 1200px;
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 0.3rem 1.2rem 2rem;
+      padding: 1.5rem 1.2rem 4rem;
     }
 
     /* HEADER */
 
     header {
-      margin: 0;
+      margin-bottom: 0;
       padding: 0;
       position: relative;
       top: 0;
       z-index: auto;
       backdrop-filter: none !important;
-      background: none;
-      border-bottom: none;
+      background: linear-gradient(
+        to bottom,
+        rgba(244, 255, 245, 0.96),
+        rgba(244, 255, 245, 0.78),
+        transparent
+      );
+      border-bottom: 1px solid rgba(189, 219, 197, 0.9);
+    }
+    
     @media (max-width: 768px) {
   .nav {
     padding: 0.5rem 0.8rem;
@@ -189,7 +194,7 @@
     .nav {
       max-width: 1120px;
       margin: 0 auto;
-      padding: 0.15rem 0.6rem;
+      padding: 0.25rem 0.8rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -251,29 +256,17 @@
   color: var(--text-soft);
   opacity: 0.85;
 }
-
-/* Remove gap between top banner and header */
-body {
-  margin: 0;
-  padding: 0;
-}
     /* TEXT LOGO IMAGE (REPLACES TEXT) */
-.nav-title-image {
-  display: flex;
-  align-items: center;
-}
-
 .nav-title-image img {
-  height: 350px;
+  height: 350px;        /* adjust if needed */
   width: auto;
-
-  position: static; 
+  display: block;
 }
 
 /* ALIGN LOGO ICON + TEXT IMAGE */
 .nav {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.6rem;
 }
     .nav-title {
@@ -354,8 +347,8 @@ body {
     main {
       position: relative;
     }
+
     .hero {
-    
       display: grid;
       grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
       gap: 2.5rem;
@@ -472,6 +465,8 @@ body {
       color: var(--accent-strong);
     }
 
+    .
+
     .timeline-row {
       display: flex;
       align-items: center;
@@ -519,7 +514,7 @@ body {
     /* SECTIONS */
 
     section {
-      margin-top: 2rem;
+      margin-top: 3.6rem;
     }
 
     .section-title {
@@ -552,7 +547,7 @@ body {
 
     .card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 26px 60px rgba(37, 99, 235, 0.28);
+      box-shadow: 0 26px 60px rgba(37, 99, 235, 0.28)
     }
 
     .card h3 {
@@ -658,7 +653,7 @@ body {
     footer {
       margin-top: 3rem;
       padding-top: 1.1rem;
-      border-top: 1px solid rgba(37, 99, 235, 0.15);
+      border-top: 1px solid rgba--card: rgba(255, 255, 255, 0.95);
       font-size: 0.78rem;
       color: var(--text-soft);
       text-align: center;
@@ -704,9 +699,14 @@ body {
       }
     }
     .logo-pill {
-  width: 42px;
-  height: 42px;
+  width: 72px;
+  height: 72px;
     }
+    /* HERO PILLS – FORCE BLUE FILL */
+.pill {
+  background: rgba(37, 99, 235, 0.12) !important;
+  color: #1E40AF !important;
+  border: 1px solid rgba(37, 99, 235, 0.3) !important;
   /* FORCE HERO PILLS TO BLUE (FINAL OVERRIDE) */
 .hero-badges .pill,
 .hero .pill,
@@ -770,11 +770,16 @@ select:-webkit-autofill {
     grid-template-columns: 1fr;
     text-align: left;
   }
-}
 
   .hero-right {
     justify-self: start;
   }
+  /* ===== NAVIGATION SCROLL FIX ===== */
+
+/* Offset fix for sticky header (important for mobile) */
+section {
+  scroll-margin-top: 90px; /* adjust if header height changes */
+}
 /* ===============================
    HERO – HARD RESET & FIX
    =============================== */
@@ -878,7 +883,6 @@ header {
 
 .hero-actions {
   display: flex;
-}
 /* ===============================
    CLEAN MOBILE HERO FIX (FINAL)
    =============================== */
@@ -888,6 +892,15 @@ html, body {
   overflow-x: hidden;
 }
 
+/* Header spacing */
+main {
+  padding-top: 90px;
+}
+
+@media (max-width: 900px) {
+  main {
+    padding-top: 110px;
+  }
   .nav-links a {
   padding: 0.55rem 1rem;
   border-radius: 999px;
@@ -895,7 +908,6 @@ html, body {
   color: #1e40af;
   transition: all 0.25s ease;
 }
- 
 
 .nav-links a:hover {
   background: rgba(37, 99, 235, 0.12);
@@ -913,7 +925,6 @@ html, body {
   position: relative;
   z-index: 2;
   pointer-events: auto;
-}
 }
   html {
   scroll-behavior: smooth;
@@ -967,12 +978,13 @@ body {
   background: #fff;
   border-radius: 14px;
   overflow: hidden;
+
+  /* fade + rise */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: cardFadeUp 0.7s ease forwards;
 }
 
-.card p {
-  margin-bottom: 0.5rem;
-  line-height: 1.45;
-}
 /* BORDER DRAW EFFECT */
 .card::before {
   content: "";
@@ -1022,140 +1034,7 @@ body {
     opacity: 0;
   }
 }
-  /* Remove gap between top banner and header */
-header,
-.navbar {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-}
-/* ===============================
-   CARD RESET – RESTORE OLD LOOK
-   (BOTTOM OVERRIDE ONLY)
-   =============================== */
-
-/* kill any animation/transform affecting height */
-.card {
-  opacity: 1 !important;
-  transform: none !important;
-  animation: none !important;
-}
-
-/* restore original padding */
-.card {
-  padding: 1.2rem 1.3rem !important;
-}
-
-/* restore natural spacing */
-.card h3 {
-  margin-bottom: 0.5rem !important;
-  line-height: 1.3;
-}
-
-.card p {
-  margin-bottom: 0.6rem !important;
-  line-height: 1.5;
-}
-
-/* normal pill spacing */
-.card .pill-row {
-  margin-top: 0.4rem !important;
-  gap: 0.4rem;
-}
-
-.card .pill,
-.card .badge {
-  padding: 0.25rem 0.65rem !important;
-  line-height: 1.2;
-}
-
-/* prevent parent rules from adding extra space */
-section > .card {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-/* ===============================
-   FORCE CARD BACK TO OLD LOOK
-   =============================== */
-
-.grid-3 .card {
-  padding: 1.2rem 1.3rem !important;
-  transform: none !important;
-  animation: none !important;
-  height: auto !important;
-  min-height: unset !important;
-}
-
-/* restore text spacing */
-.grid-3 .card h3 {
-  margin-bottom: 0.25rem !important;
-}
-
-.grid-3 .card p {
-  margin-bottom: 0.6rem !important;
-  line-height: 1.45;
-}
-
-/* restore pill spacing */
-.grid-3 .card .pill-row {
-  margin-top: 0.3rem !important;
-}
-
-.grid-3 .card .pill {
-  padding: 0.18rem 0.6rem !important;
-  font-size: 0.72em;
-}
-/* ===============================
-   SAFE CARD ANIMATION (NO LAYOUT SHIFT)
-   =============================== */
-
-/* base card stays normal */
-.grid-3 .card {
-  transform: none !important;
-  animation: none !important;
-}
-
-/* animation class */
-.card-animate {
-  opacity: 0;
-  animation: cardFadeUp 0.6s ease forwards;
-}
-
-/* animation keyframes */
-@keyframes cardFadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(12px); /* small, safe */
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/* 🔥 FINAL HEADER HEIGHT FIX */
-header {
-  height: auto !important;
-  min-height: unset !important;
-  padding-bottom: 0 !important;
-}
-
-/* kill extra visual space */
-header::after {
-  content: none !important;
-}
-
-/* pull hero up */
-main {
-  margin-top: -120px;
-}
-
-/* mobile safety */
-@media (max-width: 768px) {
-  main {
-    margin-top: -90px;
-  }
-  }
+  
 </style>
 </head>
 <body>
@@ -1652,6 +1531,12 @@ Message: ${msg}`;
   </script>
 </body>
 </html>
+
+
+
+
+
+
 
 
 
