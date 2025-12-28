@@ -192,10 +192,33 @@
     }
     
     @media (max-width: 768px) {
-  .nav {
-    padding: 0.5rem 0.8rem;
+  .hero {
+    margin-top: 2rem;
   }
-}
+    }
+   @media (max-width: 768px) {
+
+  #site-header {
+    position: relative;
+    padding: 1rem 0;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .nav-left {
+    justify-content: center;
+  }
+
+  .nav-title-image img {
+    max-width: 220px;
+    height: auto;
+  }
+
+   }
 
     .nav {
       max-width: 1120px;
