@@ -1073,6 +1073,31 @@ body {
 .nav {
   outline: 6px solid red !important;
 }
+/* =========================
+   MOBILE NAV FIX
+   ========================= */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .nav-left {
+    justify-content: center;
+  }
+
+  .nav-links {
+    margin-left: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+
+  .nav-links a {
+    font-size: 0.95rem;
+  }
+}
 </style>
 </head>
 <body>
@@ -1145,7 +1170,8 @@ body {
     target="_blank"
     rel="noopener"
   >
-    No.1 Indira Gandhi Salai, Kumbakonam
+    No.1 Indira Gandhi Salai, Kumbakonam,<br>
+    Tamil Nadu 612001<br>
   </a>
 </p>
         <p class="location">
